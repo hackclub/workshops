@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "name": "hackclub-workshops",
+  "public": true,
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
+  "github": {
+    "silent": true
+  }
+}
