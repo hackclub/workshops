@@ -4,7 +4,9 @@ export default props => (
   <Container
     as="article"
     sx={{
-      ol: {
+      '> h2, > p': { textAlign: 'center' },
+      h2: { mb: 0, '+ p': { mt: 0 } },
+      ul: {
         width: '100%',
         display: 'grid',
         gridGap: [3, 4],
