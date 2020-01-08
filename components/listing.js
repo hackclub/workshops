@@ -4,6 +4,7 @@ export default props => (
   <Container
     as="article"
     sx={{
+      color: 'text',
       '> h2, > p': { textAlign: 'center' },
       h2: { mb: 0, '+ p': { mt: 0 } },
       ul: {
@@ -17,11 +18,12 @@ export default props => (
       },
       li: {
         width: '100%',
-        minHeight: 128
+        minHeight: 128,
+        display: 'flex',
+        flexDirection: 'column'
       },
       a: {
         display: 'block',
-        backgroundColor: 'sunken',
         color: 'text',
         textDecoration: 'none',
         backgroundColor: 'elevated',
