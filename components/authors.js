@@ -15,7 +15,7 @@ export default ({ text = '@lachlanjc', sx = {}, ...props }) => (
           as="a"
           href={`https://github.com/${name.replace('@', '')}`}
           title={`View ${name} on GitHub`}
-          sx={{ alignItems: 'center' }}
+          sx={{ alignItems: 'center', m: [1, 2] }}
         >
           <Avatar
             src={`https://github.com/${name.replace('@', '')}.png`}
@@ -23,7 +23,7 @@ export default ({ text = '@lachlanjc', sx = {}, ...props }) => (
             alt={name.replace('@', '')}
             sx={{ mr: 2 }}
           />
-          <Text as="span" color="muted" sx={{ fontSize: 2 }}>
+          <Text as="span" color="muted" sx={{ fontSize: [1, 2] }}>
             {name}
           </Text>
         </Flex>
