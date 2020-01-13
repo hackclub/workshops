@@ -1,6 +1,7 @@
 import Header from '../components/header'
 import { Container } from '@theme-ui/components'
 import { map } from 'lodash'
+import Authors from '../components/authors'
 import Content from '../components/content'
 import manifest from '../manifest.json'
 
@@ -23,7 +24,9 @@ const Page = ({ routes, route, data, html }) => {
 
   return (
     <>
-      <Header title={title} desc={data.description} includeMeta />
+      <Header title={title} desc={data.description} includeMeta>
+        <Authors text={data.author} sx={{ mt: 3 }} />
+      </Header>
       <Container variant="copy" sx={{ py: [3, 4] }}>
         <Content html={html} />
         <a href={data.editUrl} target="_blank" rel="noopener noreferrer">
