@@ -3,28 +3,18 @@ import { Container } from '@theme-ui/components'
 import { map } from 'lodash'
 import Authors from '../components/authors'
 import Content from '../components/content'
-import manifest from '../manifest.json'
 
-import { useRouter } from 'next/router'
 import Error from 'next/error'
 import matter from 'gray-matter'
-import { getPaths, findRouteByPath } from '../lib/page'
-import { getRawFileFromRepo, getEditUrl } from '../lib/github'
+import { getEditUrl } from '../lib/github'
 import markdownToHtml from '../lib/markdown-to-html'
 
-const Page = ({ routes, route, data, html }) => {
-  console.log(route, data)
-  if (!route) {
-    return <Error statusCode={404} />
-  }
-
-  const router = useRouter()
-  const { asPath } = router
-  const title = data.title || route.title
+const Page = ({ slug, data, html }) => {
+  if (!slug || !data) return <Error statusCode={404} />
 
   return (
     <>
-      <Header title={title} desc={data.description} includeMeta>
+      <Header title={data.name} desc={data.description} includeMeta>
         <Authors text={data.author} sx={{ mt: 3 }} />
       </Header>
       <Container variant="copy" sx={{ py: [3, 4] }}>
@@ -37,20 +27,22 @@ const Page = ({ routes, route, data, html }) => {
   )
 }
 
-export const unstable_getStaticPaths = () => getPaths(manifest.routes)
+export const unstable_getStaticPaths = () => {
+  const { getWorkshopSlugs } = require('../lib/data')
+  const slugs = getWorkshopSlugs()
+  return map(slugs, slug => ({ params: { slug } }))
+}
 
 export const unstable_getStaticProps = async ({ params }) => {
-  const { routes } = manifest
+  const { getWorkshopContent } = require('../lib/data')
   const { slug } = params
-  const route = findRouteByPath(slug, routes)
-  if (!route) return {}
 
-  const md = await getRawFileFromRepo(`workshops/${route.path}/README.md`)
+  const md = await getWorkshopContent(slug)
   const { content, data } = matter(md)
-  data.editUrl = getEditUrl(`workshops/${route.path}/README.md`)
-  const html = await markdownToHtml(`workshops/${route.path}`, content)
+  data.editUrl = getEditUrl(`workshops/${slug}/README.md`)
+  const html = await markdownToHtml(`workshops/${slug}`, content)
 
-  return { props: { routes, data, route, html } }
+  return { props: { slug, data, html } }
 }
 
 export default Page

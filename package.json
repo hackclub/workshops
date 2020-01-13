@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "dl": "node lib/download.js",
-    "dev": "next",
-    "now-build": "next build",
+    "dev": "yarn run dl && next",
+    "build": "yarn run dl && next build",
     "start": "yarn run dev"
   },
   "engines": {
