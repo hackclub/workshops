@@ -1,0 +1,16 @@
+{
+  "routes": [
+    {
+      "title": "Starters",
+      "heading": true,
+      "routes": [
+        { "title": "Personal Website", "path": "personal_website" },
+        { "title": "Find Bigfoot", "path": "find_bigfoot" },
+        { "title": "Speak Colors", "path": "speak_colors" },
+        { "title": "Synth", "path": "synth" },
+        { "title": "Dashboard", "path": "dashboard" },
+        { "title": "Thunderstorm", "path": "thunderstorm" }
+      ]
+    }
+  ]
+}
