@@ -8,19 +8,14 @@ export default class extends Document {
     return { ...page, ...styles }
   }
 
-  constructor(props) {
-    super(props)
-    const { __NEXT_DATA__, ids } = props
-    if (ids) {
-      __NEXT_DATA__.ids = ids
-    }
-  }
-
   render() {
     return (
       <html lang="en">
         <Head>
-          <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
+          <style
+            data-emotion-css={this.props.ids.join(' ')}
+            dangerouslySetInnerHTML={{ __html: this.props.css }}
+          />
         </Head>
         <body>
           <Main />

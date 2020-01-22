@@ -1,21 +1,21 @@
-import React from 'react'
-import App from 'next/app'
-import { ThemeProvider, ColorMode } from 'theme-ui'
-import { Global } from '@emotion/core'
+import * as React from 'react'
+import NextApp from 'next/app'
+import { CacheProvider } from '@emotion/core'
+import { cache } from 'emotion'
 
-import theme from '../components/theme'
-import Meta from '../components/meta'
-import NProgress from '../components/nprogress'
+import { ThemeProvider } from 'theme-ui'
+import { theme } from '@hackclub/theme'
 import Nav from '../components/nav'
+import NProgress from '../components/nprogress'
 import Footer from '../components/footer'
 
-class Root extends App {
+export default class App extends NextApp {
   render() {
     const { Component, pageProps } = this.props
     return (
-      <>
-        <Meta />
-        <style>{`
+      <CacheProvider value={cache}>
+        <ThemeProvider theme={theme}>
+          <style>{`
           @font-face {
             font-family: 'Phantom Sans';
             src: url('https://hackclub.com/fonts/Phantom_Sans_0.4/Regular.woff')
@@ -37,17 +37,12 @@ class Root extends App {
             font-display: swap;
           }
         `}</style>
-        <ThemeProvider theme={theme}>
-          <ColorMode />
-          <Global styles={theme => ({ body: theme.styles.root })} />
           <NProgress color={theme.colors.primary} />
           <Nav />
           <Component {...pageProps} />
           <Footer />
         </ThemeProvider>
-      </>
+      </CacheProvider>
     )
   }
 }
-
-export default Root
