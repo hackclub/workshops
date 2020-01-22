@@ -1,16 +1,19 @@
 {
-  "routes": [
-    {
-      "title": "Starters",
-      "heading": true,
-      "routes": [
-        { "title": "Personal Website", "path": "personal_website" },
-        { "title": "Find Bigfoot", "path": "find_bigfoot" },
-        { "title": "Speak Colors", "path": "speak_colors" },
-        { "title": "Synth", "path": "synth" },
-        { "title": "Dashboard", "path": "dashboard" },
-        { "title": "Thunderstorm", "path": "thunderstorm" }
-      ]
-    }
-  ]
+  "starters": {
+    "title": "Start here",
+    "description": "Set out on your journey by building your own website, then move on to multiplayer games and collaborative web apps.",
+    "slugs": [
+      "personal_website",
+      "find_bigfoot",
+      "speak_colors",
+      "synth",
+      "thunderstorm",
+      "dashboard"
+    ]
+  },
+  "react": {
+    "title": "React",
+    "description": "Set out on your journey by building your own website, then move on to multiplayer games and collaborative web apps.",
+    "slugs": ["react_hooks", "nextjs_starter", "nextjs_dashboard"]
+  }
 }
