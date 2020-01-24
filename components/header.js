@@ -28,7 +28,7 @@ export default ({
         variant="title"
         sx={{
           color: 'primary',
-          maxWidth: 'narrowplus',
+          maxWidth: 'copyPlus',
           mx: centered && 'auto'
         }}
         children={title}

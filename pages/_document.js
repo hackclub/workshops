@@ -1,5 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { extractCritical } from 'emotion-server'
+import { fonts } from '@hackclub/theme'
 
 export default class extends Document {
   static getInitialProps({ renderPage }) {
@@ -12,6 +13,7 @@ export default class extends Document {
     return (
       <html lang="en">
         <Head>
+          <style>{Object.values(fonts).join('')}</style>
           <style
             data-emotion-css={this.props.ids.join(' ')}
             dangerouslySetInnerHTML={{ __html: this.props.css }}
