@@ -14,7 +14,14 @@ const Page = ({ slug, data, html }) => {
 
   return (
     <>
-      <Header title={data.name} desc={data.description} includeMeta>
+      <Header
+        title={data.name}
+        desc={data.description}
+        img={`https://workshop-cards.now.sh/${encodeURIComponent(
+          data.name
+        )}.png?caption=${encodeURIComponent(`By ${data.author}`)}`}
+        includeMeta
+      >
         <Authors text={data.author} sx={{ mt: 3 }} />
       </Header>
       <Container variant="copy" sx={{ py: [3, 4] }}>

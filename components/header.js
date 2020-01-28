@@ -1,5 +1,6 @@
 import { Box, Container, Heading } from '@theme-ui/components'
-import Meta from './meta'
+import Head from 'next/head'
+import { Meta } from '@hackclub/components'
 
 export default ({
   centered = true,
@@ -21,7 +22,6 @@ export default ({
       ...sx
     }}
   >
-    {includeMeta && <Meta title={title} description={desc} image={img} />}
     <Container>
       <Heading
         as="h1"
@@ -34,6 +34,11 @@ export default ({
         children={title}
       />
       {desc && (
+      {includeMeta && (
+        <Head>
+          <Meta title={title} description={desc} image={img} />
+        </Head>
+      )}
         <Heading
           as="h2"
           variant="subtitle"
