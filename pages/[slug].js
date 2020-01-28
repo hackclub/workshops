@@ -1,5 +1,5 @@
 import Header from '../components/header'
-import { Container } from '@theme-ui/components'
+import { Button, Container } from 'theme-ui'
 import { map } from 'lodash'
 import Authors from '../components/authors'
 import Content from '../components/content'
@@ -26,9 +26,14 @@ const Page = ({ slug, data, html }) => {
       </Header>
       <Container variant="copy" sx={{ py: [3, 4] }}>
         <Content html={html} />
-        <a href={data.editUrl} target="_blank" rel="noopener noreferrer">
+        <Button
+          as="a"
+          href={data.editUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Edit this page on GitHub
-        </a>
+        </Button>
       </Container>
     </>
   )

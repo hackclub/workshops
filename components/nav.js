@@ -1,8 +1,8 @@
-import { useColorMode } from 'theme-ui'
+import { ArrowLeft, Moon, GitHub } from 'react-feather'
+import { Box, Container, IconButton, useColorMode } from 'theme-ui'
 import { useRouter } from 'next/router'
-import { Box, Container, IconButton, Link as A } from '@theme-ui/components'
 import Link from 'next/link'
-import { Home, Moon, GitHub } from 'react-feather'
+import { Flag } from '@hackclub/components'
 
 const NavButton = ({ sx, ...props }) => (
   <IconButton
@@ -20,13 +20,26 @@ const NavButton = ({ sx, ...props }) => (
   />
 )
 
+const BackButton = ({ to = '/', text = 'Back' }) => (
+  <Link href={to} passHref>
+    <NavButton
+      as="a"
+      title={to === '/' ? 'Back to homepage' : 'Back'}
+      sx={{ display: 'flex', width: 'auto', pr: 2 }}
+    >
+      <ArrowLeft />
+      {text}
+    </NavButton>
+  </Link>
+)
+
 const ColorSwitcher = props => {
   const [mode, setMode] = useColorMode()
   return (
     <NavButton
       {...props}
       onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
-      title="Cycle Color Mode"
+      title="Reverse color scheme"
     >
       <Moon size={24} />
     </NavButton>
@@ -45,7 +58,6 @@ export default () => {
         color: 'nav',
         py: 3
       }}
-      key="nav"
     >
       <Container
         sx={{
@@ -59,31 +71,12 @@ export default () => {
           }
         }}
       >
-        <A
-          href="https://hackclub.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Hack Club homepage"
-          sx={{ mt: -3, mr: 'auto !important' }}
-        >
-          <Box
-            as="img"
-            src="https://hackclub.com/orpheus_flag.svg"
-            alt="Hack Club flag"
-            sx={{ width: [96, 128] }}
-          />
-        </A>
-        {!home && (
-          <Link href="/">
-            <NavButton as="a" aria-label="Go to homepage">
-              <Home size={24} />
-            </NavButton>
-          </Link>
-        )}
+        {!home ? <BackButton text="All Workshops" /> : <Flag sx={{ mt: -3 }} />}
         <NavButton
           as="a"
-          href="https://github.com/lachlanjc/hackathons"
+          href="https://github.com/hackclub/workshops"
           aria-label="View source code on GitHub"
+          sx={{ ml: 'auto' }}
         >
           <GitHub size={24} />
         </NavButton>

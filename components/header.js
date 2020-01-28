@@ -1,4 +1,4 @@
-import { Box, Container, Heading } from '@theme-ui/components'
+import { Box, Container, Heading, useColorMode } from 'theme-ui'
 import Head from 'next/head'
 import { Meta } from '@hackclub/components'
 
@@ -10,47 +10,50 @@ export default ({
   children,
   includeMeta = false,
   sx = {}
-}) => (
-  <Box
-    as="header"
-    sx={{
-      bg: 'header',
-      color: 'text',
-      pt: [4, null, null, null, 5],
-      pb: [4, 5, null, null, 6],
-      textAlign: centered && 'center',
-      ...sx
-    }}
-  >
-    <Container>
-      <Heading
-        as="h1"
-        variant="title"
-        sx={{
-          color: 'primary',
-          maxWidth: 'copyPlus',
-          mx: centered && 'auto'
-        }}
-        children={title}
-      />
-      {desc && (
+}) => {
+  const dark = useColorMode()[0] === 'dark'
+  return (
+    <Box
+      as="header"
+      sx={{
+        bg: dark ? 'darkless' : 'snow',
+        color: 'text',
+        pt: [4, null, null, null, 5],
+        pb: [4, 5, null, null, 6],
+        textAlign: centered && 'center',
+        ...sx
+      }}
+    >
       {includeMeta && (
         <Head>
           <Meta title={title} description={desc} image={img} />
         </Head>
       )}
+      <Container>
         <Heading
-          as="h2"
-          variant="subtitle"
+          as="h1"
+          variant="title"
           sx={{
-            mt: 3,
-            color: 'text',
+            color: 'primary',
+            maxWidth: 'copyPlus',
             mx: centered && 'auto'
           }}
-          children={desc}
+          children={title}
         />
-      )}
-      {children}
-    </Container>
-  </Box>
-)
+        {desc && (
+          <Heading
+            as="h2"
+            variant="subtitle"
+            sx={{
+              mt: 3,
+              color: 'text',
+              mx: centered && 'auto'
+            }}
+            children={desc}
+          />
+        )}
+        {children}
+      </Container>
+    </Box>
+  )
+}
