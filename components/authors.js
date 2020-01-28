@@ -15,8 +15,9 @@ export default ({ text = '@lachlanjc', sx = {}, ...props }) => (
             key={name}
             as="a"
             href={`https://github.com/${name.replace('@', '')}`}
+            target="_blank"
             title={`View ${name} on GitHub`}
-            sx={{ alignItems: 'center', m: [1, 2] }}
+            sx={{ alignItems: 'center', textDecoration: 'none', m: [1, 2] }}
           >
             <Avatar
               src={`https://github.com/${name.replace('@', '')}.png`}

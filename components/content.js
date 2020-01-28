@@ -11,20 +11,21 @@ const Content = ({ path, html }) => (
       dangerouslySetInnerHTML={{ __html: html }}
     />
     <style jsx global>{`
-      img {
+      img,
+      a {
         max-width: 100%;
       }
-      h1,
-      h2,
-      h3 {
+      .docs h1,
+      .docs h2,
+      .docs h3 {
         margin: 0;
       }
-      a {
+      .docs a {
         color: #0074de;
         text-decoration: none;
         transition: color 0.2s ease;
       }
-      a:hover {
+      .docs a:hover {
         color: #68b5fb;
       }
       code {
@@ -317,7 +318,7 @@ const Content = ({ path, html }) => (
       .docs li {
         margin-bottom: 0.625rem;
       }
-      ul :global(li:before) {
+      .docs ul :global(li:before) {
         content: '-';
         color: #999999;
         position: absolute;
