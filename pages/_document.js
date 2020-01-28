@@ -1,12 +1,11 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import { extractCritical } from 'emotion-server'
 import { fonts } from '@hackclub/theme'
+import { InitializeColorMode } from 'theme-ui'
 
 export default class extends Document {
-  static getInitialProps({ renderPage }) {
-    const page = renderPage()
-    const styles = extractCritical(page.html)
-    return { ...page, ...styles }
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx)
+    return { ...initialProps }
   }
 
   render() {
@@ -14,12 +13,9 @@ export default class extends Document {
       <html lang="en">
         <Head>
           <style>{Object.values(fonts).join('')}</style>
-          <style
-            data-emotion-css={this.props.ids.join(' ')}
-            dangerouslySetInnerHTML={{ __html: this.props.css }}
-          />
         </Head>
         <body>
+          <InitializeColorMode />
           <Main />
           <NextScript />
         </body>
