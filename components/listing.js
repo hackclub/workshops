@@ -1,49 +1,52 @@
-import { Container } from '@theme-ui/components'
+import { Container, Heading, Text, Grid, Card } from 'theme-ui'
+import Link from 'next/link'
 
-export default props => (
-  <Container
-    as="article"
-    sx={{
-      color: 'text',
-      '> h2, > p': { textAlign: 'center' },
-      h2: { mb: 0, '+ p': { mt: 0 } },
-      ul: {
-        width: '100%',
-        display: 'grid',
-        gridGap: [3, 4],
-        gridTemplateColumns: [null, 'repeat(2, 1fr)', 'repeat(4, 1fr)'],
-        listStyle: 'none',
-        p: 0,
-        m: 0
-      },
-      li: {
-        width: '100%',
-        minHeight: 128,
-        display: 'flex',
-        flexDirection: 'column'
-      },
-      a: {
+const WorkshopCard = ({ slug, name, description }) => (
+  <Link href={`/${slug}`} passHref>
+    <Card
+      as="a"
+      sx={{
         display: 'block',
         color: 'text',
         textDecoration: 'none',
         backgroundColor: 'elevated',
         borderRadius: 'extra',
         overflow: 'hidden',
-        p: 3,
+        p: [3, 3],
         WebkitTapHighlightColor: 'transparent',
         transition: 'transform .125s ease-in-out, box-shadow .125s ease-in-out',
         ':hover,:focus': {
           transform: 'scale(1.0625)',
           boxShadow: 'elevated'
-        },
-        strong: {
-          display: 'block'
-        },
-        em: {
-          fontStyle: 'normal'
         }
-      }
-    }}
-    {...props}
-  />
+      }}
+    >
+      <Heading as="h3" sx={{ mt: 0, mb: 1 }}>
+        {name}
+      </Heading>
+      <Text variant="caption">{description}</Text>
+    </Card>
+  </Link>
+)
+
+export default ({ title, description, workshops, ...props }) => (
+  <Container as="section" {...props} sx={{ color: 'text', mb: [4, 5] }}>
+    <Heading as="h2" variant="headline" sx={{ textAlign: 'center' }}>
+      {title}
+    </Heading>
+    <Text variant="caption" sx={{ textAlign: 'center' }}>
+      {description}
+    </Text>
+    <Grid
+      gap={[3, 4]}
+      columns={[null, 2, 4]}
+      sx={{
+        mt: [3, 4]
+      }}
+    >
+      {workshops.map(workshop => (
+        <WorkshopCard key={workshop.slug} {...workshop} />
+      ))}
+    </Grid>
+  </Container>
 )
