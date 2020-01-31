@@ -21,6 +21,7 @@
     "download-git-repo": "^3.0.2",
     "emotion": "^10.0.27",
     "emotion-server": "^10.0.27",
+    "geopattern": "^1.2.3",
     "github-slugger": "^1.2.1",
     "gray-matter": "^4.0.2",
     "hast-util-sanitize": "^2.0.1",
