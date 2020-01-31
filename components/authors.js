@@ -1,6 +1,14 @@
 import { Flex, Avatar, Text } from 'theme-ui'
 import { trim } from 'lodash'
 
+const Name = props => (
+  <Text
+    as="span"
+    sx={{ fontSize: [1, 2], color: 'white', opacity: 0.75 }}
+    {...props}
+  />
+)
+
 export default ({ text = '@lachlanjc', sx = {}, ...props }) => (
   <Flex
     {...props}
@@ -25,15 +33,11 @@ export default ({ text = '@lachlanjc', sx = {}, ...props }) => (
               alt={name.replace('@', '')}
               sx={{ mr: 2 }}
             />
-            <Text as="span" color="muted" sx={{ fontSize: [1, 2] }}>
-              {name}
-            </Text>
+            <Name>{name}</Name>
           </Flex>
         ))
     ) : (
-      <Text as="span" color="muted" sx={{ fontSize: [1, 2] }}>
-        {text}
-      </Text>
+      <Name>{text}</Name>
     )}
   </Flex>
 )

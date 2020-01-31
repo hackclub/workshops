@@ -21,10 +21,14 @@ const Page = ({ slug, data, html }) => {
           data.name
         )}.png?caption=${encodeURIComponent(`By ${data.author}`)}`}
         includeMeta
+        bgImg={`/api/patterns/${slug}`}
+        sx={{
+          'h1, h2': { color: 'white !important' }
+        }}
       >
         <Authors text={data.author} sx={{ mt: 3 }} />
       </Header>
-      <Container variant="copy" sx={{ py: [3, 4] }}>
+      <Container variant="copy" as="main" sx={{ py: [3, 4] }}>
         <Content html={html} />
         <Button
           as="a"

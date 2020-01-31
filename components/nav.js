@@ -1,8 +1,57 @@
 import { ArrowLeft, Moon, GitHub } from 'react-feather'
-import { Box, Container, IconButton, useColorMode } from 'theme-ui'
+import {
+  Box,
+  Container,
+  IconButton,
+  Link as A,
+  Image,
+  useColorMode
+} from 'theme-ui'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { Flag } from '@hackclub/components'
+import styled from '@emotion/styled'
+
+const Material = styled(Box)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  ${props =>
+    props.colorMode === 'dark'
+      ? `
+         background-color: rgba(0, 0, 0, 0.875);
+         @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+           background-color: rgba(0, 0, 0, 0.75);
+           -webkit-backdrop-filter: saturate(180%) blur(12px);
+         }
+         `
+      : `
+           background-color: rgba(255, 255, 255, 0.98);
+           @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+             background-color: rgba(255, 255, 255, 0.75);
+             -webkit-backdrop-filter: saturate(180%) blur(12px);
+           }
+         `};
+  @media (prefers-reduced-transparency: reduce) {
+    -webkit-backdrop-filter: auto !important;
+  }
+`
+
+const Flag = () => (
+  <A
+    href="https://hackclub.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Hack Club homepage"
+    sx={{ mt: -3 }}
+  >
+    <Image
+      src="https://hackclub.com/orpheus_flag.svg"
+      alt="Hack Club flag"
+      sx={{ width: [96, 128] }}
+    />
+  </A>
+)
 
 const NavButton = ({ sx, ...props }) => (
   <IconButton
@@ -46,13 +95,15 @@ const ColorSwitcher = props => {
   )
 }
 
-export default () => {
+export default ({ material = false }) => {
   const [mode] = useColorMode()
   const router = useRouter()
   const home = router.pathname === '/'
+  const Background = material ? Material : Box
   return (
-    <Box
+    <Background
       as="nav"
+      colorMode={mode}
       sx={{
         bg: mode === 'dark' ? 'darkless' : 'snow',
         color: 'nav',
@@ -82,6 +133,6 @@ export default () => {
         </NavButton>
         <ColorSwitcher />
       </Container>
-    </Box>
+    </Background>
   )
 }
