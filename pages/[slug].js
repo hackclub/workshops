@@ -28,7 +28,7 @@ const Page = ({ slug, data, html }) => {
       >
         <Authors text={data.author} sx={{ mt: 3 }} />
       </Header>
-      <Container variant="copy" as="main" sx={{ py: [3, 4] }}>
+      <Container variant="copy" as="main">
         <Content html={html} />
         <Button
           as="a"
