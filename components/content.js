@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { Box } from '@theme-ui/components'
+import { Box } from 'theme-ui'
 
 const areEqual = (prevProps, props) => prevProps.path === props.path
 

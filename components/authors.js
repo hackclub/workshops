@@ -1,4 +1,4 @@
-import { Flex, Avatar, Text } from '@theme-ui/components'
+import { Flex, Avatar, Text } from 'theme-ui'
 import { trim } from 'lodash'
 
 export default ({ text = '@lachlanjc', sx = {}, ...props }) => (
