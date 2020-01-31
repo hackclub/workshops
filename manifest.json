@@ -8,12 +8,65 @@
       "speak_colors",
       "synth",
       "thunderstorm",
-      "dashboard"
+      "dashboard",
+      "geometric_pattern",
+      "dodge",
+      "platformer",
+      "collaborative_sketch",
+      "tree_machine",
+      "julia_fractals"
     ]
   },
   "react": {
     "title": "React",
-    "description": "Set out on your journey by building your own website, then move on to multiplayer games and collaborative web apps.",
-    "slugs": ["react_hooks", "nextjs_starter", "nextjs_dashboard"]
+    "description": "Learn to use one of the most popular JavaScript frameworks on the web.",
+    "slugs": [
+      "nextjs_starter",
+      "nextjs_dashboard",
+      "react_hooks",
+      "styled_components"
+    ]
+  },
+  "pi": {
+    "title": "Pi",
+    "description": "Start building projects on the coolest credit card-sized computer.",
+    "slugs": [
+      "intro_to_raspi",
+      "choose_your_pi",
+      "remote_viewing_raspi",
+      "control_an_led"
+    ]
+  },
+  "arduino": {
+    "title": "Arduino",
+    "description": "Bring projects from cyberspace to the real world with this small hardware platform.",
+    "slugs": ["uno", "blink", "temperature_monitor"]
+  },
+  "experimental": {
+    "title": "Experimental",
+    "description": "As is/no warranty. These workshops haven’t been fully tested yet, so we don’t know just will happen if you try building things with them.",
+    "slugs": [
+      "linux_on_a_stick",
+      "twine",
+      "pico_8",
+      "pico_8_maze",
+      "vigenere_cipher",
+      "chrome_extension",
+      "wikibot",
+      "webcomponents",
+      "hello_bot"
+    ]
+  },
+  "misc": {
+    "title": "Miscellaneous",
+    "description": "The odd ones out. Workshops not yet properly categorized.",
+    "slugs": [
+      "preface",
+      "wishlist",
+      "orpheus",
+      "feature_extractor",
+      "intro_to_ml",
+      "that_was_easy"
+    ]
   }
 }
