@@ -20,6 +20,7 @@ export default ({
         color: 'text',
         pt: [4, null, null, null, 5],
         pb: [4, 5, null, null, 6],
+        mb: [4, 5, null, null, 6],
         textAlign: centered && 'center',
         ...sx
       }}

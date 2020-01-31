@@ -10,7 +10,7 @@ const WorkshopCard = ({ slug, name, description }) => (
         color: 'text',
         textDecoration: 'none',
         backgroundColor: 'elevated',
-        borderRadius: 'extra',
+        borderRadius: 'ultra',
         overflow: 'hidden',
         p: [3, 3],
         WebkitTapHighlightColor: 'transparent',
