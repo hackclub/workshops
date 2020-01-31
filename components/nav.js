@@ -101,15 +101,7 @@ export default ({ material = false }) => {
   const home = router.pathname === '/'
   const Background = material ? Material : Box
   return (
-    <Background
-      as="nav"
-      colorMode={mode}
-      sx={{
-        bg: mode === 'dark' ? 'darkless' : 'snow',
-        color: 'nav',
-        py: 3
-      }}
-    >
+    <Background as="nav" colorMode={mode} sx={{ bg: 'sheet', py: 3 }}>
       <Container
         sx={{
           display: 'flex',

@@ -31,10 +31,10 @@ const WorkshopCard = ({ slug, name, description }) => (
 
 export default ({ title, description, workshops, ...props }) => (
   <Container as="section" {...props} sx={{ color: 'text', mb: [4, 5] }}>
-    <Heading as="h2" variant="headline" sx={{ textAlign: 'center' }}>
+    <Heading as="h2" variant="headline" sx={{ mb: 1 }}>
       {title}
     </Heading>
-    <Text variant="caption" sx={{ textAlign: 'center' }}>
+    <Text variant="caption" sx={{ fontSize: 2 }}>
       {description}
     </Text>
     <Grid

@@ -29,7 +29,7 @@ export default ({
       key="header"
       as="header"
       sx={{
-        bg: mode === 'dark' ? 'darkless' : 'snow',
+        bg: 'sheet',
         color: 'text',
         pt: bgImg ? [6, null, null, null, 6] : [4, null, null, null, 5],
         pb: [4, 5, null, null, 6],
