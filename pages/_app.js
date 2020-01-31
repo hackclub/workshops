@@ -1,6 +1,7 @@
 import * as React from 'react'
 import NextApp from 'next/app'
 
+import '../lib/fonts.css'
 import { ThemeProvider } from 'theme-ui'
 import { theme } from '@hackclub/theme'
 import NProgress from '../components/nprogress'
