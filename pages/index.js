@@ -21,8 +21,8 @@ export default ({ sections }) => (
         Our Philosophy »
       </Button>
     </Header>
-    {sections.map(section => (
-      <Listing key={section} id={section} {...section} />
+    {sections.map(({ key, ...section }) => (
+      <Listing key={key} id={key} {...section} />
     ))}
   </>
 )
