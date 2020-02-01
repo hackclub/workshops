@@ -1,9 +1,9 @@
 import * as React from 'react'
 import NextApp from 'next/app'
 
-import '../lib/fonts.css'
+import '@hackclub/theme/fonts/reg-ital-bold.css'
 import { ThemeProvider } from 'theme-ui'
-import { theme } from '@hackclub/theme'
+import theme from '@hackclub/theme'
 import NProgress from '../components/nprogress'
 import Footer from '../components/footer'
 
