@@ -7,6 +7,7 @@ export default ({ sections }) => (
     <Header
       title="Hack Club Workshops"
       desc="Learn to code with this collection of community-contributed, self-guided coding tutorials + ideas."
+      sx={{ mb: 0 }}
     >
       <Button
         as="a"
