@@ -1,3 +1,4 @@
+import { Button } from 'theme-ui'
 import Header from '../components/header'
 import Listing from '../components/listing'
 
@@ -5,8 +6,21 @@ export default ({ sections }) => (
   <>
     <Header
       title="Hack Club Workshops"
-      desc="All the workshops, from the Hack Club community."
-    />
+      desc="Learn to code with this collection of community-contributed, self-guided coding tutorials + ideas."
+    >
+      <Button
+        as="a"
+        href="https://hackclub.com/philosophy/"
+        variant="outline"
+        sx={{
+          mt: [3, 4],
+          transition: '.125s transform ease-in-out',
+          ':hover,:focus': { transform: 'scale(1.0625)' }
+        }}
+      >
+        Our Philosophy »
+      </Button>
+    </Header>
     {sections.map(section => (
       <Listing key={section} id={section} {...section} />
     ))}

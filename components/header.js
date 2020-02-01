@@ -43,18 +43,18 @@ export default ({
           <Meta title={title} description={desc} image={img} />
         </Head>
       )} */}
-      <Container>
+      <Container variant="copy">
         <Heading
           as="h1"
           variant="title"
-          sx={{ color: 'primary', maxWidth: 'copyPlus', mx: 'auto' }}
+          sx={{ color: 'primary' }}
           children={title}
         />
         {desc && (
           <Heading
             as="h2"
             variant="subtitle"
-            sx={{ mt: 3, color: 'text', mx: 'auto' }}
+            sx={{ mt: 3, color: 'text' }}
             children={desc}
           />
         )}
