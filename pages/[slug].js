@@ -1,32 +1,25 @@
-import Header from '../components/header'
-import { Button, Container } from 'theme-ui'
+import matter from 'gray-matter'
 import { map } from 'lodash'
+import { getEditUrl } from '../lib/github'
+
+import { Button, Container } from 'theme-ui'
+import Error from 'next/error'
+import Header from '../components/header'
 import Authors from '../components/authors'
 import Content from '../components/content'
 
-import Error from 'next/error'
-import matter from 'gray-matter'
-import { getEditUrl } from '../lib/github'
-import markdownToHtml from '../lib/markdown-to-html'
-
 const Page = ({ slug, data, html }) => {
   if (!slug || !data) return <Error statusCode={404} />
-
   return (
     <>
       <Header
         title={data.name}
         desc={data.description}
-        img={`https://workshop-cards.now.sh/${encodeURIComponent(
-          data.name
-        )}.png?caption=${encodeURIComponent(`By ${data.author}`)}`}
+        img={data.card}
+        bgImg={data.bg}
         includeMeta
-        bgImg={`/api/patterns/${slug}`}
-        sx={{
-          'h1, h2': { color: 'white !important' }
-        }}
       >
-        <Authors text={data.author} sx={{ mt: 3 }} />
+        <Authors text={data.author} />
       </Header>
       <Container variant="copy" as="main">
         <Content html={html} />
@@ -51,10 +44,15 @@ export const unstable_getStaticPaths = () => {
 
 export const unstable_getStaticProps = async ({ params }) => {
   const { getWorkshopContent } = require('../lib/data')
+  const { markdownToHtml } = require('../lib/markdown-to-html')
   const { slug } = params
 
   const md = await getWorkshopContent(slug)
   const { content, data } = matter(md)
+  data.card = `https://workshop-cards.now.sh/${encodeURIComponent(
+    data?.name
+  )}.png?caption=${encodeURIComponent(`By ${data?.author}`)}`
+  data.bg = `/api/patterns/${slug}`
   data.editUrl = getEditUrl(`workshops/${slug}/README.md`)
   const html = await markdownToHtml(`workshops/${slug}`, content)
 

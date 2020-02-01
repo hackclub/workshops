@@ -12,7 +12,7 @@ const Name = props => (
 export default ({ text = '@lachlanjc', sx = {}, ...props }) => (
   <Flex
     {...props}
-    sx={{ justifyContent: 'center', alignItems: 'center', ...sx }}
+    sx={{ justifyContent: 'center', alignItems: 'center', mt: 3, ...sx }}
   >
     {text.includes('@') ? (
       text

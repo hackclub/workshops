@@ -20,7 +20,8 @@ export default ({
       backgroundImage: `linear-gradient(rgba(0,0,0,${shades[0]}), rgba(0,0,0,${shades[1]})),
         url('${bgImg}')`,
       backgroundSize: 'cover',
-      textShadow: 'text'
+      textShadow: 'text',
+      'h1, h2': { color: 'white !important' }
     }
   }
   return [
