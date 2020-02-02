@@ -1,17 +1,18 @@
-import Footer from './footer.mdx'
 import { Container, Box } from 'theme-ui'
+import Footer from './footer.mdx'
 
 export default () => (
   <Box
     as="footer"
-    sx={{ bg: 'sunken', textAlign: 'center', px: 2, py: [3, 4], mt: [4, 5] }}
+    sx={{ bg: 'sunken', textAlign: 'center', px: 2, py: [3, 4] }}
   >
     <Container
+      variant="narrow"
       sx={{
-        maxWidth: 640,
+        display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        p: { color: 'secondary', fontSize: [2, 3] },
+        p: { color: 'secondary', fontSize: 2 },
         a: { color: 'primary' }
       }}
     >
