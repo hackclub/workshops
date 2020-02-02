@@ -1,7 +1,5 @@
 import { Container } from 'theme-ui'
 import Error from 'next/error'
-import matter from 'gray-matter'
-
 import Header from '../../../components/header'
 import Authors from '../../../components/authors'
 import Content from '../../../components/content'
@@ -28,16 +26,10 @@ const Page = ({ slug, data, html }) => {
 
 Page.getInitialProps = async req => {
   const { getRawFileFromRepo } = require('../../../lib/github')
-  const { markdownToHtml } = require('../../../lib/markdown-to-html')
+  const { getWorkshopData } = require('../../../lib/data')
   const { branch, slug } = req.query
   const md = await getRawFileFromRepo(`workshops/${slug}/README.md`, branch)
-  const { content, data } = matter(md)
-  data.card = `https://workshop-cards.now.sh/${encodeURIComponent(
-    data?.name
-  )}.png?caption=${encodeURIComponent(`By ${data?.author}`)}`
-  data.bg = `/api/patterns/${slug}`
-  const html = await markdownToHtml(`workshops/${slug}`, content)
-
+  const { data, html } = await getWorkshopData(slug, md)
   return { slug, data, html }
 }
 

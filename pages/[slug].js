@@ -1,7 +1,4 @@
-import matter from 'gray-matter'
 import { map } from 'lodash'
-import { getEditUrl } from '../lib/github'
-
 import { Button, Container } from 'theme-ui'
 import Error from 'next/error'
 import Header from '../components/header'
@@ -43,19 +40,10 @@ export const unstable_getStaticPaths = () => {
 }
 
 export const unstable_getStaticProps = async ({ params }) => {
-  const { getWorkshopContent } = require('../lib/data')
-  const { markdownToHtml } = require('../lib/markdown-to-html')
+  const { getWorkshopFile, getWorkshopData } = require('../lib/data')
   const { slug } = params
-
-  const md = await getWorkshopContent(slug)
-  const { content, data } = matter(md)
-  data.card = `https://workshop-cards.now.sh/${encodeURIComponent(
-    data?.name
-  )}.png?caption=${encodeURIComponent(`By ${data?.author}`)}`
-  data.bg = `/api/patterns/${slug}`
-  data.editUrl = getEditUrl(`workshops/${slug}/README.md`)
-  const html = await markdownToHtml(`workshops/${slug}`, content)
-
+  const md = await getWorkshopFile(slug)
+  const { data, html } = await getWorkshopData(slug, md)
   return { props: { slug, data, html } }
 }
 
