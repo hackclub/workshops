@@ -99,6 +99,7 @@ export default ({ material = false }) => {
   const [mode] = useColorMode()
   const router = useRouter()
   const home = router.pathname === '/'
+  const back = !home && router.pathname !== '/conduct'
   const Background = material ? Material : Box
   return (
     <Background as="nav" colorMode={mode} sx={{ bg: 'sheet', py: 3 }}>
@@ -114,7 +115,7 @@ export default ({ material = false }) => {
           }
         }}
       >
-        {!home ? <BackButton text="All Workshops" /> : <Flag sx={{ mt: -3 }} />}
+        {back ? <BackButton text="All Workshops" /> : <Flag sx={{ mt: -3 }} />}
         <NavButton
           as="a"
           href="https://github.com/hackclub/workshops"
