@@ -7,7 +7,7 @@ const Page = ({ html }) => (
     <Header
       title="Code of Conduct"
       desc="The required standards of conduct in the Hack Club community."
-      img={`https://workshop-cards.now.sh/${encodeURIComponent(
+      img={`https://workshop-cards.hackclub.com/${encodeURIComponent(
         'Code of Conduct'
       )}.png`}
       includeMeta
