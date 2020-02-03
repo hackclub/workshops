@@ -1,7 +1,6 @@
 import { Container } from 'theme-ui'
 import Header from '../components/header'
 import Content from '../components/content'
-import { markdownToHtml } from '../lib/markdown-to-html'
 
 const Page = ({ html }) => (
   <>
@@ -21,9 +20,8 @@ const Page = ({ html }) => (
 )
 
 export const unstable_getStaticProps = async () => {
-  const { getConductFile } = require('../lib/data')
-  const md = await getConductFile()
-  const html = await markdownToHtml(`CONDUCT.md`, md)
+  const { getConductHtml } = require('../lib/data')
+  const html = await getConductHtml()
   return { props: { html } }
 }
 
