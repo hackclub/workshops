@@ -1,7 +1,7 @@
 import { Box, Container, Heading, useColorMode } from 'theme-ui'
 import Nav from './nav'
-// import Head from 'next/head'
-// import { Meta } from '@hackclub/components'
+import Head from 'next/head'
+import Meta from '@hackclub/meta'
 
 export default ({
   title,
@@ -39,11 +39,11 @@ export default ({
         ...sx
       }}
     >
-      {/* {includeMeta && (
+      {includeMeta && (
         <Head>
           <Meta title={title} description={desc} image={img} />
         </Head>
-      )} */}
+      )}
       <Container variant="copy">
         <Heading
           as="h1"

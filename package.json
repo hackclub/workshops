@@ -10,10 +10,9 @@
     "build": "yarn run dl && next build",
     "start": "yarn run dev"
   },
-  "engines": {
-    "node": "12.x"
-  },
   "dependencies": {
+    "@hackclub/meta": "^0.1.0-alpha.0",
+    "@hackclub/theme": "^0.1.0-alpha.0",
     "@zeit/next-mdx": "^1.2.0",
     "babel-plugin-emotion": "^10.0.27",
     "download-git-repo": "^3.0.2",
