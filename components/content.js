@@ -1,8 +1,5 @@
-import { memo } from 'react'
 import { BaseStyles } from 'theme-ui'
 import styled from '@emotion/styled'
-
-const areEqual = (prevProps, props) => prevProps.path === props.path
 
 const StyledContent = styled(BaseStyles)`
   font-size: 1.25rem;
@@ -17,7 +14,7 @@ const StyledContent = styled(BaseStyles)`
   }
 `
 
-const Content = ({ path, html }) => (
+const Content = ({ html }) => (
   <StyledContent
     as="article"
     className="docs"
@@ -25,4 +22,4 @@ const Content = ({ path, html }) => (
   />
 )
 
-export default memo(Content, areEqual)
+export default Content
