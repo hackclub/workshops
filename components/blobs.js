@@ -18,7 +18,7 @@ const draw = p5 => {
 
   polygons.forEach((p) => {
     p5.fill(p.col.toRGBACSS())
-    p.smooth(0.05, 0) // 0.05, 0 speed at which it grows/smooths, size that it becomes (0.05 is as close to neutral as possible, below is shrink, above is grow)
+    p.smooth(0.05, 0)
     p5.beginShape()
     p.vertices.forEach((v) => {
       p5.vertex(v.x, v.y)
