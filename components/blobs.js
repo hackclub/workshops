@@ -8,13 +8,23 @@ const Polygon2D = toxi.geom.Polygon2D,
 var polygons = []
 const numVertices = 30
 
+const getCanvasSize = () => {
+  const navWidth = document.getElementsByTagName('nav')[0].clientWidth
+  const navHeight = document.getElementsByTagName('nav')[0].clientHeight
+  const headerWidth = document.getElementsByTagName('header')[0].clientWidth
+  const headerHeight = document.getElementsByTagName('header')[0].clientHeight
+
+  return { width: navWidth + headerWidth, height: navHeight + headerHeight }
+}
+
 const setup = (p5, canvasParentRef) => {
-  p5.createCanvas(window.innerWidth, window.innerHeight).parent(canvasParentRef)
+  p5.createCanvas(getCanvasSize().width, getCanvasSize().height).parent(canvasParentRef)
   p5.noStroke()
 }
 
 const draw = p5 => {
   p5.background(window.getComputedStyle(document.body).backgroundColor)
+  p5.clear()
 
   polygons.forEach((p) => {
     p5.fill(p.col.toRGBACSS())
