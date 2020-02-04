@@ -35,11 +35,8 @@ const draw = p5 => {
   })
 }
 
-const mousePresssed = p5 => {
-  createPolyAt(p5.mouseX, p5.mouseY)
-}
-
-const touchStarted = p5 => {
+const mousePressed = p5 => {
+  if (p5.event.type != 'touchstart') return true
   createPolyAt(p5.mouseX, p5.mouseY)
 }
 
@@ -67,5 +64,5 @@ function ColoredPolygon(tcolor) {
 ColoredPolygon.prototype = Object.create(Polygon2D.prototype)
 
 export default () => (
-  <Sketch setup={setup} draw={draw} mousePressed={mousePresssed} touchStarted={touchStarted} />
+  <Sketch setup={setup} draw={draw} mousePressed={mousePresssed} />
 )
