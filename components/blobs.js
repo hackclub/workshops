@@ -9,12 +9,10 @@ var polygons = []
 const numVertices = 30
 
 const getCanvasSize = () => {
-  const navWidth = document.getElementsByTagName('nav')[0].clientWidth
   const navHeight = document.getElementsByTagName('nav')[0].clientHeight
-  const headerWidth = document.getElementsByTagName('header')[0].clientWidth
   const headerHeight = document.getElementsByTagName('header')[0].clientHeight
 
-  return { width: navWidth + headerWidth, height: navHeight + headerHeight }
+  return { width: window.innerWidth, height: navHeight + headerHeight }
 }
 
 const setup = (p5, canvasParentRef) => {
