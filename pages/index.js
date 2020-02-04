@@ -1,9 +1,15 @@
+import dynamic from 'next/dynamic'
 import { Button } from 'theme-ui'
 import Header from '../components/header'
 import Listing from '../components/listing'
 
+const Blobs = dynamic(import('../components/blobs'), {
+  ssr: false
+})
+
 export default ({ sections }) => (
   <>
+    <Blobs />
     <Header
       title="Hack Club Workshops"
       desc="Learn to code with this collection of community-contributed, self-guided coding tutorials + ideas."
