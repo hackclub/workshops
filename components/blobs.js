@@ -9,7 +9,7 @@ export default () => {
   var polygons = []
   const numVertices = 30
 
-  const canHover = !(matchMedia('(hover: none)').matches)
+  const canHover = matchMedia("screen and (max-width: 480px)").matches
 
   const setup = (p5, canvasParentRef) => {
     p5.createCanvas(window.innerWidth, window.innerHeight).parent(canvasParentRef)
