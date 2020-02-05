@@ -9,7 +9,7 @@ export default () => {
   var polygons = []
   const numVertices = 30
 
-  const canHover = matchMedia("screen and (max-width: 480px)").matches
+  const isSmallScren = matchMedia("screen and (max-width: 480px)").matches
 
   const setup = (p5, canvasParentRef) => {
     p5.createCanvas(window.innerWidth, window.innerHeight).parent(canvasParentRef)
@@ -41,7 +41,7 @@ export default () => {
   const createPolyAt = (x, y) => {
     const col = ColorRange.BRIGHT.getColor().setAlpha(MathUtils.random(0.5, 0.8))
     const poly = new ColoredPolygon(col)
-    const radius = canHover ? MathUtils.random(30, 300) : MathUtils.random(30, 100)
+    const radius = isSmallScreen ? MathUtils.random(30, 100) : MathUtils.random(30, 300)
 
     for (var i = 0; i < numVertices; i++) {
       poly.add(
