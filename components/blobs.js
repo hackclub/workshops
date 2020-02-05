@@ -9,20 +9,12 @@ const Polygon2D = toxi.geom.Polygon2D,
 var polygons = []
 const numVertices = 30
 
-const getCanvasSize = () => {
-  const navHeight = document.getElementsByTagName('nav')[0].clientHeight
-  const headerHeight = document.getElementsByTagName('header')[0].clientHeight
-
-  return { width: window.innerWidth, height: navHeight + headerHeight }
-}
-
 const setup = (p5, canvasParentRef) => {
   p5.createCanvas(window.innerWidth, window.innerHeight).parent(canvasParentRef)
   p5.noStroke()
 }
 
 const draw = p5 => {
-  //p5.background(window.getComputedStyle(document.body).backgroundColor)
   p5.clear()
 
   polygons.forEach((p) => {
@@ -36,7 +28,7 @@ const draw = p5 => {
   })
 }
 
-const touchStarted = p5 => {
+const mousePressed = p5 => {
   createPolyAt(p5.mouseX, p5.mouseY)
 }
 
@@ -64,5 +56,5 @@ function ColoredPolygon(tcolor) {
 ColoredPolygon.prototype = Object.create(Polygon2D.prototype)
 
 export default () => (
-  <Sketch setup={setup} draw={draw} touchStarted={touchStarted} />
+  <Sketch setup={setup} draw={draw} mousePressed={mousePressed} />
 )
