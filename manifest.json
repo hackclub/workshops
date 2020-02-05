@@ -23,8 +23,7 @@
     "slugs": [
       "nextjs_starter",
       "nextjs_dashboard",
-      "react_hooks",
-      "styled_components"
+      "react_hooks"
     ]
   },
   "pi": {
@@ -40,20 +39,21 @@
   "arduino": {
     "title": "Arduino",
     "description": "Bring projects from cyberspace to the real world with this small hardware platform.",
-    "slugs": ["uno", "blink", "temperature_monitor"]
+    "slugs": [
+      "uno",
+      "blink",
+      "temperature_monitor"
+    ]
   },
   "experimental": {
     "title": "Experimental",
     "description": "As is/no warranty. These workshops haven’t been fully tested yet, so we don’t know just will happen if you try building things with them.",
     "slugs": [
-      "linux_on_a_stick",
       "twine",
-      "pico_8",
       "pico_8_maze",
       "vigenere_cipher",
       "chrome_extension",
       "wikibot",
-      "webcomponents",
       "hello_bot"
     ]
   },
@@ -62,11 +62,23 @@
     "description": "The odd ones out. Workshops not yet properly categorized.",
     "slugs": [
       "preface",
-      "wishlist",
       "orpheus",
       "feature_extractor",
       "intro_to_ml",
       "that_was_easy"
+    ]
+  },
+  "retired": {
+    "title": "Retired",
+    "description": "These workshops are no longer maintained. They may contain errors and are not recommended for club use. Here be dragons.",
+    "slugs": [
+      "maze",
+      "notes_to_self",
+      "twilio",
+      "rails_notes",
+      "todo_app_using_meanjs",
+      "chat",
+      "ajar"
     ]
   }
 }
