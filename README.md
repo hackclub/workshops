@@ -1,5 +1,5 @@
-# Hackathons
+# Workshops
 
-Prototyping a new [hackathons.hackclub.com](https://hackathons.hackclub.com)
+Prototyping a new [Workshops page](https://workshops.hackclub.com)
 
 MIT License
