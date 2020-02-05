@@ -1,5 +1,6 @@
 import Sketch from 'react-p5'
 import toxi from 'toxiclibsjs'
+import theme from '@hackclub/theme'
 
 const Polygon2D = toxi.geom.Polygon2D,
   Vec2D = toxi.geom.Vec2D,
@@ -21,7 +22,7 @@ const setup = (p5, canvasParentRef) => {
 }
 
 const draw = p5 => {
-  p5.background(window.getComputedStyle(document.body).backgroundColor)
+  //p5.background(window.getComputedStyle(document.body).backgroundColor)
   p5.clear()
 
   polygons.forEach((p) => {

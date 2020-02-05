@@ -1,31 +1,29 @@
 import dynamic from 'next/dynamic'
-import { Button } from 'theme-ui'
+import theme from '@hackclub/theme'
+import { Button, useColorMode } from 'theme-ui'
 import Header from '../components/header'
 import Listing from '../components/listing'
 import styled from '@emotion/styled'
 
-const Blobs = dynamic(import('../components/blobs'), {
-  ssr: false
-})
+export default ({ sections }) => {
+  const Blobs = dynamic(import('../components/blobs'), {
+    ssr: false
+  })
 
-const Wrapper = styled.div`
-  position: relative;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  margin-top: -25rem;
+  const [mode] = useColorMode()
+
+  const Wrapper = styled.div`
+    z-index: -100;
+    position: fixed;
+    background-color: ${mode === 'dark' ? theme.colors.darkless : theme.colors.sheet}
 `
 
-const StyledBlobs = styled(Blobs)`
-  z-index: 0;
-  top: 0;
-  left: 0;
-`
+  return (
+    <>
+      <Wrapper>
+        <Blobs />
+      </Wrapper>
 
-export default ({ sections }) => (
-  <>
-    <StyledBlobs />
-    <Wrapper>
       <Header
         title="Hack Club Workshops"
         desc="Learn to code with this collection of community-contributed, self-guided coding tutorials + ideas."
@@ -44,12 +42,13 @@ export default ({ sections }) => (
           Our Philosophy »
         </Button>
       </Header>
-    </Wrapper>
-    {sections.map(({ key, ...section }) => (
-      <Listing key={key} id={key} {...section} />
-    ))}
-  </>
-)
+
+      {sections.map(({ key, ...section }) => (
+        <Listing key={key} id={key} {...section} />
+      ))}
+    </>
+  )
+}
 
 export const unstable_getStaticProps = async () => {
   const { getWorkshopSections } = require('../lib/data')
