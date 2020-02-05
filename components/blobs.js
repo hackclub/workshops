@@ -54,7 +54,7 @@ export default () => {
     polygons.push(poly)
   }
 
-  const ColoredPolygon = tcolor => {
+  function ColoredPolygon(tcolor) {
     Polygon2D.call(this)
     this.col = tcolor
   }

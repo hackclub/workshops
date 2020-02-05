@@ -4,9 +4,7 @@ import { Button, useColorMode } from 'theme-ui'
 import Header from '../components/header'
 import Listing from '../components/listing'
 import styled from '@emotion/styled'
-const Blobs = dynamic(import('../components/blobs'), {
-  ssr: false
-})
+const Blobs = dynamic(import('../components/blobs'), { ssr: false })
 
 export default ({ sections }) => {
   const [mode] = useColorMode()
