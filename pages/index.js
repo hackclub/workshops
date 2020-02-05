@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import { Box, Button, useColorMode } from 'theme-ui'
+import { Box, Button } from 'theme-ui'
 import Header from '../components/header'
 import Listing from '../components/listing'
 
