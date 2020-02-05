@@ -25,6 +25,7 @@ const Page = ({ slug, data, html }) => {
           href={data.editUrl}
           target="_blank"
           rel="noopener noreferrer"
+          sx={{ marginY: '2rem' }}
         >
           Edit this page on GitHub
         </Button>
