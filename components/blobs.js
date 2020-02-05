@@ -6,10 +6,10 @@ export default () => {
     Vec2D = toxi.geom.Vec2D,
     ColorRange = toxi.color.ColorRange,
     MathUtils = toxi.math.MathUtils
-  var polygons = []
+  let polygons = []
   const numVertices = 30
 
-  const isSmallScreen = matchMedia("screen and (max-width: 480px)").matches
+  const isSmallScreen = matchMedia('screen and (max-width: 480px)').matches
 
   const setup = (p5, canvasParentRef) => {
     p5.createCanvas(window.innerWidth, window.innerHeight).parent(canvasParentRef)
@@ -43,7 +43,7 @@ export default () => {
     const poly = new ColoredPolygon(col)
     const radius = isSmallScreen ? MathUtils.random(30, 100) : MathUtils.random(30, 300)
 
-    for (var i = 0; i < numVertices; i++) {
+    for (let i = 0; i < numVertices; i++) {
       poly.add(
         Vec2D.fromTheta((i / numVertices) * MathUtils.TWO_PI)
           .scaleSelf(MathUtils.random(0.2, 1) * radius)
