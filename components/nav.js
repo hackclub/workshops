@@ -102,7 +102,7 @@ export default ({ material = false }) => {
   const back = !home && router.pathname !== '/conduct'
   const Background = material ? Material : Box
   return (
-    <Background as="nav" colorMode={mode} sx={{ bg: 'sheet', py: 3 }}>
+    <Background as="nav" colorMode={mode} sx={{ py: 3 }}>
       <Container
         sx={{
           display: 'flex',

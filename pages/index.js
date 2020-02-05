@@ -1,13 +1,19 @@
-import { Button } from 'theme-ui'
+import dynamic from 'next/dynamic'
+import { Box, Button } from 'theme-ui'
 import Header from '../components/header'
 import Listing from '../components/listing'
 
+const Blobs = dynamic(import('../components/blobs'), { ssr: false })
+
 export default ({ sections }) => (
   <>
+    <Box sx={{ zIndex: -1, position: 'fixed', bg: 'sheet' }}>
+      <Blobs />
+    </Box>
     <Header
       title="Hack Club Workshops"
       desc="Learn to code with this collection of community-contributed, self-guided coding tutorials + ideas."
-      sx={{ mb: 0 }}
+      sx={{ mb: 0, bg: 'transparent' }}
     >
       <Button
         as="a"
