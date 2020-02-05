@@ -41,6 +41,7 @@ export default ({
     >
       {includeMeta && (
         <Head>
+          <title>{title}</title>
           <Meta title={title} description={desc} image={img} />
         </Head>
       )}
