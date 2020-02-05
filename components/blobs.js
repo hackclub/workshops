@@ -12,18 +12,20 @@ export default () => {
   const isSmallScreen = matchMedia('screen and (max-width: 480px)').matches
 
   const setup = (p5, canvasParentRef) => {
-    p5.createCanvas(window.innerWidth, window.innerHeight).parent(canvasParentRef)
+    p5.createCanvas(window.innerWidth, window.innerHeight).parent(
+      canvasParentRef
+    )
     p5.noStroke()
   }
 
   const draw = p5 => {
     p5.clear()
 
-    polygons.forEach((p) => {
+    polygons.forEach(p => {
       p5.fill(p.col.toRGBACSS())
       p.smooth(0.05, 0)
       p5.beginShape()
-      p.vertices.forEach((v) => {
+      p.vertices.forEach(v => {
         p5.vertex(v.x, v.y)
       })
       p5.endShape(toxi.CLOSE)
@@ -39,9 +41,13 @@ export default () => {
   }
 
   const createPolyAt = (x, y) => {
-    const col = ColorRange.BRIGHT.getColor().setAlpha(MathUtils.random(0.5, 0.8))
+    const col = ColorRange.BRIGHT.getColor().setAlpha(
+      MathUtils.random(0.5, 0.8)
+    )
     const poly = new ColoredPolygon(col)
-    const radius = isSmallScreen ? MathUtils.random(30, 100) : MathUtils.random(30, 300)
+    const radius = isSmallScreen
+      ? MathUtils.random(30, 100)
+      : MathUtils.random(30, 300)
 
     for (let i = 0; i < numVertices; i++) {
       poly.add(
@@ -62,6 +68,12 @@ export default () => {
   ColoredPolygon.prototype = Object.create(Polygon2D.prototype)
 
   return (
-    <Sketch setup={setup} draw={draw} mousePressed={mousePressed} windowResized={windowResized} />
+    <Sketch
+      setup={setup}
+      draw={draw}
+      mousePressed={mousePressed}
+      windowResized={windowResized}
+      role="img"
+    />
   )
 }
