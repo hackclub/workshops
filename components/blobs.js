@@ -17,7 +17,7 @@ const getCanvasSize = () => {
 }
 
 const setup = (p5, canvasParentRef) => {
-  p5.createCanvas(getCanvasSize().width, getCanvasSize().height).parent(canvasParentRef)
+  p5.createCanvas(window.innerWidth, window.innerHeight).parent(canvasParentRef)
   p5.noStroke()
 }
 
