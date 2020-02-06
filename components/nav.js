@@ -119,6 +119,8 @@ export default ({ material = false }) => {
         <NavButton
           as="a"
           href="https://github.com/hackclub/workshops"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="View source code on GitHub"
           sx={{ ml: 'auto' }}
         >

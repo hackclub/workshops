@@ -18,6 +18,8 @@ export default ({ sections }) => (
       <Button
         as="a"
         href="https://hackclub.com/philosophy/"
+        target="_blank"
+        rel="noopener noreferrer"
         variant="outline"
         sx={{
           mt: [3, 4],
