@@ -7,7 +7,6 @@
       "find_bigfoot",
       "speak_colors",
       "synth",
-      "thunderstorm",
       "dashboard",
       "geometric_pattern",
       "dodge",
@@ -30,7 +29,6 @@
     "title": "Arduino",
     "description": "Bring projects from cyberspace to the real world with this small hardware platform.",
     "slugs": [
-      "uno",
       "blink",
       "temperature_monitor"
     ]
@@ -39,7 +37,6 @@
     "title": "Experimental",
     "description": "As is/no warranty. These workshops haven’t been fully tested yet, so we don’t know just will happen if you try building things with them.",
     "slugs": [
-      "twine",
       "pico_8_maze",
       "vigenere_cipher",
       "chrome_extension",
