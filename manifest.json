@@ -25,6 +25,14 @@
       "react_hooks"
     ]
   },
+  "ml": {
+    "title": "Machine Learning",
+    "description": "Learn how to make machines learn with these fun projects!",
+    "slugs": [
+      "feature_extractor",
+      "intro_to_ml"
+    ]
+  },
   "arduino": {
     "title": "Arduino",
     "description": "Bring projects from cyberspace to the real world with this small hardware platform.",
@@ -50,8 +58,6 @@
     "slugs": [
       "preface",
       "orpheus",
-      "feature_extractor",
-      "intro_to_ml",
       "that_was_easy"
     ]
   },
