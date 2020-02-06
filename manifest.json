@@ -57,8 +57,7 @@
     "description": "The odd ones out. Workshops not yet properly categorized.",
     "slugs": [
       "preface",
-      "orpheus",
-      "that_was_easy"
+      "orpheus"
     ]
   },
   "retired": {
