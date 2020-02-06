@@ -26,16 +26,6 @@
       "react_hooks"
     ]
   },
-  "pi": {
-    "title": "Pi",
-    "description": "Start building projects on the coolest credit card-sized computer.",
-    "slugs": [
-      "intro_to_raspi",
-      "choose_your_pi",
-      "remote_viewing_raspi",
-      "control_an_led"
-    ]
-  },
   "arduino": {
     "title": "Arduino",
     "description": "Bring projects from cyberspace to the real world with this small hardware platform.",
