@@ -1,19 +1,39 @@
 {
   "starters": {
     "title": "Start here",
-    "description": "Set out on your journey by building your own website, then move on to multiplayer games and collaborative web apps.",
+    "description": "Set out on your journey by building your first website followed by building fun, exciting things with this collection of endlessly-expandable mini-workshops.",
     "slugs": [
       "personal_website",
+      "speak_colors"
+    ]
+  },
+  "javascript": {
+    "title": "JavaScript",
+    "description": "Learn how to build cool things on the web!",
+    "slugs": [
       "find_bigfoot",
-      "speak_colors",
       "synth",
       "dashboard",
       "geometric_pattern",
-      "dodge",
-      "platformer",
       "collaborative_sketch",
       "tree_machine",
-      "julia_fractals"
+      "julia_fractals",
+      "chrome_extension",
+      "wikibot",
+      "hello_bot",
+      "twilio",
+      "todo_app_using_meanjs",
+      "chat"
+    ]
+  },
+  "games": {
+    "title": "Games",
+    "description": "gaaaaaames",
+    "slugs": [
+      "dodge",
+      "platformer",
+      "maze",
+      "pico_8_maze"
     ]
   },
   "react": {
@@ -23,6 +43,13 @@
       "nextjs_starter",
       "nextjs_dashboard",
       "react_hooks"
+    ]
+  },
+  "rails": {
+    "title": "Ruby on Rails",
+    "description": "Learn to easily build complex web apps with Rails.",
+    "slugs": [
+      "rails_notes"
     ]
   },
   "ml": {
@@ -41,36 +68,13 @@
       "temperature_monitor"
     ]
   },
-  "experimental": {
-    "title": "Experimental",
-    "description": "As is/no warranty. These workshops haven’t been fully tested yet, so we don’t know just will happen if you try building things with them.",
-    "slugs": [
-      "pico_8_maze",
-      "vigenere_cipher",
-      "chrome_extension",
-      "wikibot",
-      "hello_bot"
-    ]
-  },
   "misc": {
     "title": "Miscellaneous",
-    "description": "The odd ones out. Workshops not yet properly categorized.",
+    "description": "The odd ones out. Workshops that don't quite fit into any category.",
     "slugs": [
       "preface",
-      "orpheus"
-    ]
-  },
-  "retired": {
-    "title": "Retired",
-    "description": "These workshops are no longer maintained. They may contain errors and are not recommended for club use. Here be dragons.",
-    "slugs": [
-      "maze",
-      "notes_to_self",
-      "twilio",
-      "rails_notes",
-      "todo_app_using_meanjs",
-      "chat",
-      "ajar"
+      "orpheus",
+      "vigenere_cipher"
     ]
   }
 }
