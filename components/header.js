@@ -17,7 +17,9 @@ export default ({
     const shades = mode === 'dark' ? [0.5, 0.75] : [0.125, 0.25]
     sx = {
       ...sx,
-      backgroundImage: `linear-gradient(rgba(0,0,0,${shades[0]}), rgba(0,0,0,${shades[1]})),
+      backgroundImage: `linear-gradient(rgba(0,0,0,${shades[0]}), rgba(0,0,0,${
+        shades[1]
+      })),
         url('${bgImg}')`,
       backgroundSize: 'cover',
       textShadow: 'text',

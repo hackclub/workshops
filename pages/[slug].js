@@ -37,7 +37,8 @@ const Page = ({ slug, data, html }) => {
 export const unstable_getStaticPaths = () => {
   const { getWorkshopSlugs } = require('../lib/data')
   const slugs = getWorkshopSlugs()
-  return map(slugs, slug => ({ params: { slug } }))
+  const paths = map(slugs, slug => ({ params: { slug } }))
+  return { paths }
 }
 
 export const unstable_getStaticProps = async ({ params }) => {

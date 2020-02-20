@@ -21,7 +21,9 @@ export default ({ title, description, workshops, ...props }) => (
     as="section"
     sx={{
       backgroundImage: theme =>
-        `linear-gradient(to bottom, ${theme.colors.sheet}, ${theme.colors.sunken})`,
+        `linear-gradient(to bottom, ${theme.colors.sheet}, ${
+          theme.colors.sunken
+        })`,
       py: [4, 5],
       color: 'text'
     }}
