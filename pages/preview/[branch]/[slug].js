@@ -29,7 +29,7 @@ Page.getInitialProps = async req => {
   const { getWorkshopData } = require('../../../lib/data')
   const { branch, slug } = req.query
   const md = await getRawFileFromRepo(`workshops/${slug}/README.md`, branch)
-  const { data, html } = await getWorkshopData(slug, md)
+  const { data, html } = await getWorkshopData(slug, md, branch)
   return { slug, data, html }
 }
 
