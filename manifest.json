@@ -32,8 +32,7 @@
     "description": "Learn to use one of the most popular JavaScript frameworks on the web.",
     "slugs": [
       "nextjs_starter",
-      "nextjs_dashboard",
-      "react_hooks"
+      "nextjs_dashboard"
     ]
   },
   "ml": {
@@ -69,19 +68,6 @@
     "slugs": [
       "preface",
       "orpheus"
-    ]
-  },
-  "retired": {
-    "title": "Retired",
-    "description": "These workshops are no longer maintained. They may contain errors and are not recommended for club use. Here be dragons.",
-    "slugs": [
-      "maze",
-      "notes_to_self",
-      "twilio",
-      "rails_notes",
-      "todo_app_using_meanjs",
-      "chat",
-      "ajar"
     ]
   }
 }
