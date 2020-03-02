@@ -6,7 +6,7 @@ const WorkshopCard = ({ slug, name, description, section }) => (
     <Card
       as="a"
       variant="interactive"
-      sx={{ color: 'text', textDecoration: 'none', p: [0, 0], lineHeight: 0 }}
+      sx={{ color: 'text', textDecoration: 'none', p: [0, 0], lineHeight: 0, display: 'flex', flexDirection: 'column' }}
     >
       <Box sx={{ p: 3, lineHeight: 'body' }}>
         <Heading as="h3" sx={{ my: 1 }}>
@@ -18,7 +18,7 @@ const WorkshopCard = ({ slug, name, description, section }) => (
         <Image
           alt="Demo"
           src={`/content/workshops/${slug}/img/demo.png`}
-          sx={{ width: '100%' }}
+          sx={{ width: '100%', mt: 'auto' }}
         />
       }
     </Card>
