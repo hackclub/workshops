@@ -1,22 +1,31 @@
-import { Box, Container, Heading, Text, Grid, Card } from 'theme-ui'
+import { Box, Container, Heading, Text, Grid, Card, Image } from 'theme-ui'
 import Link from 'next/link'
 
-const WorkshopCard = ({ slug, name, description }) => (
+const WorkshopCard = ({ slug, name, description, section }) => (
   <Link href={`/${slug}`} passHref>
     <Card
       as="a"
       variant="interactive"
-      sx={{ color: 'text', textDecoration: 'none', p: [3, 3] }}
+      sx={{ color: 'text', textDecoration: 'none', p: [0, 0], lineHeight: 0 }}
     >
-      <Heading as="h3" sx={{ my: 1 }}>
-        {name}
-      </Heading>
-      <Text variant="caption">{description}</Text>
+      <Box sx={{ p: 3, lineHeight: 'body' }}>
+        <Heading as="h3" sx={{ my: 1 }}>
+          {name}
+        </Heading>
+        <Text variant="caption">{description}</Text>
+      </Box>
+      {(section === 'new' || section === 'starters') &&
+        <Image
+          alt="Demo"
+          src={`/content/workshops/${slug}/img/demo.png`}
+          sx={{ width: '100%' }}
+        />
+      }
     </Card>
   </Link>
 )
 
-export default ({ title, description, workshops, ...props }) => (
+export default ({ id, title, description, workshops, ...props }) => (
   <Box
     as="section"
     sx={{
@@ -44,7 +53,7 @@ export default ({ title, description, workshops, ...props }) => (
         }}
       >
         {workshops.map(workshop => (
-          <WorkshopCard key={workshop.slug} {...workshop} />
+          <WorkshopCard key={workshop.slug} section={id} {...workshop} />
         ))}
       </Grid>
     </Container>
