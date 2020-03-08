@@ -13,6 +13,8 @@ export default ({ sections }) => (
     <Header
       title="Hack Club Workshops"
       desc="Learn to code with this collection of community-contributed, self-guided coding tutorials + ideas."
+      img="https://workshops.hackclub.com/card.png"
+      includeMeta
       sx={{ mb: 0, bg: 'transparent' }}
     >
       <Button
