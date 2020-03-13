@@ -1,4 +1,6 @@
 import { Container, Flex, Avatar, Text } from 'theme-ui'
+import Head from 'next/head'
+import Meta from '@hackclub/meta'
 import Header from '../components/header'
 import { Styled as Content } from '../components/content'
 import Signature from '../components/signature'
@@ -6,11 +8,18 @@ import ForceTheme from '../components/force-theme'
 
 <ForceTheme theme="dark" />
 
+<Head>
+  <title>COVID-19 – Hack Club</title>
+  <Meta
+    title="COVID-19"
+    desc="An update from Hack Club HQ on events. Written 2020-03-12 by Zach Latta."
+    img="https://workshop-cards.hackclub.com/COVID-19.png?theme=dark&brand=HQ&fontSize=275px&caption=our%20official%20recommendations"
+  />
+</Head>
+
 <Header
   title="COVID-19"
   desc={<>An update from Hack Club HQ on events.<br />Written 2020-03-12.</>}
-  img="https://workshop-cards.hackclub.com/COVID-19.png?theme=dark&brand=HQ&fontSize=275px&caption=our%20official%20recommendations"
-  includeMeta
   sx={{ mb: 0, bg: 'transparent', span: { color: 'muted' } }}
 >
   <Flex
