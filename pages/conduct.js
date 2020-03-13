@@ -19,7 +19,7 @@ const Page = ({ html }) => (
   </>
 )
 
-export const unstable_getStaticProps = async () => {
+export const getStaticProps = async () => {
   const { getConductHtml } = require('../lib/data')
   const html = await getConductHtml()
   return { props: { html } }

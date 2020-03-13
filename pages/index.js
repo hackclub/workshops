@@ -38,7 +38,7 @@ export default ({ sections }) => (
   </>
 )
 
-export const unstable_getStaticProps = async () => {
+export const getStaticProps = async () => {
   const { getWorkshopSections } = require('../lib/data')
   const sections = await getWorkshopSections()
   return { props: { sections } }

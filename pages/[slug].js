@@ -34,14 +34,14 @@ const Page = ({ slug, data, html }) => {
   )
 }
 
-export const unstable_getStaticPaths = () => {
+export const getStaticPaths = () => {
   const { getWorkshopSlugs } = require('../lib/data')
   const slugs = getWorkshopSlugs()
   const paths = map(slugs, slug => ({ params: { slug } }))
-  return { paths }
+  return { paths, fallback: false }
 }
 
-export const unstable_getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params }) => {
   const { getWorkshopFile, getWorkshopData } = require('../lib/data')
   const { slug } = params
   const md = await getWorkshopFile(slug)
