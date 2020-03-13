@@ -1,0 +1,58 @@
+import { Container, Flex, Avatar, Text } from 'theme-ui'
+import Header from '../components/header'
+import { Name } from '../components/authors'
+import { Styled as Content } from '../components/content'
+import Signature from '../components/signature'
+import ForceTheme from '../components/force-theme'
+
+<ForceTheme theme="dark" />
+
+<Header
+  title="COVID-19"
+  desc="An update from Hack Club HQ on events. Written 2020-03-12."
+  img="https://workshop-cards.hackclub.com/COVID-19.png?theme=dark&brand=HQ&fontSize=275px&caption=our%20official%20recommendations"
+  includeMeta
+  sx={{ mb: 0, bg: 'transparent', span: { color: 'muted' } }}
+>
+  <Flex
+    as="a"
+    href="https://app.slack.com/team/U0266FRGP"
+    target="_blank"
+    title="Message @zrl on Slack"
+    sx={{ alignItems: 'center', justifyContent: 'center', textDecoration: 'none', mt: 3 }}
+  >
+    <Avatar src="http://github.com/ZachLatta.png" size={32} alt="Zach" />
+    <Text as="span" sx={{ fontSize: [1, 2], color: 'muted', ml: 2 }}>@zrl</Text>
+  </Flex>
+</Header>
+
+<Container as={Content} variant="copy">
+
+This is a very difficult message for me to write and I want to get straight to the point: **Hack Club HQ is making the official recommendation to postpone all events slated to happen in March, April, and May**.
+
+- If you are running a hackathon in March, April, or May, we are officially recommending that you work with your team to postpone it ASAP.
+- Over the next few days, you and your team should identify a new month for your event. We are recommending August at the earliest.
+- By early next week, the first emails to your venue, sponsors, and attendees should go out. We are providing language to help with these emails.
+
+We have assembled some resources we’ve shared on Slack to serve as a guide in working with your teams to postpone, particularly when it comes to communicating to sponsors and making sure they don’t withdraw their support. All of @staff will also be on call in #hackathon-organizers to assist in the weeks to come.
+
+COVID-19 has passed the point of containment and now **necessitates decisive action on all levels**—including communities like Hack Club. While most who contract it become only mildly ill, it is extremely deadly for the elderly and people with chronic health problems. For young people like us who are low risk, we can still contract and spread it, which threatens those who are at higher risk. All of us have a stake in this and need to be part of the solution.
+
+Our hearts break with you in this moment. Hackathons changed my life and they have changed many, many lives in this community. Each of you has put in a superhuman effort to make your events happen. We know firsthand how devastating postponement is, but ultimately it’s the right thing to do in this situation. The world needs leadership from people exactly like all of you right now.
+
+We are crossing our fingers that the spread of COVID-19 will slow down in the summer months, which is why we are limiting our recommendation to events happening through May. We will revisit our advice and provide updates as needed in the months to come.
+
+My inbox is open. Please do not hesitate to DM me if I can be of support, though I will be also active in Slack and I’d encourage everyone to make their thinking around this public in #hackathon-organizers so we can all learn and act together.
+
+<Signature />
+
+## Some suggested reading
+
+- https://twitter.com/MarkJHandley/status/1237119688578138112
+- https://docs.google.com/presentation/u/3/d/1uG8g8AW4PEevKSESfnXUaKgH-bi8O-4PVOHBcdPMp9A/edit
+- https://www.facebook.com/gweninvestor/posts/10158147740444169
+- https://slatestarcodex.com/2020/03/02/coronavirus-links-speculation-open-thread/
+
+![Graph of coronavirus spread in each country](https://lh3.googleusercontent.com/uuzKObbvkWHRCwRMwWXJzgXvFGnrcseNcMM31n4FV40S177j4lda4gyzp35g2eFrvntZvZrNxnP1c058csPAXupYKBmKsrqOKqssaXkc_HfWS9-kwBtfoI9OD9xJWuSrjg)
+
+</Container>

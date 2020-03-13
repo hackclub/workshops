@@ -99,7 +99,7 @@ export default ({ material = false }) => {
   const [mode] = useColorMode()
   const router = useRouter()
   const home = router.pathname === '/'
-  const back = !home && router.pathname !== '/conduct'
+  const back = !home && !['/conduct', '/covid19'].includes(router.pathname)
   const Background = material ? Material : Box
   return (
     <Background as="nav" colorMode={mode} sx={{ py: 3 }}>
@@ -116,17 +116,21 @@ export default ({ material = false }) => {
         }}
       >
         {back ? <BackButton text="All Workshops" /> : <Flag sx={{ mt: -3 }} />}
-        <NavButton
-          as="a"
-          href="https://github.com/hackclub/workshops"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="View source code on GitHub"
-          sx={{ ml: 'auto' }}
-        >
-          <GitHub size={24} />
-        </NavButton>
-        <ColorSwitcher />
+        {router.pathname !== '/covid19' && (
+          <>
+            <NavButton
+              as="a"
+              href="https://github.com/hackclub/workshops"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View source code on GitHub"
+              sx={{ ml: 'auto' }}
+            >
+              <GitHub size={24} />
+            </NavButton>
+            <ColorSwitcher />
+          </>
+        )}
       </Container>
     </Background>
   )

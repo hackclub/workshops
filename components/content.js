@@ -1,7 +1,7 @@
 import { BaseStyles } from 'theme-ui'
 import styled from '@emotion/styled'
 
-const StyledContent = styled(BaseStyles)`
+export const Styled = styled(BaseStyles)`
   font-size: 1.25rem;
 
   a {
@@ -15,7 +15,7 @@ const StyledContent = styled(BaseStyles)`
 `
 
 const Content = ({ html }) => (
-  <StyledContent
+  <Styled
     as="article"
     className="docs"
     dangerouslySetInnerHTML={{ __html: html }}
