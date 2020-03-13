@@ -4,6 +4,7 @@ import Error from 'next/error'
 import Header from '../components/header'
 import Authors from '../components/authors'
 import Content from '../components/content'
+import Footer from '../components/footer'
 
 const Page = ({ slug, data, html }) => {
   if (!slug || !data) return <Error statusCode={404} />
@@ -30,6 +31,7 @@ const Page = ({ slug, data, html }) => {
           Edit this page on GitHub
         </Button>
       </Container>
+      <Footer />
     </>
   )
 }

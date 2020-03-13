@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic'
 import { Box, Button } from 'theme-ui'
 import Header from '../components/header'
 import Listing from '../components/listing'
+import Footer from '../components/footer'
 
 const Blobs = dynamic(import('../components/blobs'), { ssr: false })
 
@@ -35,6 +36,7 @@ export default ({ sections }) => (
     {sections.map(({ key, ...section }) => (
       <Listing key={key} id={key} {...section} />
     ))}
+    <Footer />
   </>
 )
 
