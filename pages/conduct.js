@@ -11,7 +11,7 @@ const Page = ({ html }) => (
         'Code of Conduct'
       )}.png`}
       includeMeta
-      sx={{ mb: 0 }}
+      sx={{ bg: 'transparent', mb: 0 }}
     />
     <Container variant="copy" sx={{ py: [3, 4] }}>
       <Content html={html} />
