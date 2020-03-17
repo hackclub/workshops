@@ -97,9 +97,10 @@ const ColorSwitcher = props => {
 
 export default ({ material = false }) => {
   const [mode] = useColorMode()
-  const router = useRouter()
-  const home = router.pathname === '/'
-  const back = !home && !['/conduct', '/covid19'].includes(router.pathname)
+  const { pathname } = useRouter()
+  const home = pathname === '/'
+  const standalone = ['/banner', '/conduct', '/covid19'].includes(pathname)
+  const back = !home && !standalone
   const Background = material ? Material : Box
   return (
     <Background as="nav" colorMode={mode} sx={{ py: 3 }}>
@@ -116,7 +117,7 @@ export default ({ material = false }) => {
         }}
       >
         {back ? <BackButton text="All Workshops" /> : <Flag sx={{ mt: -3 }} />}
-        {router.pathname !== '/covid19' && (
+        {!standalone && (
           <>
             <NavButton
               as="a"

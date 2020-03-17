@@ -1704,6 +1704,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@hackclub/banner@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@hackclub/banner/-/banner-1.0.1.tgz#10f39c2b8859bb74afcd98f4990bd37be5dceb47"
+  integrity sha512-ABWVNRC5854USnxthVa+mXDQN2axkNu1RxRO5vS87QsfpQncmqTZDEy7V1LKNy9m1An36zLKm4/tPcir/jI8Ow==
+
 "@hackclub/markdown@^0.0.1-alpha.0":
   version "0.0.1-alpha.0"
   resolved "https://registry.yarnpkg.com/@hackclub/markdown/-/markdown-0.0.1-alpha.0.tgz#1dba6422036bf800f1974f2e251c1b6bc20d312f"

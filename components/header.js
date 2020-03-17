@@ -10,6 +10,7 @@ export default ({
   bgImg,
   children,
   includeMeta = false,
+  hideNav = false,
   sx = {}
 }) => {
   const [mode] = useColorMode()
@@ -25,7 +26,7 @@ export default ({
     }
   }
   return [
-    <Nav key="nav" material={!!bgImg} />,
+    hideNav ? null : <Nav key="nav" material={!!bgImg} />,
     <Box
       key="header"
       as="header"
