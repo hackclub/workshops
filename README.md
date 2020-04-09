@@ -1,6 +1,6 @@
 <p align="center"><img width="200px" height="200px" alt="Hack Club icon" src="https://hackclub.com/icon/icon-masked.png"></a>
 <h1 align="center"><a href="https://workshops.hackclub.com/">Hack Club Workshops</a></h1>
-<p align="center"><i>A set of high-quality coding tutorials for Hack Club meetings..</i></p>
+<p align="center"><i>A set of high-quality coding tutorials for Hack Club meetings.</i></p>
 
 ### Introduction
 
