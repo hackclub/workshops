@@ -13,7 +13,7 @@ export default ({ sections }) => (
     </Box>
     <Header
       title="Hack Club Workshops"
-      desc="Learn to code with this collection of community-contributed, self-guided coding tutorials + ideas."
+      desc="This is a test of a feature branch."
       img="https://workshops.hackclub.com/card.png"
       includeMeta
       sx={{ mb: 0, bg: 'transparent' }}
