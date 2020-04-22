@@ -16,7 +16,7 @@ const Material = styled(Box)`
   top: 0;
   left: 0;
   right: 0;
-  ${props =>
+  ${(props) =>
     props.colorMode === 'dark'
       ? `
          background-color: rgba(0, 0, 0, 0.875);
@@ -39,14 +39,14 @@ const Material = styled(Box)`
 
 const Flag = () => (
   <A
-    href="https://hackclub.com"
+    href="https://hackclub.com/"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Hack Club homepage"
-    sx={{ mt: -3 }}
+    sx={{ mt: -3, lineHeight: 0 }}
   >
     <Image
-      src="https://hackclub.com/orpheus_flag.svg"
+      src="https://assets.hackclub.com/flag-orpheus-top.svg"
       alt="Hack Club flag"
       sx={{ width: [96, 128] }}
     />
@@ -82,7 +82,7 @@ const BackButton = ({ to = '/', text = 'Back' }) => (
   </Link>
 )
 
-const ColorSwitcher = props => {
+const ColorSwitcher = (props) => {
   const [mode, setMode] = useColorMode()
   return (
     <NavButton
