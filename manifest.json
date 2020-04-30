@@ -4,20 +4,35 @@
     "description": "Set out on your journey by building your own website, then move on to multiplayer games and collaborative web apps.",
     "slugs": [
       "personal_website",
-      "find_bigfoot",
       "colorful_grammar",
       "splatter_paint",
       "speak_colors",
-      "synth",
       "sound_galaxy",
-      "dashboard",
       "rick_roll",
+    ]
+  },
+  "web": {
+    "title": "Web development",
+    "description": "Learn how to make things happen on the web, from basic JavaScript to web APIs",
+    "slugs": [
+      "find_bigfoot",
+      "synth",
+      "dashboard",
       "geometric_pattern",
-      "dodge",
-      "platformer",
       "collaborative_sketch",
       "tree_machine",
-      "julia_fractals"
+      "julia_fractals",
+      "wikibot",
+      "hello_bot"
+    ]
+  },
+  "games": {
+    "title": "Games",
+    "description": "Learn to build games, both locally and on the web!",
+    "slugs": [
+      "dodge",
+      "platformer",
+      "pico_8_maze"
     ]
   },
   "react": {
@@ -45,14 +60,11 @@
       "temperature_monitor"
     ]
   },
-  "experimental": {
-    "title": "Experimental",
-    "description": "As is/no warranty. These workshops haven’t been fully tested yet, so we don’t know just will happen if you try building things with them.",
+  "misc": {
+    "title": "Miscellaneous",
+    "description": "Workshops not properly categorized yet.",
     "slugs": [
-      "pico_8_maze",
-      "vigenere_cipher",
-      "wikibot",
-      "hello_bot"
+      "vigenere_cipher"
     ]
   }
 }
