@@ -1,24 +1,17 @@
 {
-  "new": {
-    "title": "New workshops",
-    "description": "The new additions to the Hack Club workshops",
-    "slugs": [
-      "teachable_machine",
-      "splatter_paint",
-      "colorful_grammar",
-      "sound_galaxy",
-      "rick_roll"
-    ]
-  },
   "starters": {
     "title": "Start here",
     "description": "Set out on your journey by building your own website, then move on to multiplayer games and collaborative web apps.",
     "slugs": [
       "personal_website",
       "find_bigfoot",
+      "colorful_grammar",
+      "splatter_paint",
       "speak_colors",
       "synth",
+      "sound_galaxy",
       "dashboard",
+      "rick_roll",
       "geometric_pattern",
       "dodge",
       "platformer",
@@ -39,6 +32,7 @@
     "title": "Machine Learning",
     "description": "Learn how to make machines learn with these fun projects!",
     "slugs": [
+      "teachable_machine",
       "feature_extractor",
       "not_hotdog"
     ]
