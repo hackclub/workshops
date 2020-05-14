@@ -6,6 +6,8 @@ import Authors from '../components/authors'
 import Content from '../components/content'
 import Footer from '../components/footer'
 
+//This is  a comment
+
 const Page = ({ slug, data, html }) => {
   if (!slug || !data) return <Error statusCode={404} />
   return (
@@ -39,7 +41,7 @@ const Page = ({ slug, data, html }) => {
 export const getStaticPaths = () => {
   const { getWorkshopSlugs } = require('../lib/data')
   const slugs = getWorkshopSlugs()
-  const paths = map(slugs, slug => ({ params: { slug } }))
+  const paths = map(slugs, (slug) => ({ params: { slug } }))
   return { paths, fallback: false }
 }
 
