@@ -22,8 +22,7 @@
       "collaborative_sketch",
       "tree_machine",
       "julia_fractals",
-      "wikibot",
-      "hello_bot"
+      "wikibot"
     ]
   },
   "games": {
@@ -64,7 +63,8 @@
     "title": "Miscellaneous",
     "description": "Workshops not properly categorized yet.",
     "slugs": [
-      "vigenere_cipher"
+      "vigenere_cipher",
+      "hello_bot"
     ]
   }
 }
