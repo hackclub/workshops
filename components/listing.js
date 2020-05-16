@@ -14,7 +14,7 @@ const WorkshopCard = ({ slug, name, description, section }) => (
         </Heading>
         <Text variant="caption">{description}</Text>
       </Box>
-      {(section === 'new' || section === 'starters') &&
+      {(section === 'starters' || section === 'web') &&
         <Image
           alt="Demo"
           src={`/content/workshops/${slug}/img/demo.png`}
