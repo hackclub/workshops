@@ -8,18 +8,22 @@ import ForceTheme from '../components/force-theme'
 
 <ForceTheme theme="dark" />
 
-<Head>
-  <title>COVID-19 – Hack Club</title>
-  <Meta
-    title="COVID-19"
-    description="An update from Hack Club HQ on events. Written 2020-03-12 by Zach Latta."
-    image="https://workshop-cards.hackclub.com/COVID-19.png?theme=dark&brand=HQ&fontSize=275px&caption=our%20official%20recommendations"
-  />
-</Head>
+<Meta
+  as={Head}
+  title="COVID-19"
+  description="An update from Hack Club HQ on events. Written 2020-03-12 by Zach Latta."
+  image="https://workshop-cards.hackclub.com/COVID-19.png?theme=dark&brand=HQ&fontSize=275px&caption=our%20official%20recommendations"
+/>
 
 <Header
   title="COVID-19"
-  desc={<>An update from Hack Club HQ on events.<br />Written 2020-03-12.</>}
+  desc={
+    <>
+      An update from Hack Club HQ on events.
+      <br />
+      Written 2020-03-12.
+    </>
+  }
   sx={{ mb: 0, bg: 'transparent', span: { color: 'muted' } }}
 >
   <Flex
@@ -27,10 +31,17 @@ import ForceTheme from '../components/force-theme'
     href="https://app.slack.com/team/U0266FRGP"
     target="_blank"
     title="Message @zrl on Slack"
-    sx={{ alignItems: 'center', justifyContent: 'center', textDecoration: 'none', mt: 3 }}
+    sx={{
+      alignItems: 'center',
+      justifyContent: 'center',
+      textDecoration: 'none',
+      mt: 3
+    }}
   >
     <Avatar src="https://github.com/ZachLatta.png" size={32} alt="Zach" />
-    <Text as="span" sx={{ fontSize: [1, 2], color: 'muted', ml: 2 }}>@zrl</Text>
+    <Text as="span" sx={{ fontSize: [1, 2], color: 'muted', ml: 2 }}>
+      @zrl
+    </Text>
   </Flex>
 </Header>
 
@@ -42,7 +53,7 @@ This is a very difficult message for me to write and I want to get straight to t
 - Over the next few days, you and your team should identify a new month for your event. We are recommending August at the earliest.
 - By early next week, the first emails to your venue, sponsors, and attendees should go out. We are providing language to help with these emails.
 
-We have shared resources with organizers to support communicating postponement and making sure sponsors don't withdraw their support. All of Hack Club's staff will also be on call in the  Slack to support organizers through this difficult moment.
+We have shared resources with organizers to support communicating postponement and making sure sponsors don't withdraw their support. All of Hack Club's staff will also be on call in the Slack to support organizers through this difficult moment.
 
 COVID-19 has passed the point of containment and now **necessitates decisive action on all levels**—including communities like Hack Club. While most who contract it become only mildly ill, it is extremely deadly for the elderly and people with chronic health problems. For young people like us who are mostly low risk, we can still contract and spread it, which threatens those who are at higher risk. All of us have a stake in this and need to be part of the solution.
 

@@ -41,10 +41,7 @@ export default ({
       }}
     >
       {includeMeta && (
-        <Head>
-          <title>{title}</title>
-          <Meta title={title} description={desc} image={img} />
-        </Head>
+        <Meta as={Head} title={title} description={desc} image={img} />
       )}
       <Container variant="copy">
         <Heading
