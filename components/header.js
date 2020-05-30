@@ -33,9 +33,9 @@ export default ({
       sx={{
         bg: 'sheet',
         color: 'text',
-        pt: bgImg ? [6, null, null, null, 6] : [4, null, null, null, 5],
-        pb: [4, 5, null, null, 6],
-        mb: [4, 5, null, null, 6],
+        pt: bgImg ? 6 : 2,
+        pb: bgImg ? [4, 5] : [3, 4],
+        mb: bgImg ? [4, 5] : [3, 4],
         textAlign: 'center',
         ...sx
       }}
