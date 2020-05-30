@@ -99,7 +99,7 @@ export default ({ material = false }) => {
   const [mode] = useColorMode()
   const { pathname } = useRouter()
   const home = pathname === '/'
-  const standalone = ['/banner', '/conduct', '/covid19'].includes(pathname)
+  const standalone = ['/banner', '/conduct', '/covid19', '/transparency-may'].includes(pathname)
   const back = !home && !standalone
   const Background = material ? Material : Box
   return (
