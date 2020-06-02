@@ -1,0 +1,169 @@
+import { Container, Flex, Avatar, Text } from 'theme-ui'
+import Head from 'next/head'
+import Meta from '@hackclub/meta'
+import Header from '../components/header'
+import { Styled as Content } from '../components/content'
+import ForceTheme from '../components/force-theme'
+
+<Meta
+  as={Head}
+  title="May 2020 Transparency Update"
+  description="An update with the latest open finances from Hack Club HQ. Written 2020-05-29 by Zach Latta."
+  image="https://workshop-cards.hackclub.com/Transparency%20Update.png?theme=light&brand=HQ&fontSize=225px&caption=May%202020"
+/>
+
+<Header
+  title="May 2020 Transparency"
+  desc={
+    <>
+      An update with the latest open finances from Hack Club HQ.
+      <br />
+      Written 2020-05-29.
+    </>
+  }
+  sx={{ pb: [3, 4], mb: [3, 4], span: { color: 'muted' } }}
+>
+  <Flex
+    as="a"
+    href="https://app.slack.com/team/U0266FRGP"
+    target="_blank"
+    title="Message @zrl on Slack"
+    sx={{
+      alignItems: 'center',
+      justifyContent: 'center',
+      textDecoration: 'none',
+      mt: 3
+    }}
+  >
+    <Avatar src="https://hackclub.com/team/zach.jpg" size={32} alt="Zach" />
+    <Text as="span" sx={{ fontSize: [1, 2], color: 'muted', ml: 2 }}>
+      @zrl
+    </Text>
+  </Flex>
+</Header>
+
+<Container as={Content} variant="copy" pb={[4, 5]}>
+
+Inspired by [Drew DeVault](https://drewdevault.com/2020/05/15/Status-update.html), this is the first of what will hopefully be many financial snapshots of Hack Club’s spending.
+
+This was calculated from HQ’s export from Hack Club Bank. You can see our full current account at https://bank.hackclub.com/hq/ using Hack Club Bank’s new [Transparency Mode](https://twitter.com/hackclub/status/1262471150963130374).
+
+The following numbers are on a cash basis, meaning they only include transactions that hit our bank account or cards this month. In some cases, there are expenses that we have committed to in May that have not yet hit our accounts, like rent for the space that the team is currently staying in. They also don't include potential transactions from today, the 30th, or the 31st of this month that have not gone through yet.
+
+I've done my best to include as many committed transactions that have not yet hit our accounts at the bottom of the expense breakdown, including [Elon Musk’s $500K gift to Hack Club](https://twitter.com/hackclub/status/1263153557945159680).
+
+Without further ado, here’s a financial snapshot for Hack Club in May 2020:
+
+**Revenue (total $20,621.78):**
+
+- **Donations ($15,621.78)**
+  - $15,000 - Ron Conway
+  - $244.20 - Samuel Escapa
+  - $200 - Tim and Kate Clem
+  - $97.50 - Jake Brownson
+  - $19.30 - David C Farnan-Williams
+  - $10 - Chaleb Pommells
+  - $2 - Hamza bnr Bellucci
+- **Consulting Income ($5,000)**
+  - $5,000 - Think Together
+
+Thank you to all the new donors to Hack Club this month. You make Hack Club possible.
+
+**Expenses ($61,937.14):**
+
+- **People including taxes ($57,625.25)**
+  - $13,333.33 - Christina Asquith
+    - $9,962.34 - Net pay
+    - $3,370.99 - Employee taxes
+    - $1,020 - Employer taxes
+  - $6,666.67 - Chris Walker
+    - $5,268.17 - Net pay
+    - $1,398.50 - Employee taxes
+    - $510 - Employer taxes
+  - $6,500 - Zach Latta
+    - No taxes pre-withdrawn due to 1099, net pay above
+  - $5,166.67 - Max Wofford
+    - No taxes pre-withdrawn due to 1099, net pay above
+  - $4,761.90 - Lachlan Campbell
+    - No taxes pre-withdrawn due to 1099, net pay above
+  - $4,425 - Hack Club India Team
+  - $4,166.67 - Matthew Stanciu
+    - No taxes pre-withdrawn due to 1099, net pay above
+  - $3,500 - Theo Bleier
+    - No taxes pre-withdrawn due to 1099, net pay above
+  - $3,100 - Michael Destefanis
+    - $2,444.13 - Net pay
+    - $655.87 - Employee taxes
+    - $237.15 - Employer taxes
+  - $2,000 - Melody
+  - $1,642.86 - Sean Victory (filled in for Michael during medical leave, this was his final payment + $500 bonus)
+  - $495 - James Click (contactor on AMA video editing, ~$150/each)
+  - $100 - Sammi Brie (contractor on graphic design for Elon AMA)
+- **Hardware Chris Purchased for Simone AMA ($1,201.11)**
+  - $938.08 - Bass Pro
+  - $256.51 - Lowe’s
+  - $6.52 - Amazon
+- **Software ($1,121.31)**
+  - $260.25 - Rippling
+  - $249.90 - Zoom
+  - $184.66 - Airtable
+  - $99 - Zapier
+  - $82.83 - Calendly
+  - $59.99 - LinkedIn Premium
+  - $45 - Figma
+  - $40 - QuickBooks
+  - $39 - Mountain Duck
+  - $26.99 - Dialpad
+  - $14.99 - Castr.io
+  - $9 - Unity
+  - $8.50 - DNSimple
+  - $1.20 - Mailgun
+- **Hack Club Bank ($515.25)**
+  - $207 - Expensify
+  - $181.60 - Earth Class Mail (mail processing service)
+  - $120 - DocuSign
+  - $6.65 - Lob (check printer)
+- **Hosting ($464.81)**
+  - $425.12 - Heroku
+  - $18.50 - Compose.io
+  - $9.11 - Digital Ocean
+  - $6.54 - Linode
+  - $3.50 - Vultr
+  - $2.04 - Backblaze
+- **Food ($434.71)**
+  - $409.78 - Groceries
+  - $24.93 - Staff lunch in Philly
+- **Office ($266.07)**
+  - $207.79 - Standing whiteboard
+  - $42.39 - White noise machine
+  - $15.89 - Kitchen supplies
+  - TODO target
+- **News ($67.94)**
+  - $38.99 - Wall Street Journal
+  - $12.95 - Business Insider
+  - $12 - Stratechery
+  - $4 - New York Times
+- **Minecraft Server ($59)**
+  - $59 - Wholesale Internet
+- **Mail Team ($58)**
+  - $49 - ShipStation
+  - $9 - Aftership
+  - TODO supplies
+- **Misc ($123.69)**
+  - $42.81 - Medicine
+
+Known missing transactions:
+
+- $500,000 donation from Elon Musk
+- $5,000 in rent for May 17th - June 14th (4 weeks) at the Mt. Philo Inn.
+- $1,800 paid to Melody for work done in April and Mrach 2020 (I paid them at the time from my personal account and have not been reimbursed yet)
+- $3,670 paid to Lewis Mudge for rent the 2nd 1/2 April and the first 1/2 of May (place Max and I stayed in). Similarly, I paid Lewis at the time from my personal account and have not yet been reimbursed.
+- ~$100 gas for staff trip to Vermont
+
+Please note: there may be errors in this post. While I have pulled the numbers directly from Hack Club Bank, I did mess around a bit in a spreadsheet and have not double checked my work. I believe that all numbers below are approximately correct.
+
+If you're interested in seeing the Google Sheet I used to calculate the above numbers, you can see it at https://docs.google.com/spreadsheets/d/1UDw7YewsS5wJIVm0Uh5wOGlM2Ddv-kZVrD3QqIypvRQ/edit.
+
+Please note that while the above encompasses all of HQ’s spending, it does not include GitHub grants to clubs, postage bought by Mail Team, or grants made from our internal "Discretionary Fund" to students in need that is funded by Ron Conway.
+
+</Container>
