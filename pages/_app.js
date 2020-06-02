@@ -3,7 +3,7 @@ import NextApp from 'next/app'
 
 import '@hackclub/theme/fonts/reg-ital-bold.css'
 import { ThemeProvider } from 'theme-ui'
-import theme from '@hackclub/theme'
+import theme from '../lib/theme'
 import NProgress from '../components/nprogress'
 
 export default class App extends NextApp {

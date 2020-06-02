@@ -43,7 +43,7 @@ const Flag = () => (
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Hack Club homepage"
-    sx={{ mt: -3, lineHeight: 0 }}
+    sx={{ mt: -3, lineHeight: 0, mr: 'auto' }}
   >
     <Image
       src="https://assets.hackclub.com/flag-orpheus-top.svg"
@@ -53,12 +53,14 @@ const Flag = () => (
   </A>
 )
 
-const NavButton = ({ sx, ...props }) => (
+export const NavButton = ({ color = 'red', sx, ...props }) => (
   <IconButton
     {...props}
     sx={{
-      color: 'red',
+      color,
       borderRadius: 'circle',
+      textDecoration: 'none',
+      mr: [3, 4],
       transition: 'box-shadow .125s ease-in-out',
       ':hover,:focus': {
         boxShadow: '0 0 0 2px',
@@ -74,7 +76,7 @@ const BackButton = ({ to = '/', text = 'Back' }) => (
     <NavButton
       as="a"
       title={to === '/' ? 'Back to homepage' : 'Back'}
-      sx={{ display: 'flex', width: 'auto', pr: 2 }}
+      sx={{ display: 'flex', width: 'auto', pr: 2, mr: 'auto' }}
     >
       <ArrowLeft />
       {text}
@@ -99,11 +101,11 @@ export default ({ material = false }) => {
   const [mode] = useColorMode()
   const { pathname } = useRouter()
   const home = pathname === '/'
-  const standalone = ['/banner', '/conduct', '/covid19', '/transparency-may'].includes(pathname)
+  const standalone = pathname !== '/[slug]'
   const back = !home && !standalone
   const Background = material ? Material : Box
   return (
-    <Background as="nav" colorMode={mode} sx={{ py: 3 }}>
+    <Background as="nav" colorMode={mode} sx={{ bg: 'sheet', py: 3 }}>
       <Container
         sx={{
           display: 'flex',
@@ -111,27 +113,23 @@ export default ({ material = false }) => {
           a: {
             fontSize: 1,
             color: 'primary',
-            textDecoration: 'none',
-            mr: [3, 4]
+            textDecoration: 'none'
           }
         }}
       >
-        {back ? <BackButton text="All Workshops" /> : <Flag sx={{ mt: -3 }} />}
-        {!standalone && (
-          <>
-            <NavButton
-              as="a"
-              href="https://github.com/hackclub/workshops"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View source code on GitHub"
-              sx={{ ml: 'auto' }}
-            >
-              <GitHub size={24} />
-            </NavButton>
-            <ColorSwitcher />
-          </>
+        {back ? <BackButton text="All Workshops" /> : <Flag />}
+        {(home || !standalone) && (
+          <NavButton
+            as="a"
+            href="https://github.com/hackclub/workshops"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View source code on GitHub"
+          >
+            <GitHub size={24} />
+          </NavButton>
         )}
+        <ColorSwitcher />
       </Container>
     </Background>
   )
