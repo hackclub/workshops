@@ -1,5 +1,5 @@
 import { map } from 'lodash'
-import { Box, Container, Heading, Flex } from 'theme-ui'
+import { Box, Container, Heading, Flex, Button } from 'theme-ui'
 import Error from 'next/error'
 import Link from 'next/link'
 import Header from '../../components/header'
@@ -7,7 +7,7 @@ import Authors from '../../components/authors'
 import Issues from '../../components/vip-newsletters'
 import Content from '../../components/content'
 import { NavButton } from '../../components/nav'
-import { HelpCircle } from 'react-feather'
+import { GitHub, HelpCircle } from 'react-feather'
 
 const Page = ({ issues, slug, data, html }) => {
   if (!slug || !data) return <Error statusCode={404} />
@@ -21,6 +21,15 @@ const Page = ({ issues, slug, data, html }) => {
       </Header>
       <Container variant="copy" as="main" pb={4}>
         <Content html={html} />
+        <Button
+          as="a"
+          href={`https://github.com/hackclub/vip-newsletters/blob/master/${slug}/README.md`}
+          variant="outline"
+          sx={{ color: 'muted' }}
+        >
+          <GitHub />
+          View on GitHub
+        </Button>
       </Container>
       <Box as="footer" bg="sheet" pt={[3, 4]} pb={[4, 5]}>
         <Container>

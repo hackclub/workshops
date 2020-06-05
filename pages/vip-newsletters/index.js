@@ -1,4 +1,5 @@
-import { Heading, Container } from 'theme-ui'
+import { Heading, Container, Button } from 'theme-ui'
+import { GitHub } from 'react-feather'
 import Header from '../../components/header'
 import Content from '../../components/content'
 import Issues from '../../components/vip-newsletters'
@@ -15,6 +16,15 @@ const Page = ({ slugs, html }) => (
     <Container variant="copy" py={3}>
       <Heading variant="headline">Recent issues</Heading>
       <Issues issues={slugs} />
+      <Button
+        as="a"
+        href="https://github.com/hackclub/vip-newsletters"
+        variant="outline"
+        sx={{ color: 'muted', mt: 3 }}
+      >
+        <GitHub />
+        View on GitHub
+      </Button>
       <Heading variant="headline" mt={4}>
         About these newsletters
       </Heading>
