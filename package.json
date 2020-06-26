@@ -17,6 +17,7 @@
     "@hackclub/theme": "^0.1.1",
     "@zeit/next-mdx": "^1.2.0",
     "download-git-repo": "^3.0.2",
+    "fathom-client": "^3.0.0",
     "geopattern": "^1.2.3",
     "gray-matter": "^4.0.2",
     "isomorphic-unfetch": "^3.0.0",
