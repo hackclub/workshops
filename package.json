@@ -16,7 +16,7 @@
     "@hackclub/meta": "^1.0.0",
     "@hackclub/theme": "^0.1.1",
     "@mdx-js/loader": "^1.6.6",
-    "@next/mdx": "^1.2.0",
+    "@next/mdx": "^9.4.4",
     "download-git-repo": "^3.0.2",
     "fathom-client": "^3.0.0",
     "geopattern": "^1.2.3",
