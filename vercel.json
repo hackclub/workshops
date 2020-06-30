@@ -1,5 +1,10 @@
 {
-  "version": 2,
   "public": true,
-  "github": { "silent": true }
+  "github": { "silent": true },
+  "rewrites": [
+    {
+      "source": "/workshops/_next/:path*",
+      "destination": "/_next/:path*"
+    }
+  ]
 }
