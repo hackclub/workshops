@@ -1,10 +1,9 @@
-const isProd = process.env.NODE_ENV === 'production'
+const vcUrl = process.env.VERCEL_URL
 const withMDX = require('@next/mdx')({ extension: /\.mdx?$/ })
-console.log('VERCEL URL', process.env.VERCEL_URL)
 module.exports = withMDX({
   experimental: { trailingSlash: true },
   pageExtensions: ['js', 'jsx', 'mdx'],
-  assetPrefix: isProd ? 'https://workshops.hackclub.com' : '',
+  assetPrefix: vcUrl ? `https://${vcUrl}` : '',
   webpack: config => {
     config.node = { fs: 'empty' }
     return config
