@@ -23,7 +23,7 @@ const Page = ({ issues, slug, data, html }) => {
         <Content html={html} />
         <Button
           as="a"
-          href={`https://github.com/hackclub/vip-newsletters/blob/master/${slug}/README.md`}
+          href={`https://github.com/hackclub/vip-newsletters/blob/main/${slug}/README.md`}
           variant="outline"
           sx={{ color: 'muted' }}
         >

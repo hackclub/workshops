@@ -2,8 +2,8 @@ import { Grid, Card, useThemeUI } from 'theme-ui'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-const colors = 'red,orange,yellow,green,cyan,blue'.split(',')
-const getColor = i => colors[(Number(i) % colors.length) - 1]
+const colors = 'red,orange,yellow,green,cyan,blue,purple'.split(',')
+const getColor = i => colors[Number(i - 1) % colors.length]
 
 export default ({ issues, showAbout }) => {
   const { pathname, query } = useRouter()
