@@ -64,7 +64,9 @@
     "description": "Workshops not properly categorized yet.",
     "slugs": [
       "vigenere_cipher",
-      "hello_bot"
+      "hello_bot",
+      "line_following_robot",
+      "web-scraping"
     ]
   }
 }
