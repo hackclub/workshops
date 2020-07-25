@@ -13,7 +13,7 @@ export default () => (
         alignItems: 'center',
         justifyContent: 'center',
         p: { color: 'secondary', fontSize: 2 },
-        a: { color: 'primary' }
+        a: { variant: 'styles.a' }
       }}
     >
       <Footer />
