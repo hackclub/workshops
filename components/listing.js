@@ -18,6 +18,7 @@ const WorkshopCard = ({ slug, name, description, section }) => (
         <Image
           alt="Demo"
           src={`/content/workshops/${slug}/img/demo.png`}
+          loading="lazy"
           sx={{ width: '100%', mt: 'auto' }}
         />
       }
@@ -25,7 +26,7 @@ const WorkshopCard = ({ slug, name, description, section }) => (
   </Link>
 )
 
-export default ({ id, title, description, workshops, ...props }) => (
+const Listing = ({ id, title, description, workshops, ...props }) => (
   <Box
     as="section"
     sx={{
@@ -59,3 +60,5 @@ export default ({ id, title, description, workshops, ...props }) => (
     </Container>
   </Box>
 )
+
+export default Listing
