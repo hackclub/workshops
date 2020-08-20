@@ -6,7 +6,14 @@ const WorkshopCard = ({ slug, name, description, section }) => (
     <Card
       as="a"
       variant="interactive"
-      sx={{ color: 'text', textDecoration: 'none', p: [0, 0], lineHeight: 0, display: 'flex', flexDirection: 'column' }}
+      sx={{
+        color: 'text',
+        textDecoration: 'none',
+        p: [0, 0],
+        lineHeight: 0,
+        display: 'flex',
+        flexDirection: 'column'
+      }}
     >
       <Box sx={{ p: 3, lineHeight: 'body' }}>
         <Heading as="h3" sx={{ my: 1 }}>
@@ -14,14 +21,18 @@ const WorkshopCard = ({ slug, name, description, section }) => (
         </Heading>
         <Text variant="caption">{description}</Text>
       </Box>
-      {(section === 'starters' || section === 'web') &&
+      {(section === 'starters' || section === 'web') && (
         <Image
           alt="Demo"
           src={`/content/workshops/${slug}/img/demo.png`}
           loading="lazy"
-          sx={{ width: '100%', mt: 'auto' }}
+          sx={{
+            width: '100%',
+            mt: 'auto',
+            '@media print': { display: 'none' }
+          }}
         />
-      }
+      )}
     </Card>
   </Link>
 )
@@ -31,11 +42,10 @@ const Listing = ({ id, title, description, workshops, ...props }) => (
     as="section"
     sx={{
       backgroundImage: theme =>
-        `linear-gradient(to bottom, ${theme.colors.sheet}, ${
-          theme.colors.sunken
-        })`,
+        `linear-gradient(to bottom, ${theme.colors.sheet}, ${theme.colors.sunken})`,
       py: [4, 5],
-      color: 'text'
+      color: 'text',
+      '@media print': { background: 'none !important' }
     }}
     {...props}
   >
@@ -50,7 +60,8 @@ const Listing = ({ id, title, description, workshops, ...props }) => (
         gap={[3, 4]}
         columns={[null, 2, 4]}
         sx={{
-          mt: [3, 4]
+          mt: [3, 4],
+          '@media print': { gridTemplateColumns: 'repeat(2,1fr)' }
         }}
       >
         {workshops.map(workshop => (

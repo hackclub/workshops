@@ -8,7 +8,14 @@ const Blobs = dynamic(import('../components/blobs'), { ssr: false })
 
 export default ({ sections }) => (
   <>
-    <Box sx={{ zIndex: -1, position: 'fixed', bg: 'sheet' }}>
+    <Box
+      sx={{
+        zIndex: -1,
+        position: 'fixed',
+        bg: 'sheet',
+        '@media print': { display: 'none' }
+      }}
+    >
       <Blobs />
     </Box>
     <Header
