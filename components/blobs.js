@@ -1,7 +1,7 @@
 import Sketch from 'react-p5'
 import toxi from 'toxiclibsjs'
 
-export default () => {
+const Blobs = () => {
   const Polygon2D = toxi.geom.Polygon2D,
     Vec2D = toxi.geom.Vec2D,
     ColorRange = toxi.color.ColorRange,
@@ -77,3 +77,5 @@ export default () => {
     />
   )
 }
+
+export default Blobs

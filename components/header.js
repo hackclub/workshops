@@ -1,9 +1,10 @@
-import { Box, Container, Heading, useColorMode } from 'theme-ui'
-import Nav from './nav'
+import { Box, Container, Heading, Image, useColorMode } from 'theme-ui'
+import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Meta from '@hackclub/meta'
+import Nav from './nav'
 
-export default ({
+const Header = ({
   title,
   desc,
   img,
@@ -13,6 +14,7 @@ export default ({
   hideNav = false,
   sx = {}
 }) => {
+  const { pathname } = useRouter()
   const [mode] = useColorMode()
   if (bgImg) {
     const shades = mode === 'dark' ? [0.5, 0.75] : [0.125, 0.25]
@@ -28,6 +30,38 @@ export default ({
   return [
     hideNav ? null : <Nav key="nav" material={!!bgImg} />,
     <Box
+      key="print"
+      aria-hidden
+      sx={{
+        display: 'none',
+        mb: 3,
+        '@media print': {
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }
+      }}
+    >
+      <Image
+        src="https://assets.hackclub.com/flag-standalone.svg"
+        width={128}
+        mx={3}
+      />
+      {(pathname === '/' || pathname === '/[slug]') && (
+        <Heading
+          as="h1"
+          variant="subheadline"
+          sx={{
+            textTransform: 'uppercase',
+            letterSpacing: 'subhead',
+            color: 'primary'
+          }}
+        >
+          Workshops
+        </Heading>
+      )}
+    </Box>,
+    <Box
       key="header"
       as="header"
       sx={{
@@ -37,7 +71,15 @@ export default ({
         pb: bgImg ? [4, 5] : [3, 4],
         mb: bgImg ? [4, 5] : [3, 4],
         textAlign: 'center',
-        ...sx
+        ...sx,
+        '@media print': {
+          bg: 'white !important',
+          backgroundImage: 'none',
+          textShadow: 'none',
+          pt: 0,
+          pb: 0,
+          'h1, h2': { color: 'black !important' }
+        }
       }}
     >
       {includeMeta && (
@@ -47,7 +89,7 @@ export default ({
         <Heading
           as="h1"
           variant="title"
-          sx={{ color: 'primary' }}
+          sx={{ color: 'primary', '@media print': { fontSize: 5 } }}
           children={title}
         />
         {desc && (
@@ -63,3 +105,5 @@ export default ({
     </Box>
   ]
 }
+
+export default Header

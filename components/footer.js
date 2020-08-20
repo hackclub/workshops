@@ -1,10 +1,16 @@
 import { Container, Box } from 'theme-ui'
-import Footer from './footer.mdx'
+import Content from './footer.mdx'
 
-export default () => (
+const Footer = () => (
   <Box
     as="footer"
-    sx={{ bg: 'sunken', textAlign: 'center', px: 2, py: [3, 4] }}
+    sx={{
+      bg: 'sunken',
+      textAlign: 'center',
+      px: 2,
+      py: [3, 4],
+      '@media print': { display: 'none' }
+    }}
   >
     <Container
       variant="narrow"
@@ -16,7 +22,9 @@ export default () => (
         a: { variant: 'styles.a' }
       }}
     >
-      <Footer />
+      <Content />
     </Container>
   </Box>
 )
+
+export default Footer

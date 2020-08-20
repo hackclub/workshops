@@ -16,7 +16,7 @@ const Material = styled(Box)`
   top: 0;
   left: 0;
   right: 0;
-  ${(props) =>
+  ${props =>
     props.colorMode === 'dark'
       ? `
          background-color: rgba(0, 0, 0, 0.875);
@@ -84,7 +84,7 @@ const BackButton = ({ to = '/', text = 'Back' }) => (
   </Link>
 )
 
-const ColorSwitcher = (props) => {
+const ColorSwitcher = props => {
   const [mode, setMode] = useColorMode()
   return (
     <NavButton
@@ -97,7 +97,7 @@ const ColorSwitcher = (props) => {
   )
 }
 
-export default ({ material = false }) => {
+const Nav = ({ material = false }) => {
   const [mode] = useColorMode()
   const { pathname } = useRouter()
   const home = pathname === '/'
@@ -105,7 +105,11 @@ export default ({ material = false }) => {
   const back = !home && !standalone
   const Background = material ? Material : Box
   return (
-    <Background as="nav" colorMode={mode} sx={{ bg: 'sheet', py: 3 }}>
+    <Background
+      as="nav"
+      colorMode={mode}
+      sx={{ bg: 'sheet', py: 3, '@media print': { display: 'none' } }}
+    >
       <Container
         sx={{
           display: 'flex',
@@ -134,3 +138,5 @@ export default ({ material = false }) => {
     </Background>
   )
 }
+
+export default Nav
