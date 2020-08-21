@@ -18,7 +18,12 @@ const Authored = ({ name, avatar, url, date, ...props }) => (
         bg: 'sunken',
         fontSize: 2,
         fontWeight: 'body',
-        lineHeight: '36px'
+        lineHeight: '36px',
+        '@media print': {
+          bg: 'transparent',
+          border: 0,
+          fontSize: 1
+        }
       }
     }}
   >

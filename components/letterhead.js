@@ -45,7 +45,8 @@ const Letterhead = ({
           sx={{
             mt: 2,
             fontSize: 1,
-            textDecoration: 'none !important'
+            textDecoration: 'none !important',
+            '@media print': { display: 'none' }
           }}
         >
           <GitHub />
