@@ -1,15 +1,10 @@
-import { Container} from 'theme-ui'
-import Header from '../components/header'
-import { Styled as Content } from '../components/content'
+import Letterhead from '../components/letterhead'
 
-<Header
-  title="Sponsorship"
-  desc="Looking to get hackathon/nonprofit sponsorship from Hack Club? Here’s the rundown."
-  img="https://workshop-cards.hackclub.com/Sponsorship.png?brand=HQ&fontSize=300px"
-  includeMeta
-/>
-
-<Container as={Content} variant="copy" py={3}>
+<Letterhead
+title="Sponsorship"
+desc="Looking to get hackathon/nonprofit sponsorship from Hack Club? Here’s the rundown."
+img="https://workshop-cards.hackclub.com/Sponsorship.png?brand=HQ&fontSize=300px"
+path="sponsorship.mdx">
 
 _(To summarize: we’re a donor-supported nonprofit and don’t provide financial support to hackathons/other nonprofits. However, there are all kinds of ways we’d love to help out your project, so read on.)_
 
@@ -31,4 +26,4 @@ We’re a network of [hundreds](https://hackclub.com/map/) of high school clubs 
 
 Thanks for your interest, and we’re sorry not to be able to make donations. If you’ve got any questions, you can reach us here: <team@hackclub.com>. Best of luck with your project!
 
-</Container>
+</Letterhead>

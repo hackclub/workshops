@@ -1,56 +1,24 @@
-import { Container, Flex, Avatar, Text } from 'theme-ui'
-import Head from 'next/head'
-import Meta from '@hackclub/meta'
-import Header from '../components/header'
-import { Styled as Content } from '../components/content'
-import ForceTheme from '../components/force-theme'
+import Letterhead from '../components/letterhead'
 
-<Meta
-  as={Head}
-  title="May 2020 Transparency Update"
-  description="An update with the latest open finances from Hack Club HQ. Written June 3rd, 2020 by Zach Latta."
-  image="https://workshop-cards.hackclub.com/Transparency%20Update.png?theme=light&brand=HQ&fontSize=225px&caption=May%202020"
-/>
-
-<Header
-  title="May 2020 Transparency"
-  desc={
-    <>
-      An update with the latest open finances from Hack Club HQ.
-      <br />
-      Written 2020-06-03.
-    </>
-  }
-  sx={{ pb: [3, 4], mb: [3, 4], span: { color: 'muted' } }}
->
-  <Flex
-    as="a"
-    href="https://app.slack.com/team/U0266FRGP"
-    target="_blank"
-    title="Message @zrl on Slack"
-    sx={{
-      alignItems: 'center',
-      justifyContent: 'center',
-      textDecoration: 'none',
-      mt: 3
-    }}
-  >
-    <Avatar src="https://hackclub.com/team/zach.jpg" size={32} alt="Zach" />
-    <Text as="span" sx={{ fontSize: [1, 2], color: 'muted', ml: 2 }}>
-      @zrl
-    </Text>
-  </Flex>
-</Header>
-
-<Container as={Content} variant="copy" pb={[4, 5]}>
+<Letterhead
+title="May 2020 Transparency Update"
+desc="An update with the latest open finances from Hack Club HQ."
+img="https://workshop-cards.hackclub.com/Transparency%20Update.png?theme=light&brand=HQ&fontSize=225px&caption=May%202020"
+author={{
+  name: '@zrl',
+  avatar: 'https://hackclub.com/team/zach.jpg',
+  url: 'https://app.slack.com/team/U0266FRGP'
+}}
+date="2020-06-03"
+path="transparency-may.mdx">
 
 In 2014, after dropping out of high school at 16 to become a programmer, I started Hack Club. I had so many questions. How would finances work? How did other organizations get donations? How did they budget and spend their money? How much does it cost to run a program that reaches 1,000 people? What is an appropriate monthly salary for an employee? How much do lawyers and CPAs cost?
 
-For me, learning to program was largely possible because of open source: the code of so much software written by both professionals and hobbyists is available publicly on GitHub. When you see under the hood at how software is made, you learn yourself. But nonprofits don't work that way. They are enigmas to outsiders. While top-level information is available to the public via [IRS Form 990](https://en.wikipedia.org/wiki/Form_990) ([example](https://990s.foundationcenter.org/990_pdf_archive/946/946069890/946069890_201712_990.pdf)), the actual budgets and details of spending are closely guarded secrets—often not even donors, staff members, or board members are privy to how nonprofits spend their money. 
+For me, learning to program was largely possible because of open source: the code of so much software written by both professionals and hobbyists is available publicly on GitHub. When you see under the hood at how software is made, you learn yourself. But nonprofits don't work that way. They are enigmas to outsiders. While top-level information is available to the public via [IRS Form 990](https://en.wikipedia.org/wiki/Form_990) ([example](https://990s.foundationcenter.org/990_pdf_archive/946/946069890/946069890_201712_990.pdf)), the actual budgets and details of spending are closely guarded secrets—often not even donors, staff members, or board members are privy to how nonprofits spend their money.
 
 That lack of transparency creates an ivory tower of nonprofits that is near-impossible enter as an outsider. Since it's impossible to learn from what other organizations are doing, this results in a world where you have to be born into a high-priest class to successfully start a nonprofit and receive major gifts.
 
-We'd like to do things differently at Hack Club.
+We’d like to do things differently at Hack Club.
 
 A totally transparent nonprofit not only shows others how to do it. It also increases accountability. This is a goal of the Liberman family, who have inspired and supported Hack Club's transparency goals over the last year. In 2019, Hack Club won the [Frank Prize](https://grant.frank.ly/) of $1M to support growing Hack Club's programs and to support Hack Club in increasing transparency. Two weeks ago, [we announced we were publicly opening Hack Club's bank account](https://hackclub.com/elon/).
 
@@ -116,6 +84,7 @@ Please note that [Elon Musk also donated $500K this month](https://twitter.com/h
   - $1,642.86 - Sean Victory (filled in for Michael during medical leave, this was his final payment + $500 bonus)
   - $495 - James Click (contractor on AMA video editing, ~$150/each)
   - $100 - Sammi Brie (contractor on graphic design for Elon AMA)
+
 - **Hardware Chris Purchased for Simone and future AMAs ($1,201.11)**
   - $938.08 - Bass Pro
   - $256.51 - Lowe's
@@ -181,10 +150,10 @@ In some cases, there are expenses that we have committed to in May that have not
 
 Please note: there may be errors in this post. While I have pulled the numbers directly from Hack Club Bank, I did mess around a bit in a spreadsheet and have not double checked my work. I believe that all numbers below are approximately correct.
 
-If you're interested in seeing the Google Sheet I used to calculate the above numbers, you can see it at https://docs.google.com/spreadsheets/d/1UDw7YewsS5wJIVm0Uh5wOGlM2Ddv-kZVrD3QqIypvRQ/edit.
+If you’re interested in seeing the Google Sheet I used to calculate the above numbers, you can see it at https://docs.google.com/spreadsheets/d/1UDw7YewsS5wJIVm0Uh5wOGlM2Ddv-kZVrD3QqIypvRQ/edit.
 
 Please note that while the above encompasses all of HQ's spending in our Hack Club Bank account, it does not include GitHub grants to clubs, postage bought by Mail Team, or grants made from our internal "Discretionary Fund" to students in need that is funded by Ron Conway.
 
 _Thanks to Christina, Melody, and Lachlan for their help writing this post._
 
-</Container>
+</Letterhead>

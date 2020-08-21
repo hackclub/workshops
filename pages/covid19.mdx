@@ -1,51 +1,20 @@
-import { Container, Flex, Avatar, Text } from 'theme-ui'
-import Head from 'next/head'
-import Meta from '@hackclub/meta'
-import Header from '../components/header'
-import { Styled as Content } from '../components/content'
+import Letterhead from '../components/letterhead'
 import Signature from '../components/signature'
 import ForceTheme from '../components/force-theme'
 
 <ForceTheme theme="dark" />
 
-<Meta
-  as={Head}
-  title="COVID-19"
-  description="An update from Hack Club HQ on events. Written 2020-03-12 by Zach Latta."
-  image="https://workshop-cards.hackclub.com/COVID-19.png?theme=dark&brand=HQ&fontSize=275px&caption=our%20official%20recommendations"
-/>
-
-<Header
-  title="COVID-19"
-  desc={
-    <>
-      An update from Hack Club HQ on events.
-      <br />
-      Written 2020-03-12.
-    </>
-  }
-  sx={{ span: { color: 'muted' } }}
->
-  <Flex
-    as="a"
-    href="https://app.slack.com/team/U0266FRGP"
-    target="_blank"
-    title="Message @zrl on Slack"
-    sx={{
-      alignItems: 'center',
-      justifyContent: 'center',
-      textDecoration: 'none',
-      mt: 3
-    }}
-  >
-    <Avatar src="https://hackclub.com/team/zach.jpg" size={32} alt="Zach" />
-    <Text as="span" sx={{ fontSize: [1, 2], color: 'muted', ml: 2 }}>
-      @zrl
-    </Text>
-  </Flex>
-</Header>
-
-<Container as={Content} variant="copy" py={3}>
+<Letterhead
+title="COVID-19"
+desc="An update from Hack Club HQ on events."
+img="https://workshop-cards.hackclub.com/COVID-19.png?theme=dark&brand=HQ&fontSize=275px&caption=our%20official%20recommendations"
+author={{
+  name: '@zrl',
+  avatar: 'https://hackclub.com/team/zach.jpg',
+  url: 'https://app.slack.com/team/U0266FRGP'
+}}
+date="2020-03-12"
+path="covid19.mdx">
 
 This is a very difficult message for me to write and I want to get straight to the point: **Hack Club HQ is officially recommending postponing all events slated to happen in March, April, and May**.
 
@@ -78,4 +47,4 @@ Zach Latta ([@zrl](https://app.slack.com/team/U0266FRGP))
 
 [![Graph of coronavirus spread in each country](https://workshops.hackclub.com/covid19.png)](https://twitter.com/MarkJHandley/status/1237119688578138112)
 
-</Container>
+</Letterhead>
