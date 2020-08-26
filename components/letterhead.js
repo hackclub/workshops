@@ -22,7 +22,7 @@ const Letterhead = ({
     {includeMeta && (
       <Meta
         as={Head}
-        title="COVID-19"
+        title={title}
         description={
           author?.name && date
             ? `${desc} Written by ${author.name} on ${date}.`
