@@ -133,7 +133,7 @@ const Nav = ({ material = false }) => {
             <GitHub size={24} />
           </NavButton>
         )}
-        <ColorSwitcher />
+        <ColorSwitcher className="nav-color-switcher"/>
       </Container>
     </Background>
   )
