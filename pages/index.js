@@ -23,7 +23,7 @@ export default ({ sections }) => (
       desc="Learn to code with this collection of community-contributed, self-guided coding tutorials + ideas."
       img="https://workshops.hackclub.com/card.png"
       includeMeta
-      sx={{ mb: 0, bg: 'transparent' }}
+      sx={{ mb: 0, bg: 'transparent', userSelect: 'none' }}
     >
       <Button
         as="a"
