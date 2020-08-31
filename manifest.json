@@ -66,6 +66,7 @@
       "vigenere_cipher",
       "hello_bot",
       "line_following_robot",
+      "pyramid_discord_bot",
       "web_scraping"
     ]
   }
