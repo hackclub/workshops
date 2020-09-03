@@ -108,7 +108,7 @@ const Nav = ({ material = false }) => {
     <Background
       as="nav"
       colorMode={mode}
-      sx={{ bg: 'sheet', py: 3, '@media print': { display: 'none' } }}
+      sx={{ bg: 'none', py: 3, '@media print': { display: 'none' } }}
     >
       <Container
         sx={{
