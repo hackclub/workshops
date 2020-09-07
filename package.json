@@ -21,6 +21,7 @@
     "fathom-client": "^3.0.0",
     "geopattern": "^1.2.3",
     "gray-matter": "^4.0.2",
+    "hls.js": "^0.14.11",
     "lodash": "^4.17.20",
     "next": "^9.5.2",
     "nprogress": "^0.2.0",
