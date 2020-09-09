@@ -97,7 +97,7 @@ const ColorSwitcher = props => {
   )
 }
 
-const Nav = ({ material = false }) => {
+const Nav = ({ material = false, homepage }) => {
   const [mode] = useColorMode()
   const { pathname } = useRouter()
   const home = pathname === '/'
@@ -108,7 +108,7 @@ const Nav = ({ material = false }) => {
     <Background
       as="nav"
       colorMode={mode}
-      sx={{ bg: 'none', py: 3, '@media print': { display: 'none' } }}
+      sx={{ bg: homepage ? 'sheet' : 'none', py: 3, '@media print': { display: 'none' } }}
     >
       <Container
         sx={{

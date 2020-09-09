@@ -12,6 +12,7 @@ const Header = ({
   children,
   includeMeta = false,
   hideNav = false,
+  navBg = true,
   sx = {}
 }) => {
   const { pathname } = useRouter()
@@ -28,7 +29,7 @@ const Header = ({
     }
   }
   return [
-    hideNav ? null : <Nav key="nav" material={!!bgImg} />,
+    hideNav ? null : <Nav key="nav" homepage={navBg} material={!!bgImg} />,
     <Box
       key="print"
       aria-hidden
