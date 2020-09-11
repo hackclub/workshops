@@ -8,8 +8,7 @@
     "dl": "node lib/download.js",
     "dev": "yarn run dl && next",
     "build": "yarn run dl && next build",
-    "start": "yarn run dev",
-    "devserver": "next"
+    "start": "yarn run dev"
   },
   "dependencies": {
     "@hackclub/banner": "^1.0.1",
