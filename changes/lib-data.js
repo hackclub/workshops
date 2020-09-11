@@ -52,6 +52,7 @@ export const getWorkshopSections = () =>
 
 export const getWorkshopData = async (slug, md, branch) => {
   const { content, data } = matter(md)
+  const htmlobj = matter(md)
   const authors = (data?.author || '').includes('@')
     ? data?.author
         .replace('@', '')
@@ -74,6 +75,8 @@ export const getWorkshopData = async (slug, md, branch) => {
     ? `https://raw.githubusercontent.com/hackclub/hackclub/${branch}`
     : '/content'
   const html = await markdownToHtml(content, `workshops/${slug}`, imgPath, true)
+  console.log(typeof content)
+  console.log(typeof html)
   return { data: data, html: content }
 }
 

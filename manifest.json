@@ -25,39 +25,30 @@
       "wikibot"
     ]
   },
+  "python": {
+    "title": "Python",
+    "description": "Learn to use one of the most powerful language for web,automatio,making games and much more.",
+    "slugs": ["selenium"]
+  },
   "games": {
     "title": "Games",
     "description": "Learn to build games, both locally and on the web!",
-    "slugs": [
-      "dodge",
-      "platformer",
-      "pico_8_maze"
-    ]
+    "slugs": ["dodge", "platformer", "pico_8_maze"]
   },
   "react": {
     "title": "React",
     "description": "Learn to use one of the most popular JavaScript frameworks on the web.",
-    "slugs": [
-      "nextjs_starter",
-      "nextjs_dashboard"
-    ]
+    "slugs": ["nextjs_starter", "nextjs_dashboard"]
   },
   "ml": {
     "title": "Machine Learning",
     "description": "Learn how to make machines learn with these fun projects!",
-    "slugs": [
-      "teachable_machine",
-      "feature_extractor",
-      "not_hotdog"
-    ]
+    "slugs": ["teachable_machine", "feature_extractor", "not_hotdog"]
   },
   "arduino": {
     "title": "Arduino",
     "description": "Bring projects from cyberspace to the real world with this small hardware platform.",
-    "slugs": [
-      "blink",
-      "temperature_monitor"
-    ]
+    "slugs": ["blink", "temperature_monitor"]
   },
   "misc": {
     "title": "Miscellaneous",

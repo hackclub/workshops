@@ -20,7 +20,7 @@ const Page = ({ slug, data, html }) => {
         <Authors text={data.author} />
       </Header>
       <Container variant="copy" as="main">
-        <Content html={html} slug={slug} />
+        <Content html={html} />
         <Button
           as="a"
           href={data.editUrl}

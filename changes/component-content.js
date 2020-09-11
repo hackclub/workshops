@@ -9,22 +9,6 @@ export const Styled = styled(BaseStyles)`
   a {
     word-break: break-word;
   }
-  .embed-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-  }
-  .embed-container iframe,
-  .embed-container object,
-  .embed-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
 
   .heading a {
     color: inherit;
@@ -56,13 +40,13 @@ export const Styled = styled(BaseStyles)`
   }
 `
 
-const Content = ({ html, slug }) => (
-  <Styled as="article" className="docs">
-    <ReactMarkdown
-      source={html}
-      escapeHtml={false}
-      transformImageUri={uri => `/content/workshops/${slug}/${uri}`}
-    />
+const Content = ({ html }) => (
+  <Styled
+    as="article"
+    className="docs"
+    //dangerouslySetInnerHTML={{ __html: html }}
+  >
+    <ReactMarkdown source={html} escapeHtml={false} />
   </Styled>
 )
 

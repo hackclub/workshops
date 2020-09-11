@@ -8,7 +8,8 @@
     "dl": "node lib/download.js",
     "dev": "yarn run dl && next",
     "build": "yarn run dl && next build",
-    "start": "yarn run dev"
+    "start": "yarn run dev",
+    "devserver": "next"
   },
   "dependencies": {
     "@hackclub/banner": "^1.0.1",
@@ -27,6 +28,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-feather": "^2.0.8",
+    "react-markdown": "^4.3.1",
     "react-p5": "^1.3.6",
     "theme-ui": "^0.3.1",
     "toxiclibsjs": "^0.3.3"
