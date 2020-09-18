@@ -1,4 +1,11 @@
 {
+  "bounties": {
+    "title": "Workshop Bounties",
+    "description": "Fabulous workshops created by the community during the Workshop Bounty program.",
+    "slugs": [
+      "scrapbook_css"
+    ]
+  },
   "starters": {
     "title": "Start here",
     "description": "Set out on your journey by building your own website, then move on to multiplayer games and collaborative web apps.",
