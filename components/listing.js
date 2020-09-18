@@ -1,7 +1,7 @@
 import { Box, Container, Heading, Text, Grid, Card, Image } from 'theme-ui'
 import Link from 'next/link'
 
-const WorkshopCard = ({ slug, name, description, section }) => (
+const WorkshopCard = ({ slug, name, description, img, section }) => (
   <Link href={`/${slug}`} passHref>
     <Card
       as="a"
@@ -24,7 +24,7 @@ const WorkshopCard = ({ slug, name, description, section }) => (
       {(section === 'starters' || section === 'web') && (
         <Image
           alt="Demo"
-          src={`/content/workshops/${slug}/img/demo.png`}
+          src={(img ? img : `/content/workshops/${slug}/img/demo.png`)}
           loading="lazy"
           sx={{
             width: '100%',
