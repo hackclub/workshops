@@ -24,7 +24,7 @@ const WorkshopCard = ({ slug, name, description, img, section }) => (
       {(section === 'starters' || section === 'web') && (
         <Image
           alt="Demo"
-          src={(img ? img : `/content/workshops/${slug}/img/demo.png`)}
+          src={img || `/content/workshops/${slug}/img/demo.png`}
           loading="lazy"
           sx={{
             width: '100%',
