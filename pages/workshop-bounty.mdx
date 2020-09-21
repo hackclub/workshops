@@ -51,7 +51,7 @@ Submission requirements:
 
 - Workshop that meets all of the "Good workshops" guidelines outlined above
 - 1-2 minute video clip from your test club meeting showing what members built
-- All assets (images, PDFs, and any other binaries) must be hosted using the `#cdn` channel on the Hack Club Slack for posterity and to cut down on repository size
+- All assets (images, PDFs, and any other binaries) must be hosted using the `#cdn` channel on the Hack Club Slack for posterity and to cut down on repository size. Images must include [alt text](https://webaim.org/techniques/alttext/) ([Markdown guide](https://daringfireball.net/projects/markdown/syntax#img)). Code snippets should be included in text (not as screenshots) and preferably [syntax-highlighted](https://docs.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks#syntax-highlighting).
 - All workshops must be in English at native-level proficiency. Phrasing and grammar must be perfect.
 - You must be either a registered Hack Club leader or an active member of the Slack
 
@@ -59,6 +59,16 @@ How to submit:
 
 - Create a pull request to [`hackclub/hackclub`](https://github.com/hackclub/hackclub) on GitHub with a new folder in the [`workshops/`](https://github.com/hackclub/hackclub/tree/main/workshops) directory. Put your workshop in a file named `README.md`.
   - If your workshop is a slideshow or another binary format, export it and upload to the `#cdn` channel on the Hack Club Slack. Then link it from `README.md`.
+  - At the top of the file, include the following metadata (author being your GitHub @username):
+  
+    ```
+    ---
+    name: ‘Sound Galaxy’
+    description: ‘Visualize sound by making particles move in a galaxy’
+    author: ‘@MatthewStanciu’
+    ---
+    ```
+
 - Upload your meeting recording to the `#workshop-skunkworks` channel on Slack. Copy the link to the Slack message and include it in the text of your pull request.
 - Submit! If you have questions about submission, please ask in `#workshop-bounty`
 
