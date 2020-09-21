@@ -25,6 +25,13 @@
       "wikibot"
     ]
   },
+  "bounties": {
+    "title": "Workshop Bounties",
+    "description": "Fabulous community-created workshops from the Workshop Bounty program.",
+    "slugs": [
+      "scrapbook_css"
+    ]
+  },
   "games": {
     "title": "Games",
     "description": "Learn to build games, both locally and on the web!",

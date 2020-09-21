@@ -21,7 +21,7 @@ const WorkshopCard = ({ slug, name, description, img, section }) => (
         </Heading>
         <Text variant="caption">{description}</Text>
       </Box>
-      {(section === 'starters' || section === 'web') && (
+      {(section === 'starters' || section === 'web' || section === 'bounties' ) && (
         <Image
           alt="Demo"
           src={img || `/content/workshops/${slug}/img/demo.png`}
