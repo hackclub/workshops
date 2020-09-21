@@ -75,8 +75,7 @@
       "hello_bot",
       "line_following_robot",
       "pyramid_discord_bot",
-      "web_scraping",
-      "interactive_sketch"
+      "web_scraping"
     ]
   }
 }
