@@ -30,7 +30,8 @@
     "title": "Workshop Bounties",
     "description": "Fabulous community-created workshops from the Workshop Bounty program.",
     "slugs": [
-      "scrapbook_css"
+      "scrapbook_css",
+      "simple_clock"
     ]
   },
   "games": {
