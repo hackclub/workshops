@@ -65,7 +65,8 @@
     "description": "Bring projects from cyberspace to the real world with this small hardware platform.",
     "slugs": [
       "blink",
-      "temperature_monitor"
+      "temperature_monitor",
+      "iotworkshop"
     ]
   },
   "misc": {
