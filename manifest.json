@@ -42,6 +42,13 @@
       "vigenere_cipher"
     ]
   },
+  "react-native": {
+    "title": "React Native",
+    "description": "Make cross-platform native apps with React!",
+    "slugs": [
+      "dicegamereactnative"
+     ]
+  },
   "games": {
     "title": "Games",
     "description": "Learn to build games, both locally and on the web!",
