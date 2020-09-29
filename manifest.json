@@ -34,6 +34,14 @@
       "simple_clock"
     ]
   },
+  "python": {
+    "title": "Python",
+    "description": "Learn to use one of the most powerful and beginner-friendly languages.",
+    "slugs": [
+      "selenium",
+      "vigenere_cipher"
+    ]
+  },
   "games": {
     "title": "Games",
     "description": "Learn to build games, both locally and on the web!",
@@ -74,7 +82,6 @@
     "description": "Workshops not properly categorized yet.",
     "slugs": [
       "personal_website_2",
-      "vigenere_cipher",
       "hello_bot",
       "line_following_robot",
       "pyramid_discord_bot",
