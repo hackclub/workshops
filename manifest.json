@@ -34,6 +34,13 @@
       "simple_clock"
     ]
   },
+  "python": {
+    "title": "Python",
+    "description": "Learn to use one of the most powerful language for web,automatio,making games and much more.",
+    "slugs": [
+      "selenium"
+    ]
+  },
   "games": {
     "title": "Games",
     "description": "Learn to build games, both locally and on the web!",
