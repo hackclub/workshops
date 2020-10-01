@@ -14,7 +14,7 @@ The content lives in [hackclub/hackclub](https://github.com/hackclub/hackclub)â€
 
 The stack: [Next.js](https://nextjs.org) & [Theme UI](https://theme-ui.com), with [Hack Club Theme](https://github.com/hackclub/theme) packages & [Hack Club Markdown](https://github.com/hackclub/markdown).
 
-Stuff you need installed ahead of time:
+Stuff you needed to installed ahead of time:
 
 - Git
 - Yarn
