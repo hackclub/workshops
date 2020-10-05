@@ -23,7 +23,8 @@
       "tree_machine",
       "julia_fractals",
       "wikibot",
-      "hackide"
+      "hackide",
+      "api_canvas"
     ]
   },
   "bounties": {
