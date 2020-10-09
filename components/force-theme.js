@@ -6,7 +6,7 @@ export default ({ theme }) => {
   return (
     <style jsx global>{`
       .nav-color-switcher{
-        display: none;
+        display: none !important;
       }`}
     </style>
   )
