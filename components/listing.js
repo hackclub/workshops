@@ -1,5 +1,6 @@
 import { Box, Container, Heading, Text, Grid, Card, Image } from 'theme-ui'
 import Link from 'next/link'
+import { snakeCase } from 'lodash'
 
 const WorkshopCard = ({ slug, name, description, img, section }) => (
   <Link href={`/${slug}`} passHref>
@@ -40,7 +41,7 @@ const WorkshopCard = ({ slug, name, description, img, section }) => (
 const Listing = ({ id, title, description, workshops, ...props }) => (
   <Box
     as="section"
-    id={(title.toLowerCase().replace(" ", "_"))}
+    id={snakeCase(title)}
     sx={{
       backgroundImage: theme =>
         `linear-gradient(to bottom, ${theme.colors.sheet}, ${theme.colors.sunken})`,
