@@ -31,7 +31,8 @@
     "description": "Fabulous community-created workshops from the Workshop Bounty program.",
     "slugs": [
       "scrapbook_css",
-      "simple_clock"
+      "simple_clock",
+      "tunes"
     ]
   },
   "python": {
