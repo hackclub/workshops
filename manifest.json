@@ -32,7 +32,8 @@
     "slugs": [
       "scrapbook_css",
       "simple_clock",
-      "tunes"
+      "tunes",
+      "robot_emails"
     ]
   },
   "python": {
@@ -42,13 +43,6 @@
       "selenium",
       "vigenere_cipher"
     ]
-  },
-  "react-native": {
-    "title": "React Native",
-    "description": "Make cross-platform native apps with React!",
-    "slugs": [
-      "dicegamereactnative"
-     ]
   },
   "games": {
     "title": "Games",
@@ -61,10 +55,11 @@
   },
   "react": {
     "title": "React",
-    "description": "Learn to use one of the most popular JavaScript frameworks on the web.",
+    "description": "Learn to use one of the most popular JavaScript frameworks out there.",
     "slugs": [
       "nextjs_starter",
-      "nextjs_dashboard"
+      "nextjs_dashboard",
+      "dicegamereactnative"
     ]
   },
   "ml": {
