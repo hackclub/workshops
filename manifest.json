@@ -86,6 +86,7 @@
     "slugs": [
       "personal_website_2",
       "hello_bot",
+      "firstnpmpackage",
       "line_following_robot",
       "pyramid_discord_bot",
       "web_scraping",
