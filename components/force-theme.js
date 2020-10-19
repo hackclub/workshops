@@ -4,10 +4,10 @@ export default ({ theme }) => {
   const [colorMode, setColorMode] = useColorMode()
   setColorMode(theme)
   return (
-    <style jsx global>{`
-      .nav-color-switcher{
+    <style>{`
+      .nav-color-switcher {
         display: none !important;
-      }`}
-    </style>
+      }
+    `}</style>
   )
 }
