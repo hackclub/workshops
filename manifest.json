@@ -33,7 +33,10 @@
       "scrapbook_css",
       "simple_clock",
       "tunes",
-      "robot_emails"
+      "robot_emails",
+      "python_turtle",
+      "3d_models_with_zdog",
+      "login_auth"
     ]
   },
   "python": {
