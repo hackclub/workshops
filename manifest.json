@@ -27,11 +27,12 @@
     ]
   },
   "bounties": {
-    "title": "Workshop Bounties",
+    "title": "Workshop bounties",
     "description": "Fabulous community-created workshops from the Workshop Bounty program.",
     "slugs": [
       "scrapbook_css",
       "simple_clock",
+      "stopwatch",
       "tunes",
       "robot_emails",
       "python_turtle",
