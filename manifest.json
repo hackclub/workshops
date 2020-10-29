@@ -38,7 +38,10 @@
       "python_turtle",
       "3d_models_with_zdog",
       "login_auth",
-      "konami_code"
+      "konami_code",
+      "tic_tac_toe",
+      "python_turtle",
+      "parallax_effect"
     ]
   },
   "python": {
