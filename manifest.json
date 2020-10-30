@@ -1,4 +1,22 @@
 {
+  "bounties": {
+    "title": "Workshop bounties",
+    "description": "Fabulous community-created workshops from the Workshop Bounty program.",
+    "slugs": [
+      "scrapbook_css",
+      "simple_clock",
+      "stopwatch",
+      "tunes",
+      "robot_emails",
+      "python_turtle",
+      "3d_models_with_zdog",
+      "login_auth",
+      "konami_code",
+      "tic_tac_toe",
+      "parallax_effect",
+      "py_Christmas"
+    ]
+  },
   "starters": {
     "title": "Start here",
     "description": "Set out on your journey by building your own website, then move on to multiplayer games and collaborative web apps.",
@@ -24,23 +42,6 @@
       "julia_fractals",
       "wikibot",
       "hackide"
-    ]
-  },
-  "bounties": {
-    "title": "Workshop bounties",
-    "description": "Fabulous community-created workshops from the Workshop Bounty program.",
-    "slugs": [
-      "scrapbook_css",
-      "simple_clock",
-      "stopwatch",
-      "tunes",
-      "robot_emails",
-      "python_turtle",
-      "3d_models_with_zdog",
-      "login_auth",
-      "konami_code",
-      "tic_tac_toe",
-      "parallax_effect"
     ]
   },
   "python": {
