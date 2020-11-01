@@ -1,5 +1,6 @@
 import { Box, Container, Heading, Text, Grid, Card, Image } from 'theme-ui'
 import Link from 'next/link'
+import NextImage from 'next/image'
 import { snakeCase } from 'lodash'
 
 const WorkshopCard = ({ slug, name, description, img, section }) => (
@@ -22,17 +23,28 @@ const WorkshopCard = ({ slug, name, description, img, section }) => (
         </Heading>
         <Text variant="caption">{description}</Text>
       </Box>
-      {(section === 'starters' || section === 'web' || section === 'bounties') && (
-        <Image
-          alt="Demo"
-          src={img || `/content/workshops/${slug}/img/demo.png`}
-          loading="lazy"
+      {['starters', 'web', 'bounties'].includes(section) && (
+        <Box
           sx={{
             width: '100%',
             mt: 'auto',
+            ...(img && { height: 0, paddingBottom: '50%' }),
+            '> img': { objectFit: 'cover', objectPosition: 'center' },
             '@media print': { display: 'none' }
           }}
-        />
+        >
+          {/* currently Next Images only support known domains, so we can’t use them for bounties/etc with the `img` in metadata */}
+          {img ? (
+            <Image alt={`${name} demo`} src={img} loading="lazy" />
+          ) : (
+            <NextImage
+              alt={`${name} demo`}
+              src={`/content/workshops/${slug}/img/demo.png`}
+              width={512}
+              height={256}
+            />
+          )}
+        </Box>
       )}
     </Card>
   </Link>

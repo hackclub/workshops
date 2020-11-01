@@ -7,5 +7,8 @@ module.exports = withMDX({
   webpack: config => {
     config.node = { fs: 'empty' }
     return config
+  },
+  images: {
+    imageSizes: [512]
   }
 })
