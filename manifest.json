@@ -51,7 +51,8 @@
     "description": "Learn to use one of the most powerful and beginner-friendly languages.",
     "slugs": [
       "selenium",
-      "vigenere_cipher"
+      "vigenere_cipher",
+      "passwordcracker"
     ]
   },
   "games": {
