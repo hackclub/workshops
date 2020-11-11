@@ -24,7 +24,8 @@
       "weather_app",
       "cli_app_with_nodejs",
       "popup_chrome_extension",
-      "react_calendar"
+      "react_calendar",
+      "web_chat"
     ]
   },
   "starters": {
