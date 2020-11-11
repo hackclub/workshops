@@ -22,7 +22,8 @@
       "contact_form_serverless",
       "coffin_dance_arduino",
       "weather_app",
-      "cli_app_with_nodejs"
+      "cli_app_with_nodejs",
+      "popup_chrome_extension"
     ]
   },
   "starters": {
