@@ -23,7 +23,8 @@
       "coffin_dance_arduino",
       "weather_app",
       "cli_app_with_nodejs",
-      "popup_chrome_extension"
+      "popup_chrome_extension",
+      "react_calendar"
     ]
   },
   "starters": {
