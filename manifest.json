@@ -26,7 +26,8 @@
       "popup_chrome_extension",
       "react_calendar",
       "web_chat",
-      "quotes_generator"
+      "quotes_generator",
+      "memory_game"
     ]
   },
   "starters": {
