@@ -27,7 +27,8 @@
       "react_calendar",
       "web_chat",
       "quotes_generator",
-      "memory_game"
+      "memory_game",
+      "spinning_wheel"
     ]
   },
   "starters": {
