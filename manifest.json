@@ -28,7 +28,8 @@
       "web_chat",
       "quotes_generator",
       "memory_game",
-      "spinning_wheel"
+      "spinning_wheel",
+      "fetch_a_hack_clubber"
     ]
   },
   "starters": {
