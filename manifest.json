@@ -29,7 +29,8 @@
       "quotes_generator",
       "memory_game",
       "spinning_wheel",
-      "fetch_a_hack_clubber"
+      "fetch_a_hack_clubber",
+      "custom_link_shortener"
     ]
   },
   "starters": {
