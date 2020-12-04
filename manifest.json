@@ -13,10 +13,27 @@
       "login_auth",
       "konami_code",
       "tic_tac_toe",
+      "responsive_navbar",
       "parallax_effect",
       "py_christmas",
       "python_stock_viewer",
-      "python_data_viz"
+      "python_data_viz",
+      "rock_paper_scissors",
+      "contact_form_serverless",
+      "coffin_dance_arduino",
+      "weather_app",
+      "cli_app_with_nodejs",
+      "popup_chrome_extension",
+      "react_calendar",
+      "web_chat",
+      "quotes_generator",
+      "memory_game",
+      "spinning_wheel",
+      "fetch_a_hack_clubber",
+      "custom_link_shortener",
+      "react_calculator",
+      "hcload",
+      "pacman_game"
     ]
   },
   "starters": {
