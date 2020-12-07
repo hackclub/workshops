@@ -34,7 +34,8 @@
       "react_calculator",
       "hcload",
       "pacman_game",
-      "slack_todo_list"
+      "slack_todo_list",
+      "weather_grapher"
     ]
   },
   "starters": {
