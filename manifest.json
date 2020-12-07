@@ -33,7 +33,8 @@
       "custom_link_shortener",
       "react_calculator",
       "hcload",
-      "pacman_game"
+      "pacman_game",
+      "slack_todo_list"
     ]
   },
   "starters": {
