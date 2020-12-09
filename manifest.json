@@ -113,6 +113,15 @@
       "iotworkshop"
     ]
   },
+  "functional programming in JS": {
+    "title": "functional programming in javascript",
+    "description": "Learn the functional programming paradigm in your favorite language Javascript!",
+    "slugs": [
+      "functional_programming_1",
+      "functional_programming_2",
+      "functional_programming_3"
+    ]
+  },
   "misc": {
     "title": "Miscellaneous",
     "description": "Workshops not properly categorized yet.",
