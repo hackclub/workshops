@@ -114,7 +114,7 @@
     ]
   },
   "functionalProgramming": {
-    "title": "Functional Programming",
+    "title": "Functional Programming with JavaScript",
     "description": "Learn the functional programming paradigm in JavaScript with this experimental new series.",
     "slugs": [
       "functional_programming_1",
