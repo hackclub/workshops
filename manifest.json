@@ -95,6 +95,11 @@
       "dicegamereactnative"
     ]
   },
+  "Adventures of Hack Island!": {
+    "title": "Adventures of Hack Island!",
+    "description": "Help Orpheus and the people of Hack Island! Learn cyber skills on the go and use them to complete your adventures🤠 And remember, Orpheus needs your help!",
+    "slugs": ["help_orpheus"]
+  },
   "ml": {
     "title": "Machine Learning",
     "description": "Learn how to make machines learn with these fun projects!",
