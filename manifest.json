@@ -95,9 +95,9 @@
       "dicegamereactnative"
     ]
   },
-  "Adventures of Hack Island!": {
+  "hack_island": {
     "title": "Adventures of Hack Island!",
-    "description": "Help Orpheus and the people of Hack Island! Learn cyber skills on the go and use them to complete your adventures🤠 And remember, Orpheus needs your help!",
+    "description": "Help Orpheus and the people of Hack Island! Learn about cybersecurity while completing an adventure in this experimental new workshop series.",
     "slugs": ["help_orpheus"]
   },
   "ml": {
@@ -118,7 +118,7 @@
       "iotworkshop"
     ]
   },
-  "functionalProgramming": {
+  "functional_programming": {
     "title": "Functional Programming with JavaScript",
     "description": "Learn the functional programming paradigm in JavaScript with this experimental new series.",
     "slugs": [
