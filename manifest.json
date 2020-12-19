@@ -37,7 +37,8 @@
       "weather_grapher",
       "flask_quote_generator",
       "discord_bot_with_rust",
-      "slack_pfp"
+      "slack_pfp",
+      "discord_message_bot"
     ]
   },
   "starters": {
