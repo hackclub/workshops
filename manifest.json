@@ -38,7 +38,8 @@
       "flask_quote_generator",
       "discord_bot_with_rust",
       "slack_pfp",
-      "discord_message_bot"
+      "discord_message_bot",
+      "password-generator"
     ]
   },
   "starters": {
