@@ -27,7 +27,8 @@ const Page = ({ slug, data, html }) => {
 Page.getInitialProps = async req => {
   const { getRawFileFromRepo } = require('../../../../lib/github')
   const { getWorkshopData } = require('../../../../lib/data')
-  const { branch, repo, slug } = req.query
+  let { branch, repo, slug } = req.query
+  repo = repo + '/hackclub'
   const md = await getRawFileFromRepo(`workshops/${slug}/README.md`, branch, repo)
   const { data, html } = await getWorkshopData(slug, md, branch)
   return { slug, data, html }
