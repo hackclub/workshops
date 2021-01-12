@@ -39,7 +39,8 @@
       "discord_bot_with_rust",
       "slack_pfp",
       "discord_message_bot",
-      "password_generator"
+      "password_generator",
+      "image_editor"
     ]
   },
   "starters": {
