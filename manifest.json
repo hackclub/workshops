@@ -40,7 +40,8 @@
       "slack_pfp",
       "discord_message_bot",
       "password_generator",
-      "image_editor"
+      "image_editor",
+      "vr_worlds"
     ]
   },
   "starters": {
