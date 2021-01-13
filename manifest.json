@@ -42,7 +42,8 @@
       "password_generator",
       "image_editor",
       "vr_worlds",
-      "populous_cities"
+      "populous_cities",
+      "bitex"
     ]
   },
   "starters": {
