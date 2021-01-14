@@ -47,7 +47,8 @@
       "orpheus_run",
       "micro_bit_flappy_bird",
       "python_snake",
-      "drum_pad"
+      "drum_pad",
+      "atari_breakout"
     ]
   },
   "starters": {
