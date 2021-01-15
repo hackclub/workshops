@@ -54,7 +54,8 @@
       "seven_segment_display",
       "javascript_snake",
       "speech_recognition",
-      "full_stack_todo_app"
+      "full_stack_todo_app",
+      "shared_clipboard"
     ]
   },
   "starters": {
