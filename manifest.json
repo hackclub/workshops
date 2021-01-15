@@ -56,7 +56,8 @@
       "speech_recognition",
       "full_stack_todo_app",
       "shared_clipboard",
-      "kahoot"
+      "kahoot",
+      "ar_with_echoar"
     ]
   },
   "starters": {
