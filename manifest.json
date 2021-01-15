@@ -50,7 +50,8 @@
       "drum_pad",
       "atari_breakout",
       "pixel_art_pad",
-      "clicker_game"
+      "clicker_game",
+      "seven_segment_display"
     ]
   },
   "starters": {
