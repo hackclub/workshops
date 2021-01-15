@@ -49,7 +49,8 @@
       "python_snake",
       "drum_pad",
       "atari_breakout",
-      "pixel_art_pad"
+      "pixel_art_pad",
+      "clicker_game"
     ]
   },
   "starters": {
