@@ -48,7 +48,8 @@
       "micro_bit_flappy_bird",
       "python_snake",
       "drum_pad",
-      "atari_breakout"
+      "atari_breakout",
+      "pixel_art_pad"
     ]
   },
   "starters": {
