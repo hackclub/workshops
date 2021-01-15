@@ -52,7 +52,8 @@
       "pixel_art_pad",
       "clicker_game",
       "seven_segment_display",
-      "javascript_snake"
+      "javascript_snake",
+      "speech_recognition"
     ]
   },
   "starters": {
