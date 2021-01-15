@@ -57,7 +57,8 @@
       "full_stack_todo_app",
       "shared_clipboard",
       "kahoot",
-      "ar_with_echoar"
+      "ar_with_echoar",
+      "json_db"
     ]
   },
   "starters": {
