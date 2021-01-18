@@ -64,7 +64,8 @@
       "color_scheme_generator",
       "smart_calculator",
       "hangman",
-      "digit_recognition"
+      "digit_recognition",
+      "read_the_internet"
     ]
   },
   "starters": {
