@@ -61,7 +61,8 @@
       "json_db",
       "javascript_typing_test",
       "particle_physics",
-      "color_scheme_generator"
+      "color_scheme_generator",
+      "smart_calculator"
     ]
   },
   "starters": {
