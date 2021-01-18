@@ -63,7 +63,8 @@
       "particle_physics",
       "color_scheme_generator",
       "smart_calculator",
-      "hangman"
+      "hangman",
+      "digit_recognition"
     ]
   },
   "starters": {
