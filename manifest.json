@@ -131,7 +131,7 @@
   "hack_island": {
     "title": "Adventures of Hack Island!",
     "description": "Help Orpheus and the people of Hack Island! Learn about cybersecurity while completing an adventure in this experimental new workshop series.",
-    "slugs": ["help_orpheus"]
+    "slugs": ["help_orpheus","save_hack_club_bank"]
   },
   "ml": {
     "title": "Machine Learning",
