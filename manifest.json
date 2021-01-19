@@ -72,7 +72,8 @@
       "craps_simulator",
       "dialogue_tree",
       "dice_rolling",
-      "battleship"
+      "battleship",
+      "flask_login
     ]
   },
   "starters": {
