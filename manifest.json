@@ -71,7 +71,8 @@
       "scalable_snowman",
       "craps_simulator",
       "dialogue_tree",
-      "dice_rolling"
+      "dice_rolling",
+      "battleship"
     ]
   },
   "starters": {
