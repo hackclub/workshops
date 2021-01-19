@@ -69,7 +69,8 @@
       "painting_app",
       "chart_js",
       "scalable_snowman",
-      "craps_simulator"
+      "craps_simulator",
+      "dialogue_tree"
     ]
   },
   "starters": {
