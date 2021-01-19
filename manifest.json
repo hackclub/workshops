@@ -73,7 +73,8 @@
       "dialogue_tree",
       "dice_rolling",
       "battleship",
-      "flask_login
+      "flask_login,
+      "kuizzy"
     ]
   },
   "starters": {
