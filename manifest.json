@@ -70,7 +70,8 @@
       "chart_js",
       "scalable_snowman",
       "craps_simulator",
-      "dialogue_tree"
+      "dialogue_tree",
+      "dice_rolling"
     ]
   },
   "starters": {
