@@ -74,7 +74,8 @@
       "dice_rolling",
       "battleship",
       "flask_login,
-      "kuizzy"
+      "kuizzy",
+      "dungeon_crawler"
     ]
   },
   "starters": {
