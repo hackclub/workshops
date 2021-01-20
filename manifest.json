@@ -75,7 +75,8 @@
       "battleship",
       "flask_login",
       "kuizzy",
-      "dungeon_crawler"
+      "dungeon_crawler",
+      "website_mockup_generator"
     ]
   },
   "starters": {
