@@ -76,7 +76,8 @@
       "flask_login",
       "kuizzy",
       "dungeon_crawler",
-      "website_mockup_generator"
+      "website_mockup_generator",
+      "python_password_generator"
     ]
   },
   "starters": {
