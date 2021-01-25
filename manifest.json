@@ -79,7 +79,8 @@
       "website_mockup_generator",
       "python_password_generator",
       "rust_text_game",
-      "drawing_shapes"
+      "drawing_shapes",
+      "meme_generator"
     ]
   },
   "starters": {
