@@ -1,5 +1,17 @@
 {
-  "bounties": {
+  "starters": {
+    "title": "Start here",
+    "description": "Set out on your journey by building your own website, then move on to multiplayer games and collaborative web apps.",
+    "slugs": [
+      "personal_website",
+      "splatter_paint",
+      "colorful_grammar",
+      "speak_colors",
+      "sound_galaxy",
+      "teachable_machine"
+    ]
+  },
+    "bounties": {
     "title": "Workshop bounties",
     "description": "Fabulous community-created workshops from the Workshop Bounty program.",
     "slugs": [
@@ -82,18 +94,6 @@
       "drawing_shapes",
       "meme_generator",
       "fibonacci_sequence"
-    ]
-  },
-  "starters": {
-    "title": "Start here",
-    "description": "Set out on your journey by building your own website, then move on to multiplayer games and collaborative web apps.",
-    "slugs": [
-      "personal_website",
-      "splatter_paint",
-      "colorful_grammar",
-      "speak_colors",
-      "sound_galaxy",
-      "teachable_machine"
     ]
   },
   "web": {
