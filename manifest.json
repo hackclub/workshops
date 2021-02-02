@@ -93,7 +93,8 @@
       "rust_text_game",
       "drawing_shapes",
       "meme_generator",
-      "fibonacci_sequence"
+      "fibonacci_sequence",
+      "3d_mountain"
     ]
   },
   "web": {
