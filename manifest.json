@@ -149,8 +149,7 @@
     "description": "Learn how to make machines learn with these fun projects!",
     "slugs": [
       "teachable_machine",
-      "feature_extractor",
-      "not_hotdog"
+      "feature_extractor"
     ]
   },
   "arduino": {
