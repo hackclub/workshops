@@ -15,52 +15,39 @@
     "title": "Workshop bounties",
     "description": "Fabulous community-created workshops from the Workshop Bounty program.",
     "slugs": [
-      "robot_emails",
-      "python_turtle",
-      "py_christmas",
-      "python_stock_viewer",
-      "python_data_viz",
-      "rock_paper_scissors",
       "coffin_dance_arduino",
       "cli_app_with_nodejs",
       "popup_chrome_extension",
       "hcload",
       "slack_todo_list",
-      "weather_grapher",
-      "flask_quote_generator",
+      
       "discord_bot_with_rust",
       "slack_pfp",
       "discord_message_bot",
       "bitex",
       "micro_bit_flappy_bird",
-      "python_snake",
-      "drum_pad",
+      
+      
       "seven_segment_display",
-      "javascript_snake",
+      
       "speech_recognition",
       "shared_clipboard",
       "kahoot",
       "json_db",
-      "javascript_typing_test",
-      "smart_calculator",
+      
+     
       "hangman",
       "digit_recognition",
-      "read_the_internet",
-      "painting_app",
-      "scalable_snowman",
+      
       "craps_simulator",
       "dialogue_tree",
       "dice_rolling",
       "battleship",
-      "flask_login",
-      "dungeon_crawler",
-      "python_password_generator",
+      
       "rust_text_game",
-      "drawing_shapes",
-      "fibonacci_sequence",
-      "3d_mountain",
-      "mad_libs",
-      "space_game"
+      
+      "mad_libs"
+      
     ]
   },
   "web": {
@@ -80,6 +67,7 @@
       "3d_models_with_zdog",
       "julia_fractals",
       "particle_physics",
+      "javascript_typing_test",
       "wikibot",
       "hackide",
       "hosting",
@@ -88,6 +76,7 @@
       "tic_tac_toe",
       "parallax_effect",
       "contact_form_serverless",
+      "javascript_snake",
       "weather_app",
       "web_chat",
       "memory_game",
@@ -98,10 +87,13 @@
       "password_generator",
       "orpheus_run",
       "atari_breakout",
+      "drum_pad",
+      "weather_grapher",
       "pixel_art_pad",
       "ar_with_echoar",
       "chart_js",
       "kuizzy",
+      "painting_app",
       "website_mockup_generator",
       "meme_generator"
     ]
@@ -109,7 +101,29 @@
   "python": {
     "title": "Python",
     "description": "Learn to use one of the most powerful and beginner-friendly languages.",
-    "slugs": ["selenium", "vigenere_cipher", "passwordcracker"]
+    "slugs": [
+      "selenium",
+      "vigenere_cipher",
+      "passwordcracker",
+      "robot_emails",
+      "python_turtle",
+      "py_christmas",
+      "python_stock_viewer",
+      "python_data_viz",
+      "flask_quote_generator",
+      "python_snake",
+      "fibonacci_sequence",
+      "3d_mountain",
+      "rock_paper_scissors",
+      "drawing_shapes",
+      "space_game",
+      "flask_login",
+      "dungeon_crawler",
+      "python_password_generator",
+      "read_the_internet",
+      "smart_calculator",
+      "scalable_snowman"
+    ]
   },
   "games": {
     "title": "Games",
@@ -130,7 +144,7 @@
       "populous_cities",
       "clicker_game",
       "full_stack_todo_app",
-      "color_scheme_generator",
+      "color_scheme_generator"
     ]
   },
   "hack_island": {
