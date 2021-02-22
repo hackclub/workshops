@@ -11,33 +11,26 @@
       "teachable_machine"
     ]
   },
-    "bounties": {
+  "bounties": {
     "title": "Workshop bounties",
     "description": "Fabulous community-created workshops from the Workshop Bounty program.",
     "slugs": [
       "robot_emails",
       "python_turtle",
-      
-      
-      "tic_tac_toe",
-      
-      "parallax_effect",
       "py_christmas",
       "python_stock_viewer",
       "python_data_viz",
       "rock_paper_scissors",
-      "contact_form_serverless",
       "coffin_dance_arduino",
-      "weather_app",
+
       "cli_app_with_nodejs",
       "popup_chrome_extension",
       "react_calendar",
-      "web_chat",
+
       "quotes_generator",
-      "memory_game",
-      "spinning_wheel",
+
       "fetch_a_hack_clubber",
-      "custom_link_shortener",
+
       "react_calculator",
       "hcload",
       "slack_todo_list",
@@ -46,17 +39,13 @@
       "discord_bot_with_rust",
       "slack_pfp",
       "discord_message_bot",
-      "password_generator",
-      "image_editor",
-      "vr_worlds",
-      "populous_cities",
+
       "bitex",
-      "orpheus_run",
+
       "micro_bit_flappy_bird",
       "python_snake",
       "drum_pad",
-      "atari_breakout",
-      "pixel_art_pad",
+
       "clicker_game",
       "seven_segment_display",
       "javascript_snake",
@@ -64,30 +53,29 @@
       "full_stack_todo_app",
       "shared_clipboard",
       "kahoot",
-      "ar_with_echoar",
+
       "json_db",
       "javascript_typing_test",
-      "particle_physics",
+
       "color_scheme_generator",
       "smart_calculator",
       "hangman",
       "digit_recognition",
       "read_the_internet",
       "painting_app",
-      "chart_js",
+
       "scalable_snowman",
       "craps_simulator",
       "dialogue_tree",
       "dice_rolling",
       "battleship",
       "flask_login",
-      "kuizzy",
+
       "dungeon_crawler",
-      "website_mockup_generator",
+
       "python_password_generator",
       "rust_text_game",
       "drawing_shapes",
-      "meme_generator",
       "fibonacci_sequence",
       "3d_mountain",
       "mad_libs",
@@ -110,30 +98,42 @@
       "konami_code",
       "3d_models_with_zdog",
       "julia_fractals",
+      "particle_physics",
       "wikibot",
       "hackide",
       "hosting",
       "login_auth",
-      "responsive_navbar"
+      "responsive_navbar",
+      "tic_tac_toe",
+      "parallax_effect",
+      "contact_form_serverless",
+      "weather_app",
+      "web_chat",
+      "memory_game",
+      "spinning_wheel",
+      "custom_link_shortener",
+      "image_editor",
+      "vr_worlds",
+      "password_generator",
+      "orpheus_run",
+      "atari_breakout",
+      "pixel_art_pad",
+      "ar_with_echoar",
+      "chart_js",
+      "kuizzy",
+      "website_mockup_generator",
+      "meme_generator"
     ]
   },
   "python": {
     "title": "Python",
     "description": "Learn to use one of the most powerful and beginner-friendly languages.",
-    "slugs": [
-      "selenium",
-      "vigenere_cipher",
-      "passwordcracker"
-    ]
+    "slugs": ["selenium", "vigenere_cipher", "passwordcracker"]
   },
   "games": {
     "title": "Games",
     "description": "Learn to build games, both locally and on the web!",
-    "slugs": [
-      "dodge",
-      "platformer",
-      "pico_8_maze"
-    ]
+    "slugs": ["dodge", "platformer", "pico_8_maze"]
   },
   "react": {
     "title": "React",
@@ -141,30 +141,24 @@
     "slugs": [
       "nextjs_starter",
       "nextjs_dashboard",
-      "dicegamereactnative"
+      "dicegamereactnative",
+      "populous_cities"
     ]
   },
   "hack_island": {
     "title": "Adventures of Hack Island!",
     "description": "Help Orpheus and the people of Hack Island! Learn about cybersecurity while completing an adventure in this experimental new workshop series.",
-    "slugs": ["help_orpheus","save_hack_club_bank"]
+    "slugs": ["help_orpheus", "save_hack_club_bank"]
   },
   "ml": {
     "title": "Machine Learning",
     "description": "Learn how to make machines learn with these fun projects!",
-    "slugs": [
-      "teachable_machine",
-      "feature_extractor"
-    ]
+    "slugs": ["teachable_machine", "feature_extractor"]
   },
   "arduino": {
     "title": "Arduino",
     "description": "Bring projects from cyberspace to the real world with this small hardware platform.",
-    "slugs": [
-      "blink",
-      "temperature_monitor",
-      "iotworkshop"
-    ]
+    "slugs": ["blink", "temperature_monitor", "iotworkshop"]
   },
   "functional_programming": {
     "title": "Functional Programming with JavaScript",
