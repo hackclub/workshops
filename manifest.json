@@ -11,45 +11,7 @@
       "teachable_machine"
     ]
   },
-  "bounties": {
-    "title": "Workshop bounties",
-    "description": "Fabulous community-created workshops from the Workshop Bounty program.",
-    "slugs": [
-      "coffin_dance_arduino",
-      "cli_app_with_nodejs",
-      "popup_chrome_extension",
-      "hcload",
-      "slack_todo_list",
-      
-      "discord_bot_with_rust",
-      "slack_pfp",
-      "discord_message_bot",
-      "bitex",
-      "micro_bit_flappy_bird",
-      
-      
-      "seven_segment_display",
-      
-      "speech_recognition",
-      "shared_clipboard",
-      "kahoot",
-      "json_db",
-      
-     
-      "hangman",
-      "digit_recognition",
-      
-      "craps_simulator",
-      "dialogue_tree",
-      "dice_rolling",
-      "battleship",
-      
-      "rust_text_game",
-      
-      "mad_libs"
-      
-    ]
-  },
+
   "web": {
     "title": "Web development",
     "description": "Learn how to make things happen on the web, from basic JavaScript to web APIs",
@@ -78,15 +40,13 @@
       "contact_form_serverless",
       "javascript_snake",
       "weather_app",
+      "speech_recognition",
       "web_chat",
-      "memory_game",
       "spinning_wheel",
       "custom_link_shortener",
       "image_editor",
       "vr_worlds",
       "password_generator",
-      "orpheus_run",
-      "atari_breakout",
       "drum_pad",
       "weather_grapher",
       "pixel_art_pad",
@@ -119,6 +79,7 @@
       "space_game",
       "flask_login",
       "dungeon_crawler",
+      "dice_rolling",
       "python_password_generator",
       "read_the_internet",
       "smart_calculator",
@@ -128,7 +89,16 @@
   "games": {
     "title": "Games",
     "description": "Learn to build games, both locally and on the web!",
-    "slugs": ["dodge", "platformer", "pico_8_maze"]
+    "slugs": [
+      "dodge",
+      "platformer",
+      "pico_8_maze",
+      "memory_game",
+      "orpheus_run",
+      "atari_breakout",
+      "hangman",
+      "rust_text_game"
+    ]
   },
   "react": {
     "title": "React",
@@ -147,6 +117,23 @@
       "color_scheme_generator"
     ]
   },
+  "chrome": {
+    "title": "Chrome Extensions",
+    "description": "Extend the functionality of the world's most popular browser.",
+    "slugs": ["popup_chrome_extension", "bitex"]
+  },
+  "bots": {
+    "title": "Chat bots",
+    "description": "Make all sorts of bots for popular platforms such as Discord & Slack.",
+    "slugs": [
+      "hello_bot",
+      "pyramid_discord_bot",
+      "slack_todo_list",
+      "discord_bot_with_rust",
+      "slack_pfp",
+      "discord_message_bot"
+    ]
+  },
   "hack_island": {
     "title": "Adventures of Hack Island!",
     "description": "Help Orpheus and the people of Hack Island! Learn about cybersecurity while completing an adventure in this experimental new workshop series.",
@@ -155,12 +142,36 @@
   "ml": {
     "title": "Machine Learning",
     "description": "Learn how to make machines learn with these fun projects!",
-    "slugs": ["teachable_machine", "feature_extractor"]
+    "slugs": ["teachable_machine", "feature_extractor", "digit_recognition"]
   },
-  "arduino": {
-    "title": "Arduino",
-    "description": "Bring projects from cyberspace to the real world with this small hardware platform.",
-    "slugs": ["blink", "temperature_monitor", "iotworkshop"]
+  "node-deno": {
+    "title": "Node & Deno: JavaScript runtimes",
+    "description": "Running JS outside of the web can be a lot of fun.",
+    "slugs": [
+      "cli_app_with_nodejs",
+      "web_scraping",
+      "json_db",
+      "hcload",
+      "firstnpmpackage"
+    ]
+  },
+  "hardware": {
+    "title": "Hardware",
+    "description": "Bring projects from cyberspace to the real world with Arduinos and more.",
+    "slugs": [
+      "blink",
+      "temperature_monitor",
+      "iotworkshop",
+      "coffin_dance_arduino",
+      "micro_bit_flappy_bird",
+      "seven_segment_display",
+      "line_following_robot"
+    ]
+  },
+  "c-sharp": {
+    "title": "C#",
+    "description": "Learn all about C#, a language that can be used for almost anything.",
+    "slugs": ["craps_simulator", "dialogue_tree", "battleship", "mad_libs"]
   },
   "functional_programming": {
     "title": "Functional Programming with JavaScript",
@@ -176,13 +187,10 @@
     "description": "Workshops not properly categorized yet.",
     "slugs": [
       "personal_website_2",
-      "hello_bot",
-      "firstnpmpackage",
-      "line_following_robot",
-      "pyramid_discord_bot",
-      "web_scraping",
+      "kahoot",
       "api_canvas",
       "minecraft_modding",
+      "shared_clipboard",
       "scrapbook_css"
     ]
   }
