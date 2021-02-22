@@ -11,96 +11,7 @@
       "teachable_machine"
     ]
   },
-    "bounties": {
-    "title": "Workshop bounties",
-    "description": "Fabulous community-created workshops from the Workshop Bounty program.",
-    "slugs": [
-      "scrapbook_css",
-      "simple_clock",
-      "stopwatch",
-      "tunes",
-      "robot_emails",
-      "python_turtle",
-      "3d_models_with_zdog",
-      "login_auth",
-      "konami_code",
-      "tic_tac_toe",
-      "responsive_navbar",
-      "parallax_effect",
-      "py_christmas",
-      "python_stock_viewer",
-      "python_data_viz",
-      "rock_paper_scissors",
-      "contact_form_serverless",
-      "coffin_dance_arduino",
-      "weather_app",
-      "cli_app_with_nodejs",
-      "popup_chrome_extension",
-      "react_calendar",
-      "web_chat",
-      "quotes_generator",
-      "memory_game",
-      "spinning_wheel",
-      "fetch_a_hack_clubber",
-      "custom_link_shortener",
-      "react_calculator",
-      "hcload",
-      "slack_todo_list",
-      "weather_grapher",
-      "flask_quote_generator",
-      "discord_bot_with_rust",
-      "slack_pfp",
-      "discord_message_bot",
-      "password_generator",
-      "image_editor",
-      "vr_worlds",
-      "populous_cities",
-      "bitex",
-      "orpheus_run",
-      "micro_bit_flappy_bird",
-      "python_snake",
-      "drum_pad",
-      "atari_breakout",
-      "pixel_art_pad",
-      "clicker_game",
-      "seven_segment_display",
-      "javascript_snake",
-      "speech_recognition",
-      "full_stack_todo_app",
-      "shared_clipboard",
-      "kahoot",
-      "ar_with_echoar",
-      "json_db",
-      "javascript_typing_test",
-      "particle_physics",
-      "color_scheme_generator",
-      "smart_calculator",
-      "hangman",
-      "digit_recognition",
-      "read_the_internet",
-      "painting_app",
-      "chart_js",
-      "scalable_snowman",
-      "craps_simulator",
-      "dialogue_tree",
-      "dice_rolling",
-      "battleship",
-      "flask_login",
-      "kuizzy",
-      "dungeon_crawler",
-      "website_mockup_generator",
-      "python_password_generator",
-      "rust_text_game",
-      "drawing_shapes",
-      "meme_generator",
-      "fibonacci_sequence",
-      "3d_mountain",
-      "hosting",
-      "minecraft_modding",
-      "mad_libs",
-      "space_game"
-    ]
-  },
+
   "web": {
     "title": "Web development",
     "description": "Learn how to make things happen on the web, from basic JavaScript to web APIs",
@@ -108,12 +19,43 @@
       "find_bigfoot",
       "synth",
       "dashboard",
+      "tunes",
       "geometric_pattern",
+      "simple_clock",
       "collaborative_sketch",
       "tree_machine",
+      "stopwatch",
+      "konami_code",
+      "3d_models_with_zdog",
       "julia_fractals",
+      "particle_physics",
+      "javascript_typing_test",
       "wikibot",
-      "hackide"
+      "hackide",
+      "hosting",
+      "login_auth",
+      "responsive_navbar",
+      "tic_tac_toe",
+      "parallax_effect",
+      "contact_form_serverless",
+      "javascript_snake",
+      "weather_app",
+      "speech_recognition",
+      "web_chat",
+      "spinning_wheel",
+      "custom_link_shortener",
+      "image_editor",
+      "vr_worlds",
+      "password_generator",
+      "drum_pad",
+      "weather_grapher",
+      "pixel_art_pad",
+      "ar_with_echoar",
+      "chart_js",
+      "kuizzy",
+      "painting_app",
+      "website_mockup_generator",
+      "meme_generator"
     ]
   },
   "python": {
@@ -122,7 +64,26 @@
     "slugs": [
       "selenium",
       "vigenere_cipher",
-      "passwordcracker"
+      "passwordcracker",
+      "robot_emails",
+      "python_turtle",
+      "py_christmas",
+      "python_stock_viewer",
+      "python_data_viz",
+      "flask_quote_generator",
+      "python_snake",
+      "fibonacci_sequence",
+      "3d_mountain",
+      "rock_paper_scissors",
+      "drawing_shapes",
+      "space_game",
+      "flask_login",
+      "dungeon_crawler",
+      "dice_rolling",
+      "python_password_generator",
+      "read_the_internet",
+      "smart_calculator",
+      "scalable_snowman"
     ]
   },
   "games": {
@@ -131,7 +92,12 @@
     "slugs": [
       "dodge",
       "platformer",
-      "pico_8_maze"
+      "pico_8_maze",
+      "memory_game",
+      "orpheus_run",
+      "atari_breakout",
+      "hangman",
+      "rust_text_game"
     ]
   },
   "react": {
@@ -140,30 +106,72 @@
     "slugs": [
       "nextjs_starter",
       "nextjs_dashboard",
-      "dicegamereactnative"
+      "dicegamereactnative",
+      "react_calendar",
+      "quotes_generator",
+      "fetch_a_hack_clubber",
+      "react_calculator",
+      "populous_cities",
+      "clicker_game",
+      "full_stack_todo_app",
+      "color_scheme_generator"
     ]
   },
-  "hack_island": {
-    "title": "Adventures of Hack Island!",
-    "description": "Help Orpheus and the people of Hack Island! Learn about cybersecurity while completing an adventure in this experimental new workshop series.",
-    "slugs": ["help_orpheus","save_hack_club_bank"]
+  "chrome": {
+    "title": "Chrome Extensions",
+    "description": "Extend the functionality of the world's most popular browser.",
+    "slugs": ["popup_chrome_extension", "bitex"]
+  },
+  "bots": {
+    "title": "Chat bots",
+    "description": "Make all sorts of bots for popular platforms such as Discord & Slack.",
+    "slugs": [
+      "hello_bot",
+      "pyramid_discord_bot",
+      "slack_todo_list",
+      "discord_bot_with_rust",
+      "slack_pfp",
+      "discord_message_bot"
+    ]
   },
   "ml": {
     "title": "Machine Learning",
     "description": "Learn how to make machines learn with these fun projects!",
+    "slugs": ["teachable_machine", "feature_extractor", "digit_recognition"]
+  },
+  "node-deno": {
+    "title": "Node & Deno: JavaScript runtimes",
+    "description": "Running JS outside of the web can be a lot of fun.",
     "slugs": [
-      "teachable_machine",
-      "feature_extractor"
+      "cli_app_with_nodejs",
+      "web_scraping",
+      "json_db",
+      "hcload",
+      "firstnpmpackage"
     ]
   },
-  "arduino": {
-    "title": "Arduino",
-    "description": "Bring projects from cyberspace to the real world with this small hardware platform.",
+  "hardware": {
+    "title": "Hardware",
+    "description": "Bring projects from cyberspace to the real world with Arduinos and more.",
     "slugs": [
       "blink",
       "temperature_monitor",
-      "iotworkshop"
+      "iotworkshop",
+      "coffin_dance_arduino",
+      "micro_bit_flappy_bird",
+      "seven_segment_display",
+      "line_following_robot"
     ]
+  },
+  "c-sharp": {
+    "title": "C#",
+    "description": "Learn all about C#, a language that can be used for almost anything.",
+    "slugs": ["craps_simulator", "dialogue_tree", "battleship", "mad_libs"]
+  },
+  "hack_island": {
+  "title": "Adventures of Hack Island!",
+  "description": "Help Orpheus and the people of Hack Island! Learn about cybersecurity while completing an adventure in this experimental new workshop series.",
+  "slugs": ["help_orpheus", "save_hack_club_bank"]
   },
   "functional_programming": {
     "title": "Functional Programming with JavaScript",
@@ -179,12 +187,11 @@
     "description": "Workshops not properly categorized yet.",
     "slugs": [
       "personal_website_2",
-      "hello_bot",
-      "firstnpmpackage",
-      "line_following_robot",
-      "pyramid_discord_bot",
-      "web_scraping",
-      "api_canvas"
+      "kahoot",
+      "api_canvas",
+      "minecraft_modding",
+      "shared_clipboard",
+      "scrapbook_css"
     ]
   }
 }
