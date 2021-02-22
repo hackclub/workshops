@@ -15,15 +15,10 @@
     "title": "Workshop bounties",
     "description": "Fabulous community-created workshops from the Workshop Bounty program.",
     "slugs": [
-      "scrapbook_css",
-      "simple_clock",
-      "stopwatch",
-      "tunes",
       "robot_emails",
       "python_turtle",
-      "3d_models_with_zdog",
-      "login_auth",
-      "konami_code",
+      
+      
       "tic_tac_toe",
       "responsive_navbar",
       "parallax_effect",
@@ -106,13 +101,19 @@
       "find_bigfoot",
       "synth",
       "dashboard",
+      "tunes",
       "geometric_pattern",
+      "simple_clock",
       "collaborative_sketch",
       "tree_machine",
+      "stopwatch",
+      "konami_code",
+      "3d_models_with_zdog",
       "julia_fractals",
       "wikibot",
       "hackide",
-      "hosting"
+      "hosting",
+      "login_auth"
     ]
   },
   "python": {
@@ -184,7 +185,8 @@
       "pyramid_discord_bot",
       "web_scraping",
       "api_canvas",
-      "minecraft_modding"
+      "minecraft_modding",
+      "scrapbook_css"
     ]
   }
 }
