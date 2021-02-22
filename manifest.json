@@ -95,8 +95,6 @@
       "meme_generator",
       "fibonacci_sequence",
       "3d_mountain",
-      "hosting",
-      "minecraft_modding",
       "mad_libs",
       "space_game"
     ]
@@ -113,7 +111,8 @@
       "tree_machine",
       "julia_fractals",
       "wikibot",
-      "hackide"
+      "hackide",
+      "hosting"
     ]
   },
   "python": {
@@ -184,7 +183,8 @@
       "line_following_robot",
       "pyramid_discord_bot",
       "web_scraping",
-      "api_canvas"
+      "api_canvas",
+      "minecraft_modding"
     ]
   }
 }
