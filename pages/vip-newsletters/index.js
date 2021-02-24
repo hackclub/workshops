@@ -8,7 +8,7 @@ const Page = ({ slugs, html }) => (
   <>
     <Header
       title="VIP Newsletters"
-      desc="Email updates sent to Hack Club’s largest supporters, every&nbsp;2&nbsp;weeks."
+      desc="Email updates sent to Hack Club’s largest supporters every month."
       img="https://workshop-cards.hackclub.com/VIP%20Newsletters.png?brand=HQ&theme=dark"
       includeMeta
       sx={{ mb: 0 }}
