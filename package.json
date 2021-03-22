@@ -19,7 +19,6 @@
     "@mdx-js/loader": "^1.6.19",
     "@next/mdx": "^10.0.0",
     "download-git-repo": "^3.0.2",
-    "fathom-client": "^3.0.0",
     "geopattern": "^1.2.3",
     "gray-matter": "^4.0.2",
     "hls.js": "^0.14.16",
