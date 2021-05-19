@@ -6,8 +6,7 @@
   "private": true,
   "scripts": {
     "dl": "node lib/download.js",
-    "dev": "next",
-    "dev_2": "yarn run dl && next",
+    "dev": "yarn run dl && next",
     "build": "yarn run dl && next build",
     "start": "yarn run dev",
     "devserver": "next"

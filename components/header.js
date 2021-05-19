@@ -13,7 +13,8 @@ const Header = ({
   includeMeta = false,
   hideNav = false,
   navBg = true,
-  sx = {}
+  sx = {},
+  ...props
 }) => {
   const { pathname } = useRouter()
   const [mode] = useColorMode()
@@ -29,7 +30,9 @@ const Header = ({
     }
   }
   return [
-    hideNav ? null : <Nav key="nav" homepage={navBg} material={!!bgImg} />,
+    hideNav ? null : (
+      <Nav {...props} key="nav" homepage={navBg} material={!!bgImg} />
+    ),
     <Box
       key="print"
       aria-hidden

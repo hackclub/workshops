@@ -39,13 +39,26 @@ const parentVariant = {
     backgroundColor: 'transparent',
     paddingLeft: '0px',
     x: '0px',
-    border: '0px none rgba(1,1,0,0)'
+    border: '0px none rgba(1,1,0,0)',
+    when: 'beforeChildren'
   },
   visible: {
     width: 250,
     backgroundColor: 'white',
     paddingLeft: '16px',
     x: '-32px',
+    border: '2px solid rgba(236,55,80,1)',
+    transition: {
+      border: {
+        duration: 0.2
+      }
+    }
+  },
+  mobVisible: {
+    width: 250,
+    backgroundColor: 'white',
+    paddingLeft: '16px',
+    x: '0px',
     border: '2px solid rgba(236,55,80,1)',
     transition: {
       border: {
@@ -77,7 +90,7 @@ const flagVariant = {
   visible: {
     opacity: 1,
     scale: 1,
-    display: 'inline-flex'
+    display: 'inline'
   }
 }
 
@@ -101,7 +114,8 @@ const Flag = ({ visible }) => {
         aria-label="Hack Club homepage"
         sx={{
           mr: 'auto',
-          mt: -3
+          mt: -3,
+          lineHeight: 0
         }}
       >
         <Image
@@ -158,7 +172,7 @@ const IconWrapper = ({ csx, children, ...props }) => {
   )
 }
 
-const SearchBar = ({ setVisible, visible, ...props }) => {
+const SearchBar = ({ setVisible, visible, search, ...props }) => {
   const inp = useRef(null)
 
   const handle_focus = () => {
@@ -172,10 +186,18 @@ const SearchBar = ({ setVisible, visible, ...props }) => {
     setVisible(!visible)
   }
 
+  const retAnim = visible => {
+    if (visible) {
+      console.log(window.innerWidth <= 512 ? 'mobVisible' : 'visible')
+      return window.innerWidth <= 512 ? 'mobVisible' : 'visible'
+    }
+    return 'hidden'
+  }
+
   return (
     <motion.div
       variants={parentVariant}
-      animate={visible ? 'visible' : 'hidden'}
+      animate={retAnim(visible)}
       sx={{
         display: 'flex',
         borderRadius: 'circle',
@@ -204,6 +226,9 @@ const SearchBar = ({ setVisible, visible, ...props }) => {
           outline: 'none'
         }}
         ref={inp}
+        onChange={ele => {
+          search(inp.current.value)
+        }}
         placeholder="Search Workshops :)"
       />
 
@@ -256,7 +281,7 @@ const ColorSwitcher = props => {
   )
 }
 
-const Nav = ({ material = false, homepage }) => {
+const Nav = ({ material = false, homepage, search }) => {
   const [visible, setVisible] = useState(false)
   const [mode] = useColorMode()
   const { pathname } = useRouter()
@@ -278,7 +303,7 @@ const Nav = ({ material = false, homepage }) => {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          justifyContent: [visible ? 'center' : 'initial', 'initial'],
+          justifyContent: ['space-around'],
           a: {
             fontSize: 1,
             color: 'primary',
@@ -294,7 +319,11 @@ const Nav = ({ material = false, homepage }) => {
         {(home || !standalone) && (
           <Fragment>
             {back ? null : (
-              <SearchBar setVisible={setVisible} visible={visible} />
+              <SearchBar
+                search={search}
+                setVisible={setVisible}
+                visible={visible}
+              />
             )}
             <NavButton
               as="a"
