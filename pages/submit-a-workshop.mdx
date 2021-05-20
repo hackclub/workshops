@@ -1,0 +1,73 @@
+import Letterhead from '../components/letterhead'
+import { StaticMention } from '../components/mention'
+
+<Letterhead
+title="Submitting a Workshop"
+desc="Want to submit your own Hack Club Workshop? Here's how to do it."
+img="https://workshop-cards.hackclub.com/Workshop Bounty.png?brand=HQ&fontSize=300px"
+author={{
+  name: '@matthew',
+  avatar: 'https://cloud-7kduganuu-hack-club-bot.vercel.app/0img_5187.jpg',
+  url: 'https://matthewstanciu.me'
+}}
+date="2021-05-20"
+path="submit-a-workshop.mdx">
+
+Nearly every [Hack Club Workshop](https://workshops.hackclub.com) was written and submitted by a Hack Club leader or active community member. Most were written as part of the [Workshop Bounty Program](https://hackclub.com/workshop-bounty), which we ran in Fall 2020 in an effort to get more workshops online for club leaders. Although we're no longer directly paying for workshops, we'd love to work with you to get more workshops online! I've pulled the workshop requirements and submission instructions out of the original Workshop Bounty announcement and copied them here.
+
+If I can answer any questions or be helpful in any way, please feel free to DM me on Slack.
+
+## Submission requirements
+
+- You must be a club leader or an active community member in order to submit a workshop.
+- Your workshop must be fully original. The project & code should be made by you; it should not be a demo copied from somewhere on the Internet. All of the workshop's text & instructions should be entirely written by you.
+- All images/assets in your workshop should come from the `#cdn` channel on Slack. For example, if you want to include a gif, don't link to Giphy or Imgur; download the gif, upload it to `#cdn`, and use that link instead.
+- Your workshop must produce a compelling, specific, real project, using real code. **It should not be a tutorial** for a language or service. It should also not be a series of small projects with no clear ending or final product.
+  - ✅ [Animated 3D Models](https://workshops.hackclub.com/3d_models_with_zdog/), which uses a simple JavaScript library to create awesome-looking 3D models
+  - ❌ A tutorial for how to get started with AWS
+  - ❌ A workshop on an introduction to Scratch
+- Your workshop must be able to be completed in around 20 minutes, but it should be very easy for people to make big changes to it.
+- At the end of your workshop, you must include links to at least 3 demos clearly showing the initial project being changed in big ways. These demos should serve as examples for how hackable your workshop is. Each demo should include a link to the project and a link to the source code.
+  - ✅ [Tunes](https://workshops.hackclub.com/tunes/), which includes 3 projects at the end that stem from the project made in the workshop but are very noticeably different and clearly made independently
+  - ❌ A todo list app whose examples for hacking are adding icons, changing the background color, or other small incremental changes that don't meaningfully build on the project the workshop has made
+- Your workshop must involve code, and not require desktop software or hardware, since not all clubs will have those resources.
+  - ✅ A Python workshop where the first step is to start a new Python project at [repl.it/languages/python](https://repl.it/languages/python)
+  - ❌ A workshop on making an Android app that requires installing Android Studio
+- At the beginning of your workshop, you must include the link to the final demo and the final code.
+- Your workshop must be in English at native-level proficiency. Phrasing and grammar must be perfect.
+- By default, all workshops should be written in Markdown or another format that can be easily be added to the [Workshops page](https://workshops.hackclub.com). Workshops submitted in a different format are also encouraged, but the format must be approved by <StaticMention username="matthew" avatar="https://cloud-7kduganuu-hack-club-bot.vercel.app/0img_5187.jpg" link="https://matthewstanciu.me/" /> first.
+- Each step in your workshop should be very clearly explained and should continually give context for where the user is in the workshop.
+  - ✅ [Konami Code](https://workshops.hackclub.com/konami_code/): each step contains a small block of code that is clearly explained right afterward. Phrases such as "just above the closing `</body>` tag", code blocks that include new lines of code being shown in their entirety, and a constant reminder of what the current code should look like, all make sure the person going through the workshop is never lost. Any code concepts or information about a library are made optional to learn more by clicking a link.
+  - ❌ A workshop that includes many large blocks of code for the user to copy/paste, and does not explain what much of the code does
+  - ❌ A workshop in which each step contains a block of code with no instructions for where to include it
+- Your workshop must not be the same or too similar to [any existing workshop](https://workshops.hackclub.com). Make sure to check on this before you start writing your workshop—if your workshop is too similar to an existing one, it won't be able to be merged at all!
+- Every piece of media (image, GIF, video, etc.) you include in your workshop should include alt text that clearly describes what's in the piece of media
+  - ✅ `![A close-up of a gecko foot being pressed on glass](https://mbs.zone/geck)`
+  - ❌ `![](https://mbs.zone/geck)`
+  - ❌ `![animal](https://mbs.zone/geck)`
+
+## How to submit
+
+- Fork [`hackclub/hackclub`](https://github.com/hackclub/hackclub) on GitHub. Create a new folder inside the [`workshops/`](https://github.com/hackclub/hackclub/tree/main/workshops) directory called the name of your workshop. Make sure to follow the snake case format, like the other workshops. Put the workshop itself in a file inside that folder called `README.md`.
+  - If your workshop is a slideshow or another binary format, export it and upload to the `#cdn` channel on the Hack Club Slack. Then link it from `README.md`.
+  - Take a screenshot of your workshop demo and upload it to the `#cdn` channel on Slack.
+  - At the top of the file, include the following metadata (author being your GitHub @username):
+
+    ```
+    ---
+    name: 'Sound Galaxy'
+    description: 'Visualize sound by making particles move in a galaxy'
+    author: '@MatthewStanciu'
+    img: 'cdn-link-to-image-summarizing-your-workshop'
+    ---
+    ```
+
+- Once you've written your workshop, create a pull request to [`hackclub/hackclub`](https://github.com/hackclub/hackclub) and submit!
+
+Your workshop will then be reviewed by a Hack Club staff member. We are a very small team and unfortunately can't make any guarantees around the time it will take to review your workshop, but we will get to it as soon as we can.
+
+Because we want every workshop to be something we stand by as official curriculum for Hack Clubs, we set a high bar for quality. You may be asked to resubmit your workshop multiple times before it's ready to merge. Be prepared for constructive criticism & to make any changes to your workshop as needed.
+
+Thanks so much for your interest in submitting a Hack Club Workshop! I'm excited to see what you come up with 🎉
+
+</Letterhead>
