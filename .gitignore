@@ -4,3 +4,4 @@ public/content/
 public/vip-newsletters/
 .now
 .vercel
+.DS_Store
