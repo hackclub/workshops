@@ -7,6 +7,7 @@ import Link from 'next/link'
 import styled from '@emotion/styled'
 import { motion } from 'framer-motion'
 import { useState, useRef, Fragment } from 'react'
+import { cloneDeep } from 'lodash'
 
 const Material = styled(Box)`
   position: absolute;
@@ -44,7 +45,7 @@ const parentVariant = {
   },
   visible: {
     width: 250,
-    backgroundColor: 'white',
+    backgroundColor: 'var(--theme-ui-colors-background)',
     paddingLeft: '16px',
     x: '-32px',
     border: '2px solid rgba(236,55,80,1)',
@@ -56,7 +57,7 @@ const parentVariant = {
   },
   mobVisible: {
     width: 250,
-    backgroundColor: 'white',
+    backgroundColor: 'var(--theme-ui-colors-background)',
     paddingLeft: '16px',
     x: '0px',
     border: '2px solid rgba(236,55,80,1)',
@@ -93,6 +94,9 @@ const flagVariant = {
     display: 'inline'
   }
 }
+
+const colorSwitcherVariant = cloneDeep(flagVariant)
+colorSwitcherVariant['visible'].display = 'inline-flex'
 
 const Flag = ({ visible }) => {
   const retAnim = visible => {
@@ -188,7 +192,6 @@ const SearchBar = ({ setVisible, visible, search, ...props }) => {
 
   const retAnim = visible => {
     if (visible) {
-      console.log(window.innerWidth <= 512 ? 'mobVisible' : 'visible')
       return window.innerWidth <= 512 ? 'mobVisible' : 'visible'
     }
     return 'hidden'
@@ -223,13 +226,15 @@ const SearchBar = ({ setVisible, visible, search, ...props }) => {
           py: 1,
           borderRadius: 'circle',
           border: '0px none',
-          outline: 'none'
+          outline: 'none',
+          backgroundColor: 'background',
+          color: 'text'
         }}
         ref={inp}
         onChange={ele => {
           search(inp.current.value)
         }}
-        placeholder="Search Workshops :)"
+        placeholder="Search Workshops"
       />
 
       <IconWrapper
@@ -270,14 +275,25 @@ const BackButton = ({ to = '/', text = 'Back' }) => (
 
 const ColorSwitcher = props => {
   const [mode, setMode] = useColorMode()
+
+  const retAnim = visible => {
+    if (visible) {
+      return window.innerWidth <= 512 ? 'hidden' : 'visible'
+    } else {
+      return 'visible'
+    }
+  }
+
   return (
-    <NavButton
+    <IconWrapper
+      variants={colorSwitcherVariant}
+      animate={retAnim(props.visible)}
       {...props}
       onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
       title="Reverse color scheme"
     >
       <Moon size={24} />
-    </NavButton>
+    </IconWrapper>
   )
 }
 
