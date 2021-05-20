@@ -22,7 +22,7 @@
     "geopattern": "^1.2.3",
     "gray-matter": "^4.0.2",
     "hls.js": "^0.14.16",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "next": "^10.0.0",
     "nprogress": "^0.2.0",
     "react": "^17.0.1",
