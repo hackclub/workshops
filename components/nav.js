@@ -193,6 +193,7 @@ const SearchBar = ({ setVisible, visible, search, ...props }) => {
   const onClose = () => {
     setVisible(!visible)
     inp.current.value = ''
+    search('')
   }
 
   const retAnim = visible => {
