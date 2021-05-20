@@ -190,6 +190,11 @@ const SearchBar = ({ setVisible, visible, search, ...props }) => {
     setVisible(!visible)
   }
 
+  const onClose = () => {
+    setVisible(!visible)
+    inp.current.value = ''
+  }
+
   const retAnim = visible => {
     if (visible) {
       return window.innerWidth <= 512 ? 'mobVisible' : 'visible'
@@ -239,7 +244,7 @@ const SearchBar = ({ setVisible, visible, search, ...props }) => {
 
       <IconWrapper
         variants={childVariant}
-        onClick={onClick}
+        onClick={onClose}
         csx={{
           padding: '2px',
           mr: [2],

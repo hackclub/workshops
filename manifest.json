@@ -169,9 +169,9 @@
     "slugs": ["craps_simulator", "dialogue_tree", "battleship", "mad_libs"]
   },
   "hack_island": {
-  "title": "Adventures of Hack Island!",
-  "description": "Help Orpheus and the people of Hack Island! Learn about cybersecurity while completing an adventure in this experimental new workshop series.",
-  "slugs": ["help_orpheus", "save_hack_club_bank"]
+    "title": "Adventures of Hack Island!",
+    "description": "Help Orpheus and the people of Hack Island! Learn about cybersecurity while completing an adventure in this experimental new workshop series.",
+    "slugs": ["help_orpheus", "save_hack_club_bank"]
   },
   "functional_programming": {
     "title": "Functional Programming with JavaScript",
