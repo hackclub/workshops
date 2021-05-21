@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import Sketch from 'react-p5'
 import toxi from 'toxiclibsjs'
 
@@ -78,4 +79,4 @@ const Blobs = () => {
   )
 }
 
-export default Blobs
+export default memo(Blobs)

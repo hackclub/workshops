@@ -30,13 +30,17 @@ Great workshops make a real project in under 20 minutes, are very visual, and ha
 
 [Sound Galaxy](https://workshops.hackclub.com/sound_galaxy/) is an example of a good workshop. It's short, produces a visual project, and has clear paths to keep experimenting. Hear <StaticMention username="matthew" avatar="https://cloud-dl8z4zly8.vercel.app/t0266frgm-u4qak9srw-cf4e2e522a71-512" link="https://matthewstanciu.me/" />'s thoughts:
 
-<Video mux="pf0227X6ni00uCWWPBdJqiQTVkSuqzg7cWw00s91Nr9pK8" autoPlay={false} style={{ maxWidth: '100%' }} />
+<Video
+  mux="pf0227X6ni00uCWWPBdJqiQTVkSuqzg7cWw00s91Nr9pK8"
+  autoPlay={false}
+  style={{ maxWidth: '100%' }}
+/>
 
 In the past, Hack Club workshops were all Markdown files formated like blog posts. We want to push the format and will be accepting interactive [MDX](https://github.com/mdx-js/mdx) files, slideshows, static websites, and more (regular Markdown is still OK!).
 
 **Submission requirements:**
 
-*Updated by <StaticMention username="matthew" avatar="https://cloud-dl8z4zly8.vercel.app/t0266frgm-u4qak9srw-cf4e2e522a71-512" link="https://matthewstanciu.me/" /> on 10/29/2020. Starting today, all newly-submitted workshops will have to follow these new requirements. [Click here](https://hack.af/workshop-bounty-original) to see the previous version of this announcement.*
+_Updated by <StaticMention username="matthew" avatar="https://cloud-dl8z4zly8.vercel.app/t0266frgm-u4qak9srw-cf4e2e522a71-512" link="https://matthewstanciu.me/" /> on 10/29/2020. Starting today, all newly-submitted workshops will have to follow these new requirements. [Click here](https://hack.af/workshop-bounty-original) to see the previous version of this announcement._
 
 - You must be a club leader or an active community member in order to submit a workshop
 - Your workshop must be original and not plagiarized.
@@ -64,7 +68,6 @@ In the past, Hack Club workshops were all Markdown files formated like blog post
   - ❌ `![](https://mbs.zone/geck)`
   - ❌ `![animal](https://mbs.zone/geck)`
 
-
 Hack Club workshops are entirely open source on GitHub. Workshops are submitted using [pull requests](https://guides.github.com/activities/hello-world/#pr).
 
 In addition to submitting the workshop itself, we ask that you test your workshop in a club meeting and record a 1-2 minute clip during the meeting showing what people built. You could turn on Zoom recording for 2 minutes near the end of the meeting. Or walk around with your phone's camera showing what people built if you're in-person. This meeting can be a real club meeting or a mock meeting where you gather 3+ friends.
@@ -74,9 +77,10 @@ Every workshop we accept as part of the workshop bounty program should be someth
 **How to submit:**
 
 - Create a pull request to [`hackclub/hackclub`](https://github.com/hackclub/hackclub) on GitHub with a new folder in the [`workshops/`](https://github.com/hackclub/hackclub/tree/main/workshops) directory called the name of your workshop. Make sure to follow the lowercase snake case format, like the other workshops. Put your workshop in a file named `README.md`.
+
   - If your workshop is a slideshow or another binary format, export it and upload to the `#cdn` channel on the Hack Club Slack. Then link it from `README.md`.
   - At the top of the file, include the following metadata (author being your GitHub @username):
-  
+
     ```
     ---
     name: 'Sound Galaxy'
