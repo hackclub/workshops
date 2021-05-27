@@ -16,7 +16,7 @@
     }
   ],
   "functions": {
-    "**/*.js": {
+    "/**/*.js": {
       "includeFiles": "public/**"
     }
   }
