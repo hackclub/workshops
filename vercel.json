@@ -5,6 +5,10 @@
     {
       "source": "/workshops/_next/:path*",
       "destination": "/_next/:path*"
+    },
+    {
+      "source": "/api/workshops",
+      "destination": "/workshops.json"
     }
   ],
   "headers": [
