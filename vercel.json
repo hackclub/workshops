@@ -16,7 +16,7 @@
     }
   ],
   "functions": {
-    "api/*.js": {
+    "pages/api/*.js": {
       "includeFiles": "public/**"
     }
   }
