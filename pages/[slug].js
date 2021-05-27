@@ -1,12 +1,12 @@
 import { map } from 'lodash'
 import { Button, Container } from 'theme-ui'
+import { useRouter } from 'next/router'
 import Error from 'next/error'
 import Header from '../components/header'
 import Authors from '../components/authors'
 import Content from '../components/content'
 import Footer from '../components/footer'
 import Loading from '../components/loading'
-import { useRouter } from 'next/router'
 
 const Page = ({ slug, data, html }) => {
   const router = useRouter()
