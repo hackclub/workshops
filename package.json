@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dl": "node lib/download.js",
+    "dl": "node lib/download.js && node lib/json.js ",
     "dev": "yarn run dl && next",
     "build": "yarn run dl && next build",
     "start": "yarn run dev",

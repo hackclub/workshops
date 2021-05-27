@@ -2,6 +2,7 @@
 node_modules/
 public/content/
 public/vip-newsletters/
+public/workshops.json
 .now
 .vercel
 .DS_Store
