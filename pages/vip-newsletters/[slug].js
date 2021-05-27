@@ -1,5 +1,6 @@
 import { map } from 'lodash'
 import { Box, Container, Heading, Flex, Button } from 'theme-ui'
+import { useRouter } from 'next/router'
 import Error from 'next/error'
 import Link from 'next/link'
 import Header from '../../components/header'
