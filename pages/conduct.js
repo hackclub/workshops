@@ -20,7 +20,7 @@ const Page = ({ html }) => (
 export const getStaticProps = async () => {
   const { getConductHtml } = require('../lib/data')
   const html = await getConductHtml()
-  return { props: { html }, revalidate: 60 }
+  return { props: { html } }
 }
 
 export default Page

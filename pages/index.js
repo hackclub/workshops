@@ -67,5 +67,5 @@ export default ({ sections }) => {
 export const getStaticProps = async () => {
   const { getWorkshopSections } = require('../lib/data')
   const sections = await getWorkshopSections()
-  return { props: { sections }, revalidate: 60 }
+  return { props: { sections } }
 }

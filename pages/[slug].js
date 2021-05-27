@@ -1,18 +1,12 @@
 import { map } from 'lodash'
 import { Button, Container } from 'theme-ui'
-import { useRouter } from 'next/router'
 import Error from 'next/error'
 import Header from '../components/header'
 import Authors from '../components/authors'
 import Content from '../components/content'
 import Footer from '../components/footer'
-import Loading from '../components/loading'
 
 const Page = ({ slug, data, html }) => {
-  const router = useRouter()
-  if (router.isFallback) {
-    return <Loading />   
-  }
   if (!slug || !data) return <Error statusCode={404} />
   return (
     <>
@@ -46,7 +40,7 @@ export const getStaticPaths = () => {
   const { getWorkshopSlugs } = require('../lib/data')
   const slugs = getWorkshopSlugs()
   const paths = map(slugs, slug => ({ params: { slug } }))
-  return { paths, fallback: true }
+  return { paths, fallback: false }
 }
 
 export const getStaticProps = async ({ params }) => {
@@ -54,7 +48,7 @@ export const getStaticProps = async ({ params }) => {
   const { slug } = params
   const md = await getWorkshopFile(slug)
   const { data, html } = await getWorkshopData(slug, md)
-  return { props: { slug, data, html }, revalidate: 60 }
+  return { props: { slug, data, html } }
 }
 
 export default Page
