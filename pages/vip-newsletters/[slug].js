@@ -9,7 +9,7 @@ import Header from '../../components/header'
 import Authors from '../../components/authors'
 import Issues from '../../components/vip-newsletters'
 import Content from '../../components/content'
-import Loading from '../components/loading'
+import Loading from '../../components/loading'
 
 const Page = ({ issues, slug, data, html }) => {
   const router = useRouter()
