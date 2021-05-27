@@ -1,14 +1,15 @@
 import { map } from 'lodash'
 import { Box, Container, Heading, Flex, Button } from 'theme-ui'
 import { useRouter } from 'next/router'
+import { NavButton } from '../../components/nav'
+import { GitHub, HelpCircle } from 'react-feather'
 import Error from 'next/error'
 import Link from 'next/link'
 import Header from '../../components/header'
 import Authors from '../../components/authors'
 import Issues from '../../components/vip-newsletters'
 import Content from '../../components/content'
-import { NavButton } from '../../components/nav'
-import { GitHub, HelpCircle } from 'react-feather'
+import Loading from '../components/loading'
 
 const Page = ({ issues, slug, data, html }) => {
   const router = useRouter()
