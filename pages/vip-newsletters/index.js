@@ -29,6 +29,12 @@ const Page = ({ slugs, html }) => (
         About these newsletters
       </Heading>
       <Content html={html} />
+      <style>
+        {`
+        .hidden {
+          display: none
+        }
+        `}
     </Container>
   </>
 )
