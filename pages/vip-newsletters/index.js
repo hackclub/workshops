@@ -35,6 +35,7 @@ const Page = ({ slugs, html }) => (
           display: none
         }
         `}
+      </style>
     </Container>
   </>
 )
