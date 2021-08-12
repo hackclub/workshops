@@ -29,7 +29,7 @@ const Page = ({ html }) => (
 export const getStaticProps = async () => {
   const { getBannerHtml } = require('../lib/data')
   const html = await getBannerHtml()
-  return { props: { html } }
+  return { props: { html }, revalidate: 30 }
 }
 
 export default Page

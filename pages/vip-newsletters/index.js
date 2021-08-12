@@ -44,7 +44,7 @@ export const getStaticProps = async () => {
   const { getNewsletterSlugs, getNewslettersHtml } = require('../../lib/data')
   const slugs = await getNewsletterSlugs()
   const html = await getNewslettersHtml()
-  return { props: { slugs, html } }
+  return { props: { slugs, html }, revalidate: 30 }
 }
 
 export default Page

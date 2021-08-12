@@ -5,9 +5,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dl": "node lib/download.js && node lib/json.js ",
-    "dev": "yarn run dl && next",
-    "build": "yarn run dl && next build",
+    "dev": "next",
+    "build": "next build",
     "start": "yarn run dev",
     "devserver": "next"
   },
@@ -21,6 +20,8 @@
     "download-git-repo": "^3.0.2",
     "framer-motion": "^4.1.16",
     "geopattern": "^1.2.3",
+    "graphql": "^15.5.1",
+    "graphql-request": "^3.5.0",
     "gray-matter": "^4.0.2",
     "hls.js": "^0.14.16",
     "lodash": "^4.17.21",

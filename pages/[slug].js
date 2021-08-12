@@ -7,6 +7,20 @@ import Content from '../components/content'
 import Footer from '../components/footer'
 
 const Page = ({ slug, data, html }) => {
+  const router = useRouter()
+  if (router.isFallback) {
+    return (
+      <Flex
+        sx={{
+          minHeight: '100vh',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        <Spinner />
+      </Flex>
+    )
+  }
   if (!slug || !data) return <Error statusCode={404} />
   return (
     <>
@@ -36,11 +50,11 @@ const Page = ({ slug, data, html }) => {
   )
 }
 
-export const getStaticPaths = () => {
+export const getStaticPaths = async () => {
   const { getWorkshopSlugs } = require('../lib/data')
-  const slugs = getWorkshopSlugs()
+  const slugs = await getWorkshopSlugs()
   const paths = map(slugs, slug => ({ params: { slug } }))
-  return { paths, fallback: false }
+  return { paths, fallback: true }
 }
 
 export const getStaticProps = async ({ params }) => {
@@ -48,7 +62,7 @@ export const getStaticProps = async ({ params }) => {
   const { slug } = params
   const md = await getWorkshopFile(slug)
   const { data, html } = await getWorkshopData(slug, md)
-  return { props: { slug, data, html } }
+  return { props: { slug, data, html }, revalidate: 30 }
 }
 
 export default Page

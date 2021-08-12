@@ -1,5 +1,5 @@
 import { map } from 'lodash'
-import { Box, Container, Heading, Flex, Button } from 'theme-ui'
+import { Box, Container, Heading, Flex, Button, Spinner } from 'theme-ui'
 import Error from 'next/error'
 import Link from 'next/link'
 import Header from '../../components/header'
@@ -8,8 +8,23 @@ import Issues from '../../components/vip-newsletters'
 import Content from '../../components/content'
 import { NavButton } from '../../components/nav'
 import { GitHub, HelpCircle } from 'react-feather'
+import { useRouter } from 'next/router'
 
 const Page = ({ issues, slug, data, html }) => {
+  const router = useRouter()
+  if (router.isFallback) {
+    return (
+      <Flex
+        sx={{
+          minHeight: '100vh',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        <Spinner />
+      </Flex>
+    )
+  }
   if (!slug || !data) return <Error statusCode={404} />
   return (
     <>
@@ -69,11 +84,11 @@ const Page = ({ issues, slug, data, html }) => {
   )
 }
 
-export const getStaticPaths = () => {
+export const getStaticPaths = async () => {
   const { getNewsletterSlugs } = require('../../lib/data')
-  const slugs = getNewsletterSlugs()
+  const slugs = await getNewsletterSlugs()
   const paths = map(slugs, slug => ({ params: { slug } }))
-  return { paths, fallback: false }
+  return { paths, fallback: true }
 }
 
 export const getStaticProps = async ({ params }) => {
@@ -86,7 +101,7 @@ export const getStaticProps = async ({ params }) => {
   const issues = await getNewsletterSlugs()
   const md = await getNewsletterFile(slug)
   const { data, html } = await getNewsletterData(slug, md)
-  return { props: { issues, slug, data, html } }
+  return { props: { issues, slug, data, html }, revalidate: 30 }
 }
 
 export default Page

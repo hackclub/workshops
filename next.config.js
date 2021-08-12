@@ -10,5 +10,24 @@ module.exports = withMDX({
   },
   images: {
     imageSizes: [512]
-  }
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/content/:slug*',
+        destination: 'https://raw.githubusercontent.com/hackclub/hackclub/main/:slug*',
+        
+      },
+      {
+        source: '/vip-newsletters/:slug*',
+        destination: 'https://raw.githubusercontent.com/hackclub/vip-newsletters/main/:slug*',
+ 
+      },
+      {
+        source: '/workshops.json',
+        destination: '/api/workshops',
+   
+      },
+    ]
+  },
 })

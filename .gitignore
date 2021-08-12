@@ -6,3 +6,4 @@ public/workshops.json
 .now
 .vercel
 .DS_Store
+.env
