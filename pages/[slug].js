@@ -1,5 +1,5 @@
 import { map } from 'lodash'
-import { Button, Container } from 'theme-ui'
+import { Button, Container, Flex } from 'theme-ui'
 import Error from 'next/error'
 import Header from '../components/header'
 import Authors from '../components/authors'
