@@ -5,6 +5,7 @@ import Header from '../components/header'
 import Authors from '../components/authors'
 import Content from '../components/content'
 import Footer from '../components/footer'
+import { useRouter } from 'next/router'
 
 const Page = ({ slug, data, html }) => {
   const router = useRouter()
