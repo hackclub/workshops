@@ -19,6 +19,7 @@ Stuff you need installed ahead of time:
 - Git
 - Yarn
 - An operating system (we hope)
+- A GitHub personal access token
 
 Clone it!
 
@@ -31,6 +32,10 @@ Go into the directory!
 Install dependencies!
 
     $ yarn
+
+Add your token to `.env`!
+
+    $ GITHUB=ghp_token
 
 Run it!
 
