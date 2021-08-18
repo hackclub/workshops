@@ -14,7 +14,7 @@ const allowCors = (fn) => async (req, res) => {
   return await fn(req, res)
 }
 
-async function handler(req, res) => {
+async function handler(req, res){
     res.json((await getWorkshopSections()))
 }
 
