@@ -13,12 +13,6 @@
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=5000, immutable" }
       ]
-    },
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" }
-      ]
     }
   ]
 }
