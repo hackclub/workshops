@@ -6,7 +6,6 @@
       "personal_website",
       "splatter_paint",
       "colorful_grammar",
-      "python_pokedex",
       "speak_colors",
       "sound_galaxy",
       "teachable_machine"
@@ -73,6 +72,7 @@
       "python_data_viz",
       "flask_quote_generator",
       "python_snake",
+      "python_pokedex",
       "fibonacci_sequence",
       "3d_mountain",
       "rock_paper_scissors",
