@@ -106,7 +106,6 @@
     "description": "Learn to use one of the most popular JavaScript frameworks out there.",
     "slugs": [
       "nextjs_starter",
-      "nextjs_dashboard",
       "dicegamereactnative",
       "react_calendar",
       "quotes_generator",
