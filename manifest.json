@@ -98,7 +98,8 @@
       "orpheus_run",
       "atari_breakout",
       "hangman",
-      "rust_text_game"
+      "rust_text_game",
+      "kaboom"
     ]
   },
   "react": {
