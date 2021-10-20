@@ -240,7 +240,6 @@ const SearchBar = ({ setVisible, visible, search, ...props }) => {
         onChange={ele => {
           search(inp.current.value)
         }}
-        placeholder="Search Workshops"
       />
 
       <IconWrapper
