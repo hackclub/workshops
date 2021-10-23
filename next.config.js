@@ -4,10 +4,6 @@ module.exports = withMDX({
   trailingSlash: true,
   pageExtensions: ['js', 'jsx', 'mdx'],
   assetPrefix: isProd ? '/workshops' : '',
-  webpack: config => {
-    config.node = { fs: 'empty' }
-    return config
-  },
   images: {
     imageSizes: [512]
   },
