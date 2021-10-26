@@ -5,6 +5,7 @@ import Header from '../components/header'
 import Authors from '../components/authors'
 import Content from '../components/content'
 import Footer from '../components/footer'
+import Share from '../components/share'
 import { useRouter } from 'next/router'
 
 const Page = ({ slug, data, html }) => {
@@ -36,15 +37,7 @@ const Page = ({ slug, data, html }) => {
       </Header>
       <Container variant="copy" as="main">
         <Content html={html} />
-        <Button
-          as="a"
-          href={data.editUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          sx={{ my: 4, '@media print': { display: 'none' } }}
-        >
-          Edit this page on GitHub
-        </Button>
+        <Share workshop={data.name} />
       </Container>
       <Footer />
     </>
