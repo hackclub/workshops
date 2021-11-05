@@ -12,7 +12,14 @@
       "teachable_machine"
     ]
   },
-
+  "hack-lab": {
+    "title": "Hack Lab",
+    "description": "Workshops on the bleeding edge of development. All warranties void if used. Could result in delight or despair.",
+    "slugs": [
+      "stressed_ball",
+      "muse"
+    ]
+  },
   "web": {
     "title": "Web development",
     "description": "Learn how to make things happen on the web, from basic JavaScript to web APIs",
