@@ -23,7 +23,7 @@ const WorkshopCard = ({ slug, name, description, img, section }) => (
         </Heading>
         <Text variant="caption">{description}</Text>
       </Box>
-      {['starters', 'web'].includes(section) && (
+      {['starters', 'web', 'hack-lab'].includes(section) && (
         <Box
           sx={{
             width: '100%',
