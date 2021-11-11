@@ -27,22 +27,20 @@
       "synth",
       "dashboard",
       "tunes",
+      "julia_fractals",
+      "particle_physics",
       "geometric_pattern",
+      "3d_models_with_zdog",
       "simple_clock",
       "collaborative_sketch",
       "tree_machine",
       "stopwatch",
       "konami_code",
-      "3d_models_with_zdog",
-      "julia_fractals",
-      "particle_physics",
       "javascript_typing_test",
-      "wikibot",
       "hackide",
       "hosting",
       "login_auth",
       "responsive_navbar",
-      "tic_tac_toe",
       "parallax_effect",
       "contact_form_serverless",
       "javascript_snake",
@@ -63,6 +61,21 @@
       "painting_app",
       "website_mockup_generator",
       "meme_generator"
+    ]
+  },
+  "games": {
+    "title": "Games",
+    "description": "Learn to build games, both locally and on the web!",
+    "slugs": [
+      "dodge",
+      "platformer",
+      "pico_8_maze",
+      "memory_game",
+      "orpheus_run",
+      "atari_breakout",
+      "hangman",
+      "rust_text_game",
+      "kaboom"
     ]
   },
   "python": {
@@ -91,22 +104,8 @@
       "python_password_generator",
       "read_the_internet",
       "smart_calculator",
-      "scalable_snowman"
-    ]
-  },
-  "games": {
-    "title": "Games",
-    "description": "Learn to build games, both locally and on the web!",
-    "slugs": [
-      "dodge",
-      "platformer",
-      "pico_8_maze",
-      "memory_game",
-      "orpheus_run",
-      "atari_breakout",
-      "hangman",
-      "rust_text_game",
-      "kaboom"
+      "scalable_snowman",
+      "tic_tac_toe"
     ]
   },
   "react": {
@@ -139,6 +138,7 @@
       "slack_todo_list",
       "discord_bot_with_rust",
       "slack_pfp",
+      "wikibot",
       "discord_message_bot"
     ]
   },
