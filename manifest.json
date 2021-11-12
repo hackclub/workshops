@@ -16,7 +16,8 @@
     "description": "Workshops on the bleeding edge of development. All warranties void if used. Could result in delight or despair.",
     "slugs": [
       "stressed_ball",
-      "muse"
+      "muse",
+      "reverse_workshop_generative_art"
     ]
   },
   "web": {
