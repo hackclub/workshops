@@ -67,6 +67,9 @@ const Page = ({ slug, data, html, md }) => {
     )
   }
   if (!slug || !data) return <Error statusCode={404} />
+
+  const removeFrontMatter = markdown => markdown.split("---")[2];
+
   return (
     <>
       <Header
@@ -79,7 +82,7 @@ const Page = ({ slug, data, html, md }) => {
         <Authors text={data.author} />
       </Header>
       <Container variant="copy" as="main">
-        <MarkedRenderer md={md} />
+        <MarkedRenderer md={removeFrontMatter(md)} />
         <Share workshop={data.name} />
       </Container>
       <Footer />
