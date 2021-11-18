@@ -68,7 +68,7 @@ const Page = ({ slug, data, html, md }) => {
   }
   if (!slug || !data) return <Error statusCode={404} />
 
-  const removeFrontMatter = markdown => markdown.split("---")[2];
+  const removeFrontMatter = markdown => markdown.split("---").slice(2).join("---");
 
   return (
     <>
