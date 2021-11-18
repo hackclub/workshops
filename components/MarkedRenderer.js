@@ -35,7 +35,7 @@ const styles = () => {
 		  font-size: 1.15rem;
 		}
 
-		h1 {
+		.md-container h1 {
 		  font-size: 32px;
 		  font-weight: 800;
 		  margin: 0;
@@ -48,27 +48,27 @@ const styles = () => {
 		}
 
 		@media screen and (min-width: 48em) {
-		  h1 {
+		  .md-container h1 {
 		    font-size: 64px;
 		  }
 		}
 
-		h2 {
+		.md-container h2 {
 		  font-size: 32px;
 		  margin: 0;
 		}
 
-		h3 {
+		.md-container h3 {
 		  font-size: 28px;
 		  margin: 0;
 		}
 
-		h4 {
+		.md-container h4 {
 		  font-size: 20px;
 		  margin: 0;
 		}
 
-		h5 {
+		.md-container h5 {
 		  font-size: 16px;
 		  margin: 0;
 		}
@@ -89,22 +89,28 @@ const styles = () => {
 		  margin: 0;
 		}
 
-		a {
+		.md-container a {
 			color: var(--primary, #ec3750);
 		    -webkit-text-decoration: underline;
 		    text-decoration: underline;
 		    text-underline-position: under;
 		}
 
-		a:hover {
+		.md-container a:hover {
 			text-decoration-style: wavy;
 		}
 
-		pre {
-			font-size: .9rem !important;
+		.md-container pre {
+			font-family: "SF Mono", "Roboto Mono", Menlo, Consolas, monospace;
+	    font-size: 16px;
+	    padding: 16px;
+	    color: var(--theme-ui-colors-text);
+	    background-color: var(--theme-ui-colors-sunken);
+	    overflow: auto;
+	    border-radius: 8px;
 		}
 
-		code {
+		.md-container code {
 			color: var(--purple);
     		font-size: 1rem;
     		font-family: "SF Mono", "Roboto Mono", Menlo, Consolas, monospace;
