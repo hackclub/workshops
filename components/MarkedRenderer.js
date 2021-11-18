@@ -14,7 +14,7 @@ marked.setOptions({
 export default function MarkedRenderer({ md }) {
 	return <>
 		{styles()}
-		<div style={{padding: "20px"}} dangerouslySetInnerHTML={{ __html: marked.parse(md) }}></div>
+		<div className="md-container" style={{padding: "20px"}} dangerouslySetInnerHTML={{ __html: marked.parse(md) }}></div>
 	</>
 }
 
@@ -73,7 +73,7 @@ const styles = () => {
 		  margin: 0;
 		}
 
-		img {
+		.md-container img {
 			width: 300px;
 		}
 
