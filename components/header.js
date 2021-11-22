@@ -17,9 +17,10 @@ const Header = ({
   ...props
 }) => {
   const { pathname } = useRouter()
-  const [mode] = useColorMode()
+  // const [mode] = useColorMode()
   if (bgImg) {
-    const shades = mode === 'dark' ? [0.5, 0.75] : [0.125, 0.25]
+    const shades = [0.125, 0.25]
+
     sx = {
       ...sx,
       backgroundImage: `linear-gradient(rgba(0,0,0,${shades[0]}), rgba(0,0,0,${shades[1]})),
