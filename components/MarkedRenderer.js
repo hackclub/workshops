@@ -74,7 +74,7 @@ const styles = () => {
 		}
 
 		.md-container img {
-			width: 300px;
+			width: 100%;
 		}
 
 		p {
