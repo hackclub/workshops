@@ -33,6 +33,31 @@ export const Styled = styled(BaseStyles)`
       content: ' (' attr(href) ') ';
     }
   }
+
+  .details-video summary {
+    cursor: pointer;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-weight: bold;
+    padding: 5px 0;
+  }
+
+  details summary .details-video-caret  {
+    width: 0; 
+    height: 0; 
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 8px solid currentColor; // Create a right-facing triangle
+  }
+
+  details[open] summary .details-video-caret  {
+    transform: rotate(90deg);
+  }
+
+  .video-summary-camera-icon {
+    fill: currentColor;
+  }
 `
 
 const Content = ({ html }) => (
