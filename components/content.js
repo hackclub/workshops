@@ -35,6 +35,15 @@ export const Styled = styled(BaseStyles)`
   }
 
   .details-video summary {
+    list-style: none;
+  }
+
+  .details-video summary::-webkit-details-marker { // I hate safari
+    display: none !important;
+  }
+  
+
+  .details-video-summary {
     cursor: pointer;
     display: flex;
     gap: 6px;
@@ -43,7 +52,7 @@ export const Styled = styled(BaseStyles)`
     padding: 5px 0;
   }
 
-  details summary .details-video-caret  {
+  .details-video-caret  {
     width: 0; 
     height: 0; 
     border-top: 6px solid transparent;
@@ -51,7 +60,7 @@ export const Styled = styled(BaseStyles)`
     border-left: 8px solid currentColor; // Create a right-facing triangle
   }
 
-  details[open] summary .details-video-caret  {
+  details[open] .details-video-caret  {
     transform: rotate(90deg);
   }
 
