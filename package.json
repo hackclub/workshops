@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@hackclub/banner": "^1.0.1",
-    "@hackclub/markdown": "^0.0.4",
+    "@hackclub/markdown": "^0.0.41",
     "@hackclub/meta": "^1.0.0",
     "@hackclub/theme": "^0.3.0",
     "@mdx-js/loader": "^1.6.19",
