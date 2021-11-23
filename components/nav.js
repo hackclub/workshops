@@ -358,12 +358,10 @@ const Nav = ({ material = false, homepage, search }) => {
             </NavButton>
           </Fragment>
         )}
+        <ColorSwitcher visible={visible} className="nav-color-switcher" />
       </Container>
     </Background>
   )
 }
-
-// <ColorSwitcher visible={visible} className="nav-color-switcher" />
-
 
 export default Nav
