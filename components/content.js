@@ -57,6 +57,11 @@ export const Styled = styled(BaseStyles)`
 
   .video-summary-camera-icon {
     fill: currentColor;
+    flex: 0 0 auto;
+  }
+
+  .details-video video {
+    max-width: 100%;
   }
 `
 
