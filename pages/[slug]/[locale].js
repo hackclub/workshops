@@ -48,10 +48,19 @@ const Page = ({ slug, data, html }) => {
 export const getServerSideProps = async ({ params }) => {
   const { getWorkshopFile, getWorkshopData } = require('../../lib/data')
   const { slug, locale } = params
-  const md = await getWorkshopFile(slug, locale)
-  const { data, html } = await getWorkshopData(slug, md)
-  console.log(data)
-  return { props: { slug, data, html } }
+  try {
+    const md = await getWorkshopFile(slug, locale)
+    const { data, html } = await getWorkshopData(slug, md)
+    console.log(data)
+    return { props: { slug, data, html } }
+  } catch {
+    return {
+      redirect: {
+        destination: `/${slug}`,
+        permanent: false
+      }
+    }
+  }
 }
 
 export default Page
