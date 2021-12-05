@@ -307,7 +307,7 @@ const Nav = ({ material = false, homepage, search }) => {
   const [mode] = useColorMode()
   const { pathname } = useRouter()
   const home = pathname === '/'
-  const standalone = pathname !== '/[slug]'
+  const standalone = pathname !== '/[slug]' && pathname !== '/[slug]/[locale]'
   const back = !home && !standalone
   const Background = material ? Material : Box
   return (
