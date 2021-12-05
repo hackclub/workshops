@@ -1326,8 +1326,10 @@
   resolved "https://registry.yarnpkg.com/@hackclub/banner/-/banner-1.0.1.tgz#10f39c2b8859bb74afcd98f4990bd37be5dceb47"
   integrity sha512-ABWVNRC5854USnxthVa+mXDQN2axkNu1RxRO5vS87QsfpQncmqTZDEy7V1LKNy9m1An36zLKm4/tPcir/jI8Ow==
 
-"@hackclub/markdown@file:../markdown":
-  version "0.0.42"
+"@hackclub/markdown@^0.0.43":
+  version "0.0.43"
+  resolved "https://registry.yarnpkg.com/@hackclub/markdown/-/markdown-0.0.43.tgz#983a5cd2c8ec23c64ecae9efbab411f18461ae42"
+  integrity sha512-9cjtujLRcPJXYoxbcvBZh5td5ymhXtntRYE4UsSnqBb05G4jzMBcm0eJSSWd+asdyV6oI9Iu468ES+VTkpZJnQ==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/preset-env" "^7.12.11"
@@ -5350,6 +5352,11 @@ supports-color@^8.0.0:
   integrity sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==
   dependencies:
     has-flag "^4.0.0"
+
+swr@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/swr/-/swr-1.1.0.tgz#7710cdbc5ff664c13e41fba6a1fa4734f82aba35"
+  integrity sha512-MFL3mkl752Uap81nLA1tEu7vQmikPamSziW+6dBidYKAo4oLOlUx/x5GZy4ZCkCwfZe2uedylkz1UMGnatUX4g==
 
 tar-stream@^1.5.2:
   version "1.6.2"

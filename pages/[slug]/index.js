@@ -1,6 +1,8 @@
 import { map } from 'lodash'
-import { Button, Container, Flex, Spinner } from 'theme-ui'
+import { Button, Container, Flex, Spinner, Box } from 'theme-ui'
 import Error from 'next/error'
+import Link from 'next/link'
+import langs from '../../lib/langs'
 import Header from '../../components/header'
 import Authors from '../../components/authors'
 import Content from '../../components/content'
@@ -8,7 +10,13 @@ import Footer from '../../components/footer'
 import Share from '../../components/share'
 import { useRouter } from 'next/router'
 
-const Page = ({ slug, data, html }) => {
+const LocaleLink = ({ href, children, slug }) => {
+  return (<Link href={href == "en" ? `/${slug}` : `/${slug}/${href}`}>
+    {children}
+  </Link>)
+}
+
+const Page = ({ slug, data, html, locales }) => {
   const router = useRouter()
   if (router.isFallback) {
     return (
@@ -24,6 +32,7 @@ const Page = ({ slug, data, html }) => {
     )
   }
   if (!slug || !data) return <Error statusCode={404} />
+  if (locales) data.locales = locales
   return (
     <>
       <Header
@@ -37,6 +46,26 @@ const Page = ({ slug, data, html }) => {
       </Header>
       <Container variant="copy" as="main">
         <Content html={html} />
+        {data.locales && (
+          <Content>
+            This workshop is also available in{' '}
+            <LocaleLink href={data.locales.split(',')[0]} slug={slug}>
+              {langs[data.locales.split(',')[0]].nameEnglish}
+            </LocaleLink>
+            {data.locales
+              .split(',')
+              .slice(1)
+              .map((localeCode, index) => (
+                <>
+                  {index == data.locales.split(',').length - 2 ? ' &' : ','}{' '}
+                  <LocaleLink href={localeCode.trim()} key={`locale-${index}`} slug={slug}>
+                    {langs[localeCode.trim()].nameEnglish}
+                  </LocaleLink>
+                </>
+              ))}
+            .
+          </Content>
+        )}
         <Share workshop={data.name} />
       </Container>
       <Footer />
@@ -56,7 +85,6 @@ export const getStaticProps = async ({ params }) => {
   const { slug } = params
   const md = await getWorkshopFile(slug)
   const { data, html } = await getWorkshopData(slug, md)
-  console.log(data)
   return { props: { slug, data, html }, revalidate: 30 }
 }
 

@@ -38,10 +38,10 @@ export const Styled = styled(BaseStyles)`
     list-style: none;
   }
 
-  .details-video summary::-webkit-details-marker { // I hate safari
+  .details-video summary::-webkit-details-marker {
+    // I hate safari
     display: none !important;
   }
-  
 
   .details-video-summary {
     cursor: pointer;
@@ -52,15 +52,15 @@ export const Styled = styled(BaseStyles)`
     padding: 5px 0;
   }
 
-  .details-video-caret  {
-    width: 0; 
-    height: 0; 
+  .details-video-caret {
+    width: 0;
+    height: 0;
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
     border-left: 8px solid currentColor; // Create a right-facing triangle
   }
 
-  details[open] .details-video-caret  {
+  details[open] .details-video-caret {
     transform: rotate(90deg);
   }
 
@@ -74,12 +74,17 @@ export const Styled = styled(BaseStyles)`
   }
 `
 
-const Content = ({ html }) => (
-  <Styled
-    as="article"
-    className="docs"
-    dangerouslySetInnerHTML={{ __html: html }}
-  />
-)
+const Content = ({ html, children }) =>
+  html ? (
+    <Styled
+      as="article"
+      className="docs"
+      dangerouslySetInnerHTML={{ __html: html }}
+    ></Styled>
+  ) : (
+    <Styled as="article" className="docs">
+      {children}
+    </Styled>
+  )
 
 export default Content
