@@ -3,7 +3,7 @@ const withMDX = require('@next/mdx')({ extension: /\.mdx?$/ })
 module.exports = withMDX({
   trailingSlash: true,
   pageExtensions: ['js', 'jsx', 'mdx'],
-  assetPrefix: isProd ? '/workshops' : '',
+  assetPrefix: '/workshops',
   images: {
     imageSizes: [512]
   },
@@ -26,4 +26,9 @@ module.exports = withMDX({
       },
     ]
   },
+  async rewrites() {
+    return [
+      { source: '/workshops/_next/:path*', destination: '/_next/:path*' }
+    ]
+  }
 })
