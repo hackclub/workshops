@@ -24,11 +24,7 @@ module.exports = withMDX({
         destination: '/api/workshops',
    
       },
-    ]
-  },
-  async rewrites() {
-    return [
       { source: '/workshops/_next/:path*', destination: '/_next/:path*' }
     ]
-  }
+  },
 })
