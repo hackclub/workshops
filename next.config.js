@@ -3,7 +3,7 @@ const withMDX = require('@next/mdx')({ extension: /\.mdx?$/ })
 module.exports = withMDX({
   trailingSlash: true,
   pageExtensions: ['js', 'jsx', 'mdx'],
-  assetPrefix: '/workshops',
+  basePath: '/workshops',
   images: {
     imageSizes: [512]
   },
@@ -24,7 +24,8 @@ module.exports = withMDX({
         destination: '/api/workshops',
    
       },
-      { source: '/workshops/_next/:path*', destination: '/_next/:path*' }
+      { source: '/', destination: '/workshops/' },
+      { source: '/:path*', destination: '/workshops/:path*' }
     ]
   },
 })
