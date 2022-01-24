@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import { Box, Button } from 'theme-ui'
+import { Box, Button, Link } from 'theme-ui'
 import Header from '../components/header'
 import Listing from '../components/listing'
 import Footer from '../components/footer'
@@ -59,6 +59,19 @@ export default ({ sections }) => {
       {data.map(({ key, ...section }) => (
         <Listing key={key} id={key} {...section} />
       ))}
+      <Box 
+        sx={{ 
+          position: "fixed", 
+          bottom: "30px", 
+          right: "30px",
+          bg: "red",
+          width: "max-content",
+          p: "20px",
+          "border-radius": "20px",
+          color: "white"
+        }}>
+        Join our <a href="https://www.google.com">Jankathon</a>!
+      </Box>
       <Footer />
     </>
   )
