@@ -6,6 +6,9 @@ import Footer from '../components/footer'
 import { useState } from 'react'
 import { filter } from '../lib/search'
 
+import { GamelabAnnouncement } from '../components/gamelabAnnouncment';
+
+
 const Blobs = dynamic(import('../components/blobs'), { ssr: false })
 
 export default ({ sections }) => {
@@ -20,6 +23,8 @@ export default ({ sections }) => {
           flex-direction: column;
           justify-content: space-between;
         }
+
+
       `}</style>
 
       <Box
@@ -56,6 +61,9 @@ export default ({ sections }) => {
           Our Philosophy »
         </Button>
       </Header>
+
+      <GamelabAnnouncement></GamelabAnnouncement>
+
       {data.map(({ key, ...section }) => (
         <Listing key={key} id={key} {...section} />
       ))}
