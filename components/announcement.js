@@ -32,7 +32,7 @@ const Announcement = ({
     {iconLeft && <Flag color={iconColor} size={24} style={{ margin: '8px' }} />}
     <Text
       as="p"
-      sx={{ flex: '1 1 auto', strong: { display: ['inline', 'block'] } }}
+      sx={{ flex: '1 1 auto', ml: 1, strong: { display: ['inline', 'block'] } }}
     >
       <strong>{copy}</strong>
       {caption && (
