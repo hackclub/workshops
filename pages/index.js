@@ -6,8 +6,7 @@ import Footer from '../components/footer'
 import { useState } from 'react'
 import { filter } from '../lib/search'
 
-import { GamelabAnnouncement } from '../components/gamelabAnnouncment';
-
+import Announcement from '../components/announcement'
 
 const Blobs = dynamic(import('../components/blobs'), { ssr: false })
 
@@ -23,8 +22,6 @@ export default ({ sections }) => {
           flex-direction: column;
           justify-content: space-between;
         }
-
-
       `}</style>
 
       <Box
@@ -62,7 +59,13 @@ export default ({ sections }) => {
         </Button>
       </Header>
 
-      <GamelabAnnouncement></GamelabAnnouncement>
+      <Announcement
+        copy="Help fill the Game Lab Arcade!"
+        caption="Orpheus needs your little games to travel back to the present!"
+        color="#ec3750"
+        href="https://scrapbook.hackclub.com/r/gamelab/"
+        iconLeft
+      />
 
       {data.map(({ key, ...section }) => (
         <Listing key={key} id={key} {...section} />
