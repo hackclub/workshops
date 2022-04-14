@@ -59,14 +59,6 @@ export default ({ sections }) => {
         </Button>
       </Header>
 
-      <Announcement
-        copy="Help fill the Game Lab Arcade!"
-        caption="Orpheus needs your little games to travel back to the present!"
-        color="#ec3750"
-        href="https://scrapbook.hackclub.com/r/gamelab/"
-        iconLeft
-      />
-
       {data.map(({ key, ...section }) => (
         <Listing key={key} id={key} {...section} />
       ))}
