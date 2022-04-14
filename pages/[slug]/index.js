@@ -9,11 +9,14 @@ import Content from '../../components/content'
 import Footer from '../../components/footer'
 import Share from '../../components/share'
 import { useRouter } from 'next/router'
+import { Edit3 } from 'react-feather'
 
 const LocaleLink = ({ href, children, slug }) => {
-  return (<Link href={href == "en" ? `/${slug}` : `/${slug}/${href}`}>
-    {children}
-  </Link>)
+  return (
+    <Link href={href == 'en' ? `/${slug}` : `/${slug}/${href}`}>
+      {children}
+    </Link>
+  )
 }
 
 const Page = ({ slug, data, html, locales }) => {
@@ -50,11 +53,17 @@ const Page = ({ slug, data, html, locales }) => {
           position: 'fixed',
           right: '0',
           bottom: '25px',
-          width: 'auto',
-        }}>
-        <Link href={`https://github.com/hackclub/hackclub/edit/main/workshops/${slug}/README.md`}>
+          width: 'auto'
+        }}
+      >
+        <Button
+          as="a"
+          variant="outline"
+          href={`https://github.com/hackclub/hackclub/edit/main/workshops/${slug}/README.md`}
+        >
+          <Edit3 />
           Edit this page!
-        </Link>
+        </Button>
       </Container>
 
       <Container variant="copy" as="main">
@@ -71,7 +80,11 @@ const Page = ({ slug, data, html, locales }) => {
               .map((localeCode, index) => (
                 <>
                   {index == data.locales.split(',').length - 2 ? ' &' : ','}{' '}
-                  <LocaleLink href={localeCode.trim()} key={`locale-${index}`} slug={slug}>
+                  <LocaleLink
+                    href={localeCode.trim()}
+                    key={`locale-${index}`}
+                    slug={slug}
+                  >
                     {langs[localeCode.trim()].nameEnglish}
                   </LocaleLink>
                 </>
