@@ -52,7 +52,7 @@ const Page = ({ slug, data, html, locales }) => {
           bottom: '25px',
           width: 'auto',
         }}>
-        <Link href={`https://github.com/hackclub/hackclub/tree/main/workshops/${slug}`}>
+        <Link href={`https://github.com/hackclub/hackclub/edit/main/workshops/${slug}/README.md`}>
           Edit this page!
         </Link>
       </Container>
