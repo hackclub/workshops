@@ -44,6 +44,19 @@ const Page = ({ slug, data, html, locales }) => {
       >
         <Authors text={data.author} />
       </Header>
+
+      <Container
+        sx={{
+          position: 'fixed',
+          right: '0',
+          bottom: '25px',
+          width: 'auto',
+        }}>
+        <Link href={`https://github.com/hackclub/hackclub/tree/main/workshops/${slug}`}>
+          Edit this page!
+        </Link>
+      </Container>
+
       <Container variant="copy" as="main">
         <Content html={html} />
         {data.locales && (
