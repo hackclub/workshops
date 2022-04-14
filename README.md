@@ -33,13 +33,21 @@ Install dependencies!
 
     $ yarn
 
-Add your token to `.env`!
+Create a `.env` file!
+
+    $ touch .env
+
+Create a [GitHub personal access token](https://github.com/settings/tokens) and add the token to `.env`!
 
     $ GITHUB=ghp_token
 
 Run it!
 
     $ yarn run dev
+
+Open it!
+
+    $ open http://localhost:3000
 
 ### License
 
