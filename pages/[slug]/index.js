@@ -50,9 +50,9 @@ const Page = ({ slug, data, html, locales }) => {
 
       <Container
         sx={{
+          bottom: '25px',
           position: 'fixed',
           right: '0',
-          bottom: '25px',
           width: 'auto'
         }}
       >
@@ -60,6 +60,9 @@ const Page = ({ slug, data, html, locales }) => {
           as="a"
           variant="outline"
           href={`https://github.com/hackclub/hackclub/edit/main/workshops/${slug}/README.md`}
+          sx={{
+            backgroundColor: 'white',
+          }}
         >
           <Edit3 />
           Edit this page!
