@@ -61,7 +61,7 @@ const Page = ({ slug, data, html, locales }) => {
           variant="outline"
           href={`https://github.com/hackclub/hackclub/edit/main/workshops/${slug}/README.md`}
           sx={{
-            backgroundColor: 'white',
+            backgroundColor: 'background',
           }}
         >
           <Edit3 />
