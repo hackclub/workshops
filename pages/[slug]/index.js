@@ -1,5 +1,5 @@
 import { map } from 'lodash'
-import { Button, Container, Flex, Spinner, Box } from 'theme-ui'
+import { Button, Container, Flex, Spinner, Box, Text } from 'theme-ui'
 import Error from 'next/error'
 import Link from 'next/link'
 import langs from '../../lib/langs'
@@ -9,11 +9,14 @@ import Content from '../../components/content'
 import Footer from '../../components/footer'
 import Share from '../../components/share'
 import { useRouter } from 'next/router'
+import { Edit3 } from 'react-feather'
 
 const LocaleLink = ({ href, children, slug }) => {
-  return (<Link href={href == "en" ? `/${slug}` : `/${slug}/${href}`}>
-    {children}
-  </Link>)
+  return (
+    <Link href={href == 'en' ? `/${slug}` : `/${slug}/${href}`}>
+      {children}
+    </Link>
+  )
 }
 
 const Page = ({ slug, data, html, locales }) => {
@@ -44,6 +47,37 @@ const Page = ({ slug, data, html, locales }) => {
       >
         <Authors text={data.author} />
       </Header>
+
+      <Container
+        sx={{
+          bottom: '25px',
+          position: 'fixed',
+          right: '0',
+          width: 'auto'
+        }}
+      >
+        <Button
+          as="a"
+          variant="outline"
+          href={`https://github.com/hackclub/hackclub/edit/main/workshops/${slug}/README.md`}
+          sx={{
+            backgroundColor: 'background',
+            svg: {
+              mr: [0, 2]
+            }
+          }}
+        >
+          <Edit3 />
+          <Text
+            sx={{
+              display: ['none', 'inline']
+            }}
+          >
+            Edit this page!
+          </Text>
+        </Button>
+      </Container>
+
       <Container variant="copy" as="main">
         <Content html={html} />
         {data.locales && (
@@ -58,7 +92,11 @@ const Page = ({ slug, data, html, locales }) => {
               .map((localeCode, index) => (
                 <>
                   {index == data.locales.split(',').length - 2 ? ' &' : ','}{' '}
-                  <LocaleLink href={localeCode.trim()} key={`locale-${index}`} slug={slug}>
+                  <LocaleLink
+                    href={localeCode.trim()}
+                    key={`locale-${index}`}
+                    slug={slug}
+                  >
                     {langs[localeCode.trim()].nameEnglish}
                   </LocaleLink>
                 </>
