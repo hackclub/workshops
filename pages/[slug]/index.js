@@ -1,5 +1,5 @@
 import { map } from 'lodash'
-import { Button, Container, Flex, Spinner, Box } from 'theme-ui'
+import { Button, Container, Flex, Spinner, Box, Text } from 'theme-ui'
 import Error from 'next/error'
 import Link from 'next/link'
 import langs from '../../lib/langs'
@@ -62,10 +62,19 @@ const Page = ({ slug, data, html, locales }) => {
           href={`https://github.com/hackclub/hackclub/edit/main/workshops/${slug}/README.md`}
           sx={{
             backgroundColor: 'background',
+            svg: {
+              mr: [0, 2]
+            }
           }}
         >
           <Edit3 />
-          Edit this page!
+          <Text
+            sx={{
+              display: ['none', 'inline']
+            }}
+          >
+            Edit this page!
+          </Text>
         </Button>
       </Container>
 
