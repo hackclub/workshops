@@ -64,7 +64,8 @@ const Page = ({ slug, data, html, locales }) => {
             backgroundColor: 'background',
             svg: {
               mr: [0, 2]
-            }
+            },
+            py: [3, 2]
           }}
         >
           <Edit3 />
