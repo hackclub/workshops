@@ -15,11 +15,6 @@ module.exports = withMDX({
         
       },
       {
-        source: '/vip-newsletters/:slug*',
-        destination: 'https://raw.githubusercontent.com/hackclub/vip-newsletters/main/:slug*',
- 
-      },
-      {
         source: '/workshops.json',
         destination: '/api/workshops',
    
