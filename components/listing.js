@@ -106,7 +106,7 @@ function Listing({ id, title, description, workshops, ...props }) {
                   right: '-250%',
                   bottom: '0',
                   display: 'none',
-                  backgroundColor: '#252429',
+                  backgroundColor: '#1f2d3d',
                   color: 'white',
                   opacity: '80%',
                   px: '5px',
