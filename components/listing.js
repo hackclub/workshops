@@ -91,6 +91,8 @@ function Listing({ id, title, description, workshops, ...props }) {
                 position: 'relative',
                 display: 'inline',
                 width: 'fit-content',
+                color: 'muted',
+                pl: '5px',
                 ':hover,:focus': {
                   cursor: 'pointer',
                   '> span': {
@@ -99,11 +101,11 @@ function Listing({ id, title, description, workshops, ...props }) {
                 }
               }}
             >
-              <Icon glyph="link" size={35} />
+              <Icon glyph="link" size={24} />
               <Text
                 sx={{
                   position: 'absolute',
-                  right: '-250%',
+                  right: '-350%',
                   bottom: '0',
                   display: 'none',
                   backgroundColor: '#1f2d3d',
@@ -112,7 +114,7 @@ function Listing({ id, title, description, workshops, ...props }) {
                   px: '5px',
                   py: '2px',
                   borderRadius: '5px',
-                  width: '250%',
+                  width: '350%',
                   textAlign: 'center'
                 }}
               >
