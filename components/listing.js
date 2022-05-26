@@ -114,7 +114,7 @@ function Listing({ id, title, description, workshops, ...props }) {
                   px: '5px',
                   py: '2px',
                   borderRadius: '5px',
-                  width: '350%',
+                  width: '320%',
                   textAlign: 'center'
                 }}
               >
