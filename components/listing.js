@@ -55,7 +55,8 @@ const Listing = ({ id, title, description, workshops, ...props }) => (
     as="section"
     id={snakeCase(title)}
     sx={{
-      backgroundImage: `theme.util.gx('sheet', 'sunken')`,
+      backgroundImage: theme =>
+         `linear-gradient(to bottom, ${theme.colors.sheet}, ${theme.colors.sunken})`,
       py: [4, 5],
       flex: workshops.length == 0 ? 1 : null, //fix for floating footer on fallback data being rendered
       color: 'text',
