@@ -30,7 +30,7 @@ const Page = ({ issues, slug, data, html }) => {
     <>
       <Header {...data} includeMeta>
         <Authors
-          text="@ChristinaAsquith, @lachlanjc, @ZachLatta"
+          text="@ChristinaAsquith, @ZachLatta"
           color="secondary"
         />
       </Header>
