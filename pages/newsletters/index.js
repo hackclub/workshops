@@ -7,9 +7,9 @@ import Issues from '../../components/vip-newsletters'
 const Page = ({ slugs, html }) => (
   <>
     <Header
-      title="VIP Newsletters"
-      desc="Email updates sent to Hack Club’s largest supporters every month."
-      img="https://workshop-cards.hackclub.com/VIP%20Newsletters.png?brand=HQ&theme=dark"
+      title="Newsletters"
+      desc="Email updates sent to Hack Club’s Slack Community every month."
+      img="https://workshop-cards.hackclub.com/Newsletters.png?brand=HQ&theme=dark"
       includeMeta
       sx={{ mb: 0 }}
     />
@@ -18,7 +18,7 @@ const Page = ({ slugs, html }) => (
       <Issues issues={slugs} />
       <Button
         as="a"
-        href="https://github.com/hackclub/vip-newsletters"
+        href="https://github.com/hackclub/newsletters"
         variant="outline"
         sx={{ color: 'muted', mt: 3 }}
       >
@@ -41,9 +41,9 @@ const Page = ({ slugs, html }) => (
 )
 
 export const getStaticProps = async () => {
-  const { getVIPNewsletterSlugs, getVIPNewslettersHtml } = require('../../lib/data')
-  const slugs = await getVIPNewsletterSlugs()
-  const html = await getVIPNewslettersHtml()
+  const { getNewsletterSlugs, getNewslettersHtml } = require('../../lib/data')
+  const slugs = await getNewsletterSlugs()
+  const html = await getNewslettersHtml()
   return { props: { slugs, html }, revalidate: 30 }
 }
 

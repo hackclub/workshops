@@ -85,22 +85,22 @@ const Page = ({ issues, slug, data, html }) => {
 }
 
 export const getStaticPaths = async () => {
-  const { getVIPNewsletterSlugs } = require('../../lib/data')
-  const slugs = await getVIPNewsletterSlugs()
+  const { getNewsletterSlugs } = require('../../lib/data')
+  const slugs = await getNewsletterSlugs()
   const paths = map(slugs, slug => ({ params: { slug } }))
   return { paths, fallback: true }
 }
 
 export const getStaticProps = async ({ params }) => {
   const {
-    getVIPNewsletterSlugs,
-    getVIPNewsletterFile,
-    getVIPNewsletterData
+    getNewsletterSlugs,
+    getNewsletterFile,
+    getNewsletterData
   } = require('../../lib/data')
   const { slug } = params
-  const issues = await getVIPNewsletterSlugs()
-  const md = await getVIPNewsletterFile(slug)
-  const { data, html } = await getVIPNewsletterData(slug, md)
+  const issues = await getNewsletterSlugs()
+  const md = await getNewsletterFile(slug)
+  const { data, html } = await getNewsletterData(slug, md)
   return { props: { issues, slug, data, html }, revalidate: 30 }
 }
 
