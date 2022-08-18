@@ -9,6 +9,7 @@ import Content from '../../components/content'
 import { NavButton } from '../../components/nav'
 import { GitHub, HelpCircle } from 'react-feather'
 import { useRouter } from 'next/router'
+import { formatTitle } from '../../lib/format-title'
 
 const Page = ({ issues, slug, data, html }) => {
   const router = useRouter()
@@ -26,6 +27,7 @@ const Page = ({ issues, slug, data, html }) => {
     )
   }
   if (!slug || !data) return <Error statusCode={404} />
+  console.log(data)
   return (
     <>
       <Header {...data} includeMeta />
@@ -96,6 +98,8 @@ export const getStaticProps = async ({ params }) => {
   const issues = await getNewsletterSlugs()
   const md = await getNewsletterFile(slug)
   const { data, html } = await getNewsletterData(slug, md)
+  data.title =
+    data.title.split(' ')[0] + ' ' + formatTitle(data.title.split(' ')[1])
   return { props: { issues, slug, data, html }, revalidate: 30 }
 }
 
