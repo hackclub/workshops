@@ -1,5 +1,5 @@
 import { map } from 'lodash'
-import { Box, Container, Heading, Flex, Button, Spinner } from 'theme-ui'
+import { Box, Container, Heading, Flex, Button, Spinner, Text } from 'theme-ui'
 import Error from 'next/error'
 import Link from 'next/link'
 import Header from '../../components/header'
@@ -7,7 +7,7 @@ import Authors from '../../components/authors'
 import Issues from '../../components/newsletters'
 import Content from '../../components/content'
 import { NavButton } from '../../components/nav'
-import { GitHub, HelpCircle } from 'react-feather'
+import { GitHub, HelpCircle, ArrowLeftCircle } from 'react-feather'
 import { useRouter } from 'next/router'
 import { formatTitle } from '../../lib/format-title'
 
@@ -27,11 +27,23 @@ const Page = ({ issues, slug, data, html }) => {
     )
   }
   if (!slug || !data) return <Error statusCode={404} />
-  console.log(data)
   return (
     <>
-      <Header {...data} includeMeta />
+      <Header title="Community Newsletter" />
       <Container variant="copy" as="main" pb={4}>
+        <Link href="/newsletters" passHref>
+          <Box
+            sx={{
+              mb: 4,
+              display: 'flex',
+              alignItems: 'center',
+              ':hover': { color: 'red', cursor: 'pointer' }
+            }}
+          >
+            <ArrowLeftCircle />
+            <Text sx={{ fontSize: [2, 3], ml: 2 }}>Back</Text>
+          </Box>
+        </Link>
         <Content html={html} />
         <Button
           as="a"
