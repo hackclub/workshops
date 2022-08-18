@@ -59,31 +59,29 @@ const Page = ({ issues, slug, data, html }) => {
         <Container>
           <Flex
             sx={{
-              mb: 3,
-              flexWrap: 'wrap',
-              alignItems: 'flex-end',
+              mb: 5,
+              alignContent: 'center',
               justifyContent: 'center',
-              textAlign: 'center'
+              textAlign: 'center',
+              flexDirection: 'column'
             }}
           >
             <Heading variant="headline" mt={0} mr={3} mb={2}>
               Recent issues
             </Heading>
             <Link href="/newsletters" passHref>
-              <NavButton
-                as="a"
-                color="muted"
+              <Container
                 sx={{
-                  display: 'inline-flex',
-                  width: 'auto',
-                  pr: 2,
-                  mb: 2,
-                  svg: { mr: 2 }
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'muted',
+                  ':hover': { cursor: 'pointer' }
                 }}
               >
                 <HelpCircle size={24} />
-                What are these?
-              </NavButton>
+                <Heading sx={{ ml: 2 }}>What are these?</Heading>
+              </Container>
             </Link>
           </Flex>
           <Issues issues={issues} vip={false} showAbout />
