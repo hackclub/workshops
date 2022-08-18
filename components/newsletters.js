@@ -5,6 +5,10 @@ import { useRouter } from 'next/router'
 const colors = 'red,orange,yellow,green,cyan,blue,purple'.split(',')
 const getColor = i => colors[Number(i - 1) % colors.length]
 
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.toLowerCase().slice(1)
+}
+
 export default ({ issues, showAbout, vip = true }) => {
   const { pathname, query } = useRouter()
   const active =
@@ -15,10 +19,14 @@ export default ({ issues, showAbout, vip = true }) => {
   const { theme } = useThemeUI()
   return (
     <>
-      <Grid columns={vip ? [2, 3, 4] : [2, 3]} gap={3} sx={{ alignItems: 'center' }}>
+      <Grid
+        columns={vip ? [2, 3, 4] : [2, 3]}
+        gap={3}
+        sx={{ alignItems: 'center' }}
+      >
         {vip
-          // VIP newsletter styles
-          ? issues.map(issue => (
+          ? // VIP newsletter styles
+            issues.map(issue => (
               <Link
                 href={`/vip-newsletters/[slug]`}
                 as={`/vip-newsletters/${issue}`}
@@ -42,8 +50,8 @@ export default ({ issues, showAbout, vip = true }) => {
                 </Card>
               </Link>
             ))
-          // Community news letter issues
-          : issues.map(issue => (
+          : // Community news letter issues
+            issues.map(issue => (
               <Link
                 href={`/newsletters/[slug]`}
                 as={`/newsletters/${issue}`}
@@ -63,7 +71,11 @@ export default ({ issues, showAbout, vip = true }) => {
                         : theme.shadows.card
                   }}
                 >
-                  {issue}
+                  {capitalize(issue.split('-')[2]) +
+                    ' ' +
+                    issue.split('-')[1] +
+                    ', ' +
+                    issue.split('-')[0]}
                 </Card>
               </Link>
             ))}
