@@ -18,7 +18,7 @@ const Page = ({ slugs, html }) => (
       <Issues issues={slugs} vip={false} />
       <Button
         as="a"
-        href="https://github.com/hackclub/newsletters"
+        href="https://github.com/hackclub/newsletter"
         variant="outline"
         sx={{ color: 'muted', mt: 3 }}
       >
