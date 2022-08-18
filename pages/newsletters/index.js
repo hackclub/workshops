@@ -15,7 +15,7 @@ const Page = ({ slugs, html }) => (
     />
     <Container variant="copy" py={3}>
       <Heading variant="headline">Recent issues</Heading>
-      <Issues issues={slugs} />
+      <Issues issues={slugs} vip={false} />
       <Button
         as="a"
         href="https://github.com/hackclub/newsletters"
