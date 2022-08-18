@@ -1,13 +1,12 @@
 import { Grid, Card, useThemeUI } from 'theme-ui'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { formatTitle } from '../lib/format-title'
 
 const colors = 'red,orange,yellow,green,cyan,blue,purple'.split(',')
 const getColor = i => colors[Number(i - 1) % colors.length]
 
-function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.toLowerCase().slice(1)
-}
+
 
 export default ({ issues, showAbout, vip = true }) => {
   const { pathname, query } = useRouter()
@@ -71,11 +70,7 @@ export default ({ issues, showAbout, vip = true }) => {
                         : theme.shadows.card
                   }}
                 >
-                  {capitalize(issue.split('-')[2]) +
-                    ' ' +
-                    issue.split('-')[1] +
-                    ', ' +
-                    issue.split('-')[0]}
+                  {formatTitle(issue)}
                 </Card>
               </Link>
             ))}
