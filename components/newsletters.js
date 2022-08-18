@@ -50,7 +50,7 @@ export default ({ issues, showAbout, vip = true }) => {
               </Link>
             ))
           : // Community news letter issues
-            issues.map(issue => (
+            issues.map((issue, i) => (
               <Link
                 href={`/newsletters/[slug]`}
                 as={`/newsletters/${issue}`}
@@ -60,12 +60,12 @@ export default ({ issues, showAbout, vip = true }) => {
                 <Card
                   as="a"
                   variant="nav"
-                  sx={{ bg: getColor(issue), color: 'white' }}
+                  sx={{ bg: getColor(i+1), color: 'white' }}
                   style={{
                     boxShadow:
-                      active === issue
+                      active === i+1
                         ? `0 0 0 3px ${theme.colors.sheet}, 0 0 0 6px ${
-                            theme.colors[getColor(issue)]
+                            theme.colors[getColor(i+1)]
                           }`
                         : theme.shadows.card
                   }}
