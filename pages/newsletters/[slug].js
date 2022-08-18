@@ -4,7 +4,7 @@ import Error from 'next/error'
 import Link from 'next/link'
 import Header from '../../components/header'
 import Authors from '../../components/authors'
-import Issues from '../../components/vip-newsletters'
+import Issues from '../../components/newsletters'
 import Content from '../../components/content'
 import { NavButton } from '../../components/nav'
 import { GitHub, HelpCircle } from 'react-feather'
@@ -28,17 +28,12 @@ const Page = ({ issues, slug, data, html }) => {
   if (!slug || !data) return <Error statusCode={404} />
   return (
     <>
-      <Header {...data} includeMeta>
-        <Authors
-          text="@ChristinaAsquith, @ZachLatta"
-          color="secondary"
-        />
-      </Header>
+      <Header {...data} includeMeta />
       <Container variant="copy" as="main" pb={4}>
         <Content html={html} />
         <Button
           as="a"
-          href={`https://github.com/hackclub/vip-newsletters/blob/main/${slug}/README.md`}
+          href={`https://github.com/hackclub/newsletters/blob/main/${slug}/README.md`}
           variant="outline"
           sx={{ color: 'muted' }}
         >
@@ -60,7 +55,7 @@ const Page = ({ issues, slug, data, html }) => {
             <Heading variant="headline" mt={0} mr={3} mb={2}>
               Recent issues
             </Heading>
-            <Link href="/vip-newsletters" passHref>
+            <Link href="/newsletters" passHref>
               <NavButton
                 as="a"
                 color="muted"
@@ -77,7 +72,7 @@ const Page = ({ issues, slug, data, html }) => {
               </NavButton>
             </Link>
           </Flex>
-          <Issues issues={issues} showAbout />
+          <Issues issues={issues} vip={false} showAbout />
         </Container>
       </Box>
     </>

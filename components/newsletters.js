@@ -5,17 +5,17 @@ import { useRouter } from 'next/router'
 const colors = 'red,orange,yellow,green,cyan,blue,purple'.split(',')
 const getColor = i => colors[Number(i - 1) % colors.length]
 
-export default ({ issues, showAbout }) => {
+export default ({ issues, showAbout, vip = true }) => {
   const { pathname, query } = useRouter()
-  const active = pathname.startsWith('/vip-newsletters/') ? query.slug : false
+  const active = pathname.startsWith('/vip-newsletters/') || pathname.startsWith('/newsletters/') ? query.slug : false
   const { theme } = useThemeUI()
   return (
     <>
       <Grid columns={[2, 3, 4]} gap={3} sx={{ alignItems: 'center' }}>
         {issues.map(issue => (
           <Link
-            href="/vip-newsletters/[slug]"
-            as={`/vip-newsletters/${issue}`}
+            href={`/${vip ? 'vip-' : ''}newsletters/[slug]`}
+            as={`/${vip ? 'vip-' : ''}newsletters/${issue}`}
             passHref
             key={issue}
           >

@@ -2,7 +2,7 @@ import { Heading, Container, Button } from 'theme-ui'
 import { GitHub } from 'react-feather'
 import Header from '../../components/header'
 import Content from '../../components/content'
-import Issues from '../../components/vip-newsletters'
+import Issues from '../../components/newsletters'
 
 const Page = ({ slugs, html }) => (
   <>
