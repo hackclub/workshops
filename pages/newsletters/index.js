@@ -19,7 +19,7 @@ const Page = ({ slugs, html }) => (
       <Button
         as="a"
         href="https://github.com/hackclub/newsletters"
-        variant="outline"
+        variant="outline" 
         sx={{ color: 'muted', mt: 3 }}
       >
         <GitHub />
