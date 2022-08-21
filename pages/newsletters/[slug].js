@@ -11,7 +11,7 @@ import { GitHub, HelpCircle, ArrowLeftCircle } from 'react-feather'
 import { useRouter } from 'next/router'
 import { formatTitle } from '../../lib/format-title'
 
-const Page = ({ issues, slug, data, html }) => {
+const Page = ({ issues, slug, data, html, authors }) => {
   const router = useRouter()
   if (router.isFallback) {
     return (
@@ -29,7 +29,11 @@ const Page = ({ issues, slug, data, html }) => {
   if (!slug || !data) return <Error statusCode={404} />
   return (
     <>
-      <Header title="Community Newsletter" />
+      <Header title="Community Newsletter">
+        <Heading sx={{ mt: 3, mb: 2 }}>{formatTitle(slug)}</Heading>
+        <Authors text={authors.join()} />
+        {/* <Heading sx={{fontSize: } }></Heading> */}
+      </Header>
       <Container variant="copy" as="main" pb={4}>
         <Link href="/newsletters" passHref>
           <Box
@@ -102,15 +106,17 @@ export const getStaticProps = async ({ params }) => {
   const {
     getNewsletterSlugs,
     getNewsletterFile,
-    getNewsletterData
+    getNewsletterData,
+    getNewsletterAuthors
   } = require('../../lib/data')
   const { slug } = params
   const issues = await getNewsletterSlugs()
   const md = await getNewsletterFile(slug)
   const { data, html } = await getNewsletterData(slug, md)
-  data.title =
-    data.title.split(' ')[0] + ' ' + formatTitle(data.title.split(' ')[1])
-  return { props: { issues, slug, data, html }, revalidate: 30 }
+  data.title = data.title.split(' ')[0] + ' ' + formatTitle(data.title.split(' ')[1])
+  const authors = await getNewsletterAuthors(slug)
+
+  return { props: { issues, slug, data, html, authors }, revalidate: 30 }
 }
 
 export default Page
