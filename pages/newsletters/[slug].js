@@ -31,15 +31,29 @@ const Page = ({ issues, slug, data, html, authors }) => {
     <>
       <Header title="Community Newsletter">
         <Heading sx={{ mt: 3, mb: 2 }}>{formatTitle(slug)}</Heading>
-        <Authors text={authors.join()} />
-        {/* <Heading sx={{fontSize: } }></Heading> */}
+        <Authors text={authors.join()} color="secondary" />
+        <Heading sx={{ fontSize: 1, color: 'secondary', mt: 3 }}>
+          Want to be an author? Submit a pull request{' '}
+          <Link href="https://github.com/hackclub/newsletter" passHref>
+            <Heading
+              sx={{
+                display: 'inline',
+                fontSize: 1,
+                color: 'red',
+                ':hover': { cursor: 'pointer' }
+              }}
+            >
+              here!
+            </Heading>
+          </Link>
+        </Heading>
       </Header>
       <Container variant="copy" as="main" pb={4}>
         <Link href="/newsletters" passHref>
           <Box
             sx={{
               mb: 4,
-              display: 'flex',
+              display: 'inline-flex',
               alignItems: 'center',
               ':hover': { color: 'red', cursor: 'pointer' }
             }}
@@ -113,7 +127,8 @@ export const getStaticProps = async ({ params }) => {
   const issues = await getNewsletterSlugs()
   const md = await getNewsletterFile(slug)
   const { data, html } = await getNewsletterData(slug, md)
-  data.title = data.title.split(' ')[0] + ' ' + formatTitle(data.title.split(' ')[1])
+  data.title =
+    data.title.split(' ')[0] + ' ' + formatTitle(data.title.split(' ')[1])
   const authors = await getNewsletterAuthors(slug)
 
   return { props: { issues, slug, data, html, authors }, revalidate: 30 }
