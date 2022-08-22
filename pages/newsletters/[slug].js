@@ -1,5 +1,5 @@
 import { map } from 'lodash'
-import { Box, Container, Heading, Flex, Button, Spinner } from 'theme-ui'
+import { Box, Container, Heading, Flex, Button, Spinner, Text } from 'theme-ui'
 import Error from 'next/error'
 import Link from 'next/link'
 import Header from '../../components/header'
@@ -7,10 +7,11 @@ import Authors from '../../components/authors'
 import Issues from '../../components/newsletters'
 import Content from '../../components/content'
 import { NavButton } from '../../components/nav'
-import { GitHub, HelpCircle } from 'react-feather'
+import { GitHub, HelpCircle, ArrowLeftCircle } from 'react-feather'
 import { useRouter } from 'next/router'
+import { formatTitle } from '../../lib/format-title'
 
-const Page = ({ issues, slug, data, html }) => {
+const Page = ({ issues, slug, data, html, authors }) => {
   const router = useRouter()
   if (router.isFallback) {
     return (
@@ -28,12 +29,43 @@ const Page = ({ issues, slug, data, html }) => {
   if (!slug || !data) return <Error statusCode={404} />
   return (
     <>
-      <Header {...data} includeMeta />
+      <Header title="Community Newsletter">
+        <Heading sx={{ mt: 3, mb: 2 }}>{formatTitle(slug)}</Heading>
+        <Authors text={authors.join()} color="secondary" />
+        <Heading sx={{ fontSize: 1, color: 'secondary', mt: 3 }}>
+          Want to be an author? Submit a pull request{' '}
+          <Link href="https://github.com/hackclub/newsletter" passHref>
+            <Heading
+              sx={{
+                display: 'inline',
+                fontSize: 1,
+                color: 'red',
+                ':hover': { cursor: 'pointer' }
+              }}
+            >
+              here!
+            </Heading>
+          </Link>
+        </Heading>
+      </Header>
       <Container variant="copy" as="main" pb={4}>
+        <Link href="/newsletters" passHref>
+          <Box
+            sx={{
+              mb: 4,
+              display: 'inline-flex',
+              alignItems: 'center',
+              ':hover': { color: 'red', cursor: 'pointer' }
+            }}
+          >
+            <ArrowLeftCircle />
+            <Text sx={{ fontSize: [2, 3], ml: 2 }}>Back</Text>
+          </Box>
+        </Link>
         <Content html={html} />
         <Button
           as="a"
-          href={`https://github.com/hackclub/newsletters/blob/main/${slug}/README.md`}
+          href={`https://github.com/hackclub/newsletter/blob/main/${slug}/README.md`}
           variant="outline"
           sx={{ color: 'muted' }}
         >
@@ -45,31 +77,29 @@ const Page = ({ issues, slug, data, html }) => {
         <Container>
           <Flex
             sx={{
-              mb: 3,
-              flexWrap: 'wrap',
-              alignItems: 'flex-end',
+              mb: 5,
+              alignContent: 'center',
               justifyContent: 'center',
-              textAlign: 'center'
+              textAlign: 'center',
+              flexDirection: 'column'
             }}
           >
             <Heading variant="headline" mt={0} mr={3} mb={2}>
               Recent issues
             </Heading>
             <Link href="/newsletters" passHref>
-              <NavButton
-                as="a"
-                color="muted"
+              <Container
                 sx={{
-                  display: 'inline-flex',
-                  width: 'auto',
-                  pr: 2,
-                  mb: 2,
-                  svg: { mr: 2 }
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'muted',
+                  ':hover': { cursor: 'pointer' }
                 }}
               >
                 <HelpCircle size={24} />
-                What are these?
-              </NavButton>
+                <Heading sx={{ ml: 2 }}>What are these?</Heading>
+              </Container>
             </Link>
           </Flex>
           <Issues issues={issues} vip={false} showAbout />
@@ -90,13 +120,18 @@ export const getStaticProps = async ({ params }) => {
   const {
     getNewsletterSlugs,
     getNewsletterFile,
-    getNewsletterData
+    getNewsletterData,
+    getNewsletterAuthors
   } = require('../../lib/data')
   const { slug } = params
   const issues = await getNewsletterSlugs()
   const md = await getNewsletterFile(slug)
   const { data, html } = await getNewsletterData(slug, md)
-  return { props: { issues, slug, data, html }, revalidate: 30 }
+  data.title =
+    data.title.split(' ')[0] + ' ' + formatTitle(data.title.split(' ')[1])
+  const authors = await getNewsletterAuthors(slug)
+
+  return { props: { issues, slug, data, html, authors }, revalidate: 30 }
 }
 
 export default Page

@@ -1,6 +1,7 @@
 import { Grid, Card, useThemeUI } from 'theme-ui'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { formatTitle } from '../lib/format-title'
 
 const colors = 'red,orange,yellow,green,cyan,blue,purple'.split(',')
 const getColor = i => colors[Number(i - 1) % colors.length]
@@ -12,7 +13,7 @@ export default ({ issues, showAbout, vip = true }) => {
   return (
     <>
       <Grid columns={[2, 3, 4]} gap={3} sx={{ alignItems: 'center' }}>
-        {issues.map(issue => (
+        {issues.map((issue, i) => (
           <Link
             href={`/${vip ? 'vip-' : ''}newsletters/[slug]`}
             as={`/${vip ? 'vip-' : ''}newsletters/${issue}`}
@@ -22,17 +23,17 @@ export default ({ issues, showAbout, vip = true }) => {
             <Card
               as="a"
               variant="nav"
-              sx={{ bg: getColor(issue), color: 'white' }}
+              sx={{ bg: getColor(i+1), color: 'white' }}
               style={{
                 boxShadow:
-                  active === issue
+                  active === i+1
                     ? `0 0 0 3px ${theme.colors.sheet}, 0 0 0 6px ${
-                        theme.colors[getColor(issue)]
+                        theme.colors[getColor(i+1)]
                       }`
                     : theme.shadows.card
               }}
             >
-              {issue}
+              {vip ? issue : formatTitle(issue)}
             </Card>
           </Link>
         ))}
