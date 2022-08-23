@@ -49,7 +49,7 @@ const Page = ({ issues, slug, data, html, authors }) => {
         </Heading>
       </Header>
       <Container variant="copy" as="main" pb={4}>
-        <Link href="/newsletters" passHref>
+        <Link href="/newsletter" passHref>
           <Box
             sx={{
               mb: 4,
@@ -87,7 +87,7 @@ const Page = ({ issues, slug, data, html, authors }) => {
             <Heading variant="headline" mt={0} mr={3} mb={2}>
               Recent issues
             </Heading>
-            <Link href="/newsletters" passHref>
+            <Link href="/newsletter" passHref>
               <Container
                 sx={{
                   display: 'flex',

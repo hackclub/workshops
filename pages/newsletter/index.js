@@ -7,7 +7,7 @@ import Issues from '../../components/newsletters'
 const Page = ({ slugs, html }) => (
   <>
     <Header
-      title="Newsletters"
+      title="Newsletter"
       desc="Email updates sent to Hack Club’s Slack Community every month."
       img="https://workshop-cards.hackclub.com/Newsletters.png?brand=HQ&theme=dark"
       includeMeta
@@ -18,7 +18,7 @@ const Page = ({ slugs, html }) => (
       <Issues issues={slugs} vip={false} />
       <Button
         as="a"
-        href="https://github.com/hackclub/newsletters"
+        href="https://github.com/hackclub/newsletter"
         variant="outline" 
         sx={{ color: 'muted', mt: 3 }}
       >
