@@ -1,36 +1,30 @@
 {
-  "hack-lab": {
-    "title": "Hack Lab",
-    "description": "Workshops on the bleeding edge of development. All warranties void if used. Could result in delight or despair.",
-    "slugs": [
-      "muse",
-      "stressed_ball",
-      "reverse_workshop_generative_art",
-      "whackamole"
-    ]
-  },
   "starters": {
     "title": "Start here",
     "description": "Set out on your journey by building your own website, then move on to multiplayer games and collaborative web apps.",
     "slugs": [
+      "sprig",
       "personal_website",
       "splatter_paint",
-      "colorful_grammar",
-      "speak_colors",
       "sound_galaxy",
-      "teachable_machine"
+      "muse"
     ]
   },
   "web": {
     "title": "Web development",
     "description": "Learn how to make things happen on the web, from basic JavaScript to web APIs",
     "slugs": [
+      "whackamole",
       "find_bigfoot",
       "synth",
+      "colorful_grammar",
+      "speak_colors",
+      "teachable_machine",
       "dashboard",
       "tunes",
       "julia_fractals",
       "particle_physics",
+      "reverse_workshop_generative_art",
       "geometric_pattern",
       "3d_models_with_zdog",
       "simple_clock",
