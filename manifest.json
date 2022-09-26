@@ -3,9 +3,9 @@
     "title": "Start here",
     "description": "Set out on your journey by building your own website, then move on to multiplayer games and collaborative web apps.",
     "slugs": [
-      "sprig",
       "personal_website",
       "splatter_paint",
+      "sprig",
       "sound_galaxy",
       "muse"
     ]
