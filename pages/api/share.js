@@ -1,4 +1,4 @@
-export default async function handler(req, res){
+export default async function handler(req, res) {
   let submission = await fetch(
     'https://airtable-forms-proxy.hackclub.dev/api/appYdkBrT3PrwcbJB/Workshops/',
     {

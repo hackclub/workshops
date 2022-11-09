@@ -15,7 +15,7 @@ const Page = ({ slugs, html }) => (
     />
     <Container variant="copy" py={3}>
       <Heading variant="headline">Recent issues</Heading>
-      <Issues issues={slugs} />
+      <Issues issues={slugs} kind="vip" />
       <Button
         as="a"
         href="https://github.com/hackclub/vip-newsletters"
@@ -41,7 +41,10 @@ const Page = ({ slugs, html }) => (
 )
 
 export const getStaticProps = async () => {
-  const { getVIPNewsletterSlugs, getVIPNewslettersHtml } = require('../../lib/data')
+  const {
+    getVIPNewsletterSlugs,
+    getVIPNewslettersHtml
+  } = require('../../lib/data')
   const slugs = await getVIPNewsletterSlugs()
   const html = await getVIPNewslettersHtml()
   return { props: { slugs, html }, revalidate: 30 }
