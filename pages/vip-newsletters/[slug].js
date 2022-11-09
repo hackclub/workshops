@@ -29,10 +29,7 @@ const Page = ({ issues, slug, data, html }) => {
   return (
     <>
       <Header {...data} includeMeta>
-        <Authors
-          text="@ChristinaAsquith, @ZachLatta"
-          color="secondary"
-        />
+        <Authors text="@ChristinaAsquith, @ZachLatta" color="secondary" />
       </Header>
       <Container variant="copy" as="main" pb={4}>
         <Content html={html} />
@@ -40,7 +37,7 @@ const Page = ({ issues, slug, data, html }) => {
           as="a"
           href={`https://github.com/hackclub/vip-newsletters/blob/main/${slug}/README.md`}
           variant="outline"
-          sx={{ color: 'muted' }}
+          sx={{ color: 'muted', mt: 3 }}
         >
           <GitHub />
           View on GitHub
@@ -77,7 +74,7 @@ const Page = ({ issues, slug, data, html }) => {
               </NavButton>
             </Link>
           </Flex>
-          <Issues issues={issues} showAbout />
+          <Issues issues={issues} showAbout kind="vip" />
         </Container>
       </Box>
     </>

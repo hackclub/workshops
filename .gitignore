@@ -7,3 +7,4 @@ public/workshops.json
 .vercel
 .DS_Store
 .env
+package-lock.json

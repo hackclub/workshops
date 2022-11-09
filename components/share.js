@@ -24,23 +24,20 @@ export default ({ workshop }) => {
   const [submitting, setSubmitting] = useState(false)
   const [done, setDone] = useState(false)
   const [error, setError] = useState('')
-  const onSubmit = async (e) => {
+  const onSubmit = async e => {
     e.preventDefault()
     setSubmitting(true)
-    if(url.length < 3){
+    if (url.length < 3) {
       setSubmitting(false)
     }
-    let submission = await fetch(
-      '/api/share',
-      {
-        method: 'POST',
-        body: JSON.stringify({ "URL": url, "Workshop": workshop }),
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json'
-        }
+    let submission = await fetch('/api/share', {
+      method: 'POST',
+      body: JSON.stringify({ URL: url, Workshop: workshop }),
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
       }
-    )
+    })
     if (submission.ok) {
       submission = await submission.json()
       setURL('')
@@ -54,7 +51,7 @@ export default ({ workshop }) => {
   }
   return (
     <Card sx={{ mx: 'auto', my: [3, 4] }}>
-      <Heading as="h2"sx={{ mb: 1 }}>
+      <Heading as="h2" sx={{ mb: 1 }}>
         We'd love to see what you've made!
       </Heading>
       <Text sx={{ color: 'muted' }}>
@@ -79,8 +76,8 @@ export default ({ workshop }) => {
             id="url"
             placeholder="https://website--prophetorpheus.repl.co"
             value={url}
-            onChange={(e) => setURL(e.target.value)}
-            sx={{borderRadius: 6 }}
+            onChange={e => setURL(e.target.value)}
+            sx={{ borderRadius: 6 }}
           />
         </div>
         <Button type="submit" sx={{ mt: [2, 0], borderRadius: 6 }}>
@@ -89,7 +86,7 @@ export default ({ workshop }) => {
       </Grid>
       {error && (
         <Alert variant="primary" sx={{ mt: [2, 3] }}>
-          ⚠️ Something went wrong, please try again. 
+          ⚠️ Something went wrong, please try again.
         </Alert>
       )}
       {done && (

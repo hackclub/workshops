@@ -13,6 +13,7 @@ const Authors = ({
   text = '@lachlanjc',
   color = 'white',
   sx = {},
+  extra = [],
   ...props
 }) => (
   <Flex
@@ -25,6 +26,33 @@ const Authors = ({
       ...sx
     }}
   >
+    {extra.length ? (
+      extra.map(author => (
+        <Flex
+          key={author.name}
+          as="a"
+          href={author.link}
+          target="_blank"
+          title={`View ${author.name}'s profile`}
+          sx={{
+            alignItems: 'center',
+            textDecoration: 'none',
+            color,
+            m: [1, 2]
+          }}
+        >
+          <Avatar
+            src={author.pic}
+            size={[32, 48, 64]}
+            alt={author.name}
+            sx={{ mr: 2 }}
+          />
+          <Name>{author.name}</Name>
+        </Flex>
+      ))
+    ) : (
+      <Flex />
+    )}
     {text.includes('@') ? (
       text
         .split(',')

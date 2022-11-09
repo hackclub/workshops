@@ -11,15 +11,14 @@ module.exports = withMDX({
     return [
       {
         source: '/content/:slug*',
-        destination: 'https://raw.githubusercontent.com/hackclub/hackclub/main/:slug*',
-        
+        destination:
+          'https://raw.githubusercontent.com/hackclub/hackclub/main/:slug*'
       },
       {
         source: '/workshops.json',
-        destination: '/api/workshops',
-   
+        destination: '/api/workshops'
       },
       { source: '/workshops/_next/:path*', destination: '/_next/:path*' }
     ]
-  },
+  }
 })
