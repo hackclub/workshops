@@ -34,7 +34,7 @@ Page.getInitialProps = async req => {
     branch,
     repo
   )
-  const { data, html } = await getWorkshopData(slug, md, branch)
+  const { data, html } = await getWorkshopData(slug, md, branch, repo)
   return { slug, data, html }
 }
 
