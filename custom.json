@@ -2,7 +2,7 @@
   "draw_dino": {
     "name": "Draw Dino",
     "description": "An “inter-active” primer to submiting pull requests on GitHub. Featuring art!",
-    "img": "https://github.com/hackclub/draw-dino/raw/main/screenshot.png",
+    "img": "https://cloud-osg9bq9oo-hack-club-bot.vercel.app/0screenshot.png",
     "url": "https://hack.af/draw-dino"
   }
 }
