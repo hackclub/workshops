@@ -1,0 +1,8 @@
+{
+  "draw_dino": {
+    "name": "Draw Dino",
+    "description": "An “inter-active” primer to submiting pull requests on GitHub. With art!",
+    "img": "https://github.com/hackclub/draw-dino/raw/main/screenshot.png",
+    "url": "https://hack.af/draw-dino"
+  }
+}
