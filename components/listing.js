@@ -7,7 +7,7 @@ import Icon from '@hackclub/icons'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 const WorkshopCard = ({ slug, name, description, img, section }) => (
-  <Link href={`/${slug}`} passHref>
+  <Link href={`${slug.includes("https://") ? "" : "/"}${slug}`} passHref>
     <Card
       as="a"
       variant="interactive"
