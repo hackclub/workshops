@@ -16,7 +16,7 @@ const Page = ({ slugs, pastSlugs, html }) => (
       <Heading variant="headline">Recent issues</Heading>
       <Issues issues={slugs} kind="leader" />
       <Heading variant="headline" sx={{ mt: 4 }}>
-        Archive
+        Matthew's Archive
       </Heading>
       <Issues issues={pastSlugs} kind="leader-newsletters/archived" />
       <Button
