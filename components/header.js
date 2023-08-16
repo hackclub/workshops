@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Image, useColorMode } from 'theme-ui'
+import { Box, Container, Text, Heading, Image, useColorMode } from 'theme-ui'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Meta from '@hackclub/meta'
@@ -33,6 +33,7 @@ const Header = ({
     hideNav ? null : (
       <Nav {...props} key="nav" homepage={navBg} material={!!bgImg} />
     ),
+
     <Box
       key="print"
       aria-hidden
