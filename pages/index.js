@@ -59,11 +59,11 @@ export default ({ sections }) => {
           Our Philosophy »
         </Button>
       </Header>
-      <Container sx={{backgroundColor: "#fff", padding: "16px 32px", borderRadius: "16px", border: "1px solid #993CCF"}}>
+      <Container sx={{backgroundColor: "background", padding: "16px 32px", borderRadius: "16px", border: "1px solid #993CCF"}}>
         <Grid columns={["1fr", "1fr", "1fr 1fr"]} gap={"48px"} sx={{alignItems: "center"}}>
         <Box>
           <Heading
-            as="h2" sx={{fontSize: 32, mb: 2, color: "#993CCF"}}>Jams! 🍇</Heading>
+            as="h2" sx={{fontSize: 32, mb: 2, color: "purple"}}>Jams! 🍇</Heading>
           <Text>
             Jams are the successors to our workshops, offering you a customizable project experiences perfect for clubs and friends. Whether you're inclined to <Link href="https://jams.hackclub.com/jam/3d-club-village" sx={{color: "#993CCF"}}>build a 3D village</Link>, <Link sx={{color: "#993CCF"}} href="https://jams.hackclub.com/jam/ai-travel">craft an AI travel planner</Link>, or <Link sx={{color: "#993CCF"}} href="https://jams.hackclub.com/batch/webOS">create your own web-based operating system</Link>, Jams have got you covered!
           </Text>
