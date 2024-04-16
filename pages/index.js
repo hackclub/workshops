@@ -59,7 +59,7 @@ export default ({ sections }) => {
           Our Philosophy »
         </Button>
       </Header>
-      <Container sx={{backgroundColor: "background", padding: "16px 32px", borderRadius: "16px", border: "1px solid #993CCF"}}>
+      {/* <Container sx={{backgroundColor: "background", padding: "16px 32px", borderRadius: "16px", border: "1px solid #993CCF"}}>
         <Grid columns={["1fr", "1fr", "1fr 1fr"]} gap={"48px"} sx={{alignItems: "center"}}>
         <Box>
           <Heading
@@ -90,7 +90,7 @@ export default ({ sections }) => {
         <Image sx={{borderRadius: "16px", width: "100%", height: "250px", objectFit: "cover", border: "1px solid #993CCF"}} src="https://cloud-r8id38sdk-hack-club-bot.vercel.app/0image.png"/>
         </a>
         </Grid>
-      </Container>
+      </Container> */}
 
       {data.map(({ key, ...section }) => (
         <Listing key={key} id={key} {...section} />
