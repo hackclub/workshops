@@ -8,3 +8,4 @@ public/workshops.json
 .DS_Store
 .env
 package-lock.json
+.env*.local
