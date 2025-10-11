@@ -49,8 +49,8 @@ export const getStaticProps = async () => {
     getLeaderNewsletterHtml
   } = require('../../lib/data')
   const slugs = await getLeaderNewsletterSlugs()
-  const currentSlugs = slugs.find(x => x.kind === 'updates').slugs
-  const pastSlugs = slugs.find(x => x.kind === 'archive').slugs
+  const currentSlugs = slugs.find(x => x.kind === 'updates').slugs.reverse()
+  const pastSlugs = slugs.find(x => x.kind === 'archive').slugs.reverse()
   const html = await getLeaderNewsletterHtml()
   return { props: { slugs: currentSlugs, html, pastSlugs }, revalidate: 30 }
 }
