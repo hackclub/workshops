@@ -7,6 +7,15 @@ module.exports = withMDX({
   images: {
     imageSizes: [512]
   },
+  async redirects() {
+    return [
+      {
+        source: '/privacy',
+        destination: '/privacy-and-terms',
+        permanent: true
+      }
+    ]
+  },
   async rewrites() {
     return [
       {
