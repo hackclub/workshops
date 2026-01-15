@@ -158,6 +158,8 @@ Inquiries must be directed to [safeguarding@hackclub.com](mailto:safeguarding@ha
     
     - Over the counter medication is only available if parent/guardian provided explicit permission on Attend and only the specific medication (including brand, name, dosage and timing) approved on the form. 
 
+6\. Participant Welfare
+
   6.1 Recognising concerns
   
     Concerns may include (but aren't limited to):
