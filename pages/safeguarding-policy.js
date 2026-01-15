@@ -22,7 +22,7 @@ const Page = ({ html }) => {
 
 export const getServerSideProps = async () => {
   const { getSafeguardingHtml } = require('../lib/data')
-  const html = await getPrivacyHtml()
+  const html = await getSafeguardingHtml()
   
   return { 
     props: { html }
