@@ -3,30 +3,24 @@
 Adopted and Published January 15, 2026 | 8-10 minute read
 Inquiries must be directed to [safeguarding@hackclub.com](mailto:safeguarding@hackclub.com).
 
-1\. Purpose
-
+1. Purpose
+    
     1.1 Overview
-    
-    The purpose of this Safeguarding Policy (the "Policy") is to ensure that all participants, volunteers, mentors and staff at Hack Club are safe, respected, and supported. It reflects the spirit of the Hack Club Code of Conduct (respect, kindness and  inclusive behavior).
 
-2\. Scope
-  
+    * The purpose of this Safeguarding Policy (the "Policy") is to ensure that all participants, volunteers, mentors and staff at Hack Club are safe, respected, and supported. It reflects the spirit of the Hack Club Code of Conduct (respect, kindness and  inclusive behavior).
+
+2. Scope 
     2.1 Application
-    
-    This policy applies to everyone involved with Hack Club events globally:
-    
-    - Participants (aged 13-18)
-    
-    - Parents/guardians of participants
-    
-    - Organizers, event staff and volunteers
-    
-    - Mentors, guest speakers, external vendors and venue staff
-    
-    - Any other individual present at the event
-    
-    It covers all event locations (hacking venue, sleeping/rest areas if applicable, common spaces) and event-related activities (pre-event, the 24-hour/12-hour event, social time, post-event wrap-up).
-    
+
+    * This policy applies to everyone involved with Hack Club events globally:    
+        - Participants (aged 13-18)
+        - Parents/guardians of participants
+        - Organizers, event staff and volunteers
+        - Mentors, guest speakers, external vendors and venue staff
+        - Any other individual present at the event
+        
+        It covers all event locations (hacking venue, sleeping/rest areas if applicable, common spaces) and event-related activities (pre-event, the 24-hour/12-hour event, social time, post-event wrap-up).
+
     2.2 Safeguarding Principles
     
     - Everyone must be treated with dignity, respect, and fairness regardless of age, background, identity, or characteristics.  This includes, but is not limited to a person's gender identity, sex, ethnicity, disability, race or language .
@@ -39,7 +33,7 @@ Inquiries must be directed to [safeguarding@hackclub.com](mailto:safeguarding@ha
     
     - We adopt a "duty of care" mindset: proactively reducing risks, not just reacting to problems. All participants, volunteers, mentors and staff are required to report any concerns or incidents to the point of contact(s) / safeguarding officer.
 
-3\. Roles & Responsibilities
+3. Roles & Responsibilities
     
     3.1 Local Event Lead / Point of Contact
     
@@ -94,7 +88,7 @@ Inquiries must be directed to [safeguarding@hackclub.com](mailto:safeguarding@ha
     
     - Unless otherwise specified by event organizers, parents and guardians are not allowed to remain in event spaces, for the safety and comfort of all participants.
 
-4\. Risk Management & Environment
+4. Risk Management & Environment
     
     4.1 Venue & Supervision
     
@@ -144,7 +138,7 @@ Inquiries must be directed to [safeguarding@hackclub.com](mailto:safeguarding@ha
     
     - Participants, organizers, and staff are expected to respect quiet/shutdown times, rest breaks, water breaks, and individual health needs.
 
-5\. Medical & Emergency Procedures
+5. Medical & Emergency Procedures
     
     5.1 First Aid
     
@@ -158,78 +152,65 @@ Inquiries must be directed to [safeguarding@hackclub.com](mailto:safeguarding@ha
     
     - Over the counter medication is only available if parent/guardian provided explicit permission on Attend and only the specific medication (including brand, name, dosage and timing) approved on the form. 
 
-6\. Participant Welfare
+6. Participant Welfare
 
-  6.1 Recognising concerns
-  
-    Concerns may include (but aren't limited to):
+    6.1 Recognising concerns
     
-       - Bullying, harassment, discrimination, coercion.
-    
-       - Sexual or physical abuse or inappropriate behaviour
-    
-       - A participant disclosing personal safeguarding concerns (self-harm, abuse at home, etc)
-      
-       - A staff/volunteer breaching physical or emotional boundaries
-    
-       - Mental health crisis, or participant behaving out of character and posing risk to self/others.
-    
+    * Concerns may include (but aren't limited to):
+        - Bullying, harassment, discrimination, coercion.
+        - Sexual or physical abuse or inappropriate behaviour
+        - A participant disclosing personal safeguarding concerns (self-harm, abuse at home, etc)
+        - A staff/volunteer breaching physical or emotional boundaries
+        - Mental health crisis, or participant behaving out of character and posing risk to self/others.
+
     6.2 Reporting Mechanism
-    
-       - There must be clear, visible signage online and in-person notifying participants/guardians how to contact both the event organizer and the Hack Club team.
-    
-       - Staff/volunteers must report concerns immediately to the lead organizer / point of contact.
-    
-       - For every incident, the incident reporting form must be completed and submitted through the relevant administrative tool (i.e. Attend).
-    
+
+    - There must be clear, visible signage online and in-person notifying participants/guardians how to contact both the event organizer and the Hack Club team.
+
+    - Staff/volunteers must report concerns immediately to the lead organizer / point of contact.
+
+    - For every incident, the incident reporting form must be completed and submitted through the relevant administrative tool (i.e. Attend).
+
     6.3 Mandated Reporting
-    
+
     - Mandatory submission: All safeguarding incidents, regardless of severity, must be reported by the Event Lead or Safeguarding Officer through the Hack Club organizer dashboard as soon as possible;  reports must be made within 18 hours of the incident occurring.
-    
+
     - Confidentiality: Reports submitted via Hack Club tools are confidential and accessible only to Hack Club HQ staff and designated safeguarding personnel.
-    
+
     - Timeline: Report emergencies immediately to local emergency services.  Urgent incidents (cases of immediate danger, serious harm, or where statutory reporting requirements take effect) must be reported to Hack Club HQ (after appropriate emergency services are contacted) immediately via phone ([+18556254225](tel:18556254225)) or email (<safeguarding@hackclub.com>) in addition to the form submission.
-    
+
     - Consequences: Failure to submit a mandated report may result in organizers being barred from running future Hack Club events and may affect the event's insurance coverage and Hack Club support.
-    
+
     - Support: Hack Club HQ will review all reports, provide guidance on next steps, and offer support to organizers in handling complex situations. Reports contribute to ongoing safeguarding improvement across all Hack Club events.
     
     6.4 Confidentiality & Support
     
-       - All reports will be stored and processed confidentially. Information will only be shared on a "need-to-know" basis.
-    
-       - Support must be offered to any affected participant (e.g if appropriate, parental contact).
-    
-       - No retaliation or discrimination will be tolerated against someone who reports a concern or experiences bullying or harm at an event.
+    - All reports will be stored and processed confidentially. Information will only be shared on a "need-to-know" basis.
+
+    - Support must be offered to any affected participant (e.g if appropriate, parental contact).
+
+    - No retaliation or discrimination will be tolerated against someone who reports a concern or experiences bullying or harm at an event.
     
     6.5 Disciplinary Actions
     
-       - In the event that a Hack Club team member or Event Lead is made aware of misconduct by a participant/staff/volunteer, the offender's consequences may include: warning, removal from the event, being sent home (guardian contact required), and/or banning from future events/Hack Club as a whole.
-    
-       - Serious breaches (abuse, violence, sexual misconduct) will lead to immediate removal and referral to authorities.   As previously stated, the safety and welfare of minors is our paramount consideration.
-    
-       - All actions will align with the principle of fairness and transparency, and maintain the event's baseline Code of Conduct standards.
-    
+    - In the event that a Hack Club team member or Event Lead is made aware of misconduct by a participant/staff/volunteer, the offender's consequences may include: warning, removal from the event, being sent home (guardian contact required), and/or banning from future events/Hack Club as a whole.
+
+    - Serious breaches (abuse, violence, sexual misconduct) will lead to immediate removal and referral to authorities.   As previously stated, the safety and welfare of minors is our paramount consideration.
+
+    - All actions will align with the principle of fairness and transparency, and maintain the event's baseline Code of Conduct standards.
+
     6.6 Review & Continuous Improvement
     
-       - After the event, organizers will conduct a safeguarding debrief, reviewing incidents logged, lessons learned, and feedback gathered.
-    
-       - This policy will be reviewed annually.
-    
-       - All changes will be clearly communicated to future participants/staff/volunteers.
+    - After the event, organizers will conduct a safeguarding debrief, reviewing incidents logged, lessons learned, and feedback gathered.
+    - This policy will be reviewed annually.
+    - All changes will be clearly communicated to future participants/staff/volunteers.
     
     6.7 Consent & Parental/Guardian Involvement
-    
-       - Explicit consent from a parent/guardian must be obtained for minors to participate. The following information must also be disclosed: 
-    
-       - Participant details (name, age, school)
-    
-       - Emergency contact(s)
-    
-       - Necessary medical and/or health information (allergies, medications, support needs)
-    
-       - If the participant has attendance restrictions (e.g. leaving early)
-    
-       - Parents/guardians must receive event schedule, arrival/departure times, venue address, and contact information for the Safeguarding Officer and lead organizer.
-    
-       - If a participant leaves the venue before the end of the event without permission, the parent/guardian of the individual must be informed and the Safeguarding Officer notified.
+
+    - Explicit consent from a parent/guardian must be obtained for minors to participate. The following information must also be disclosed: 
+    - Participant details (name, age, school)
+    - Emergency contact(s)
+    - Necessary medical and/or health information (allergies, medications, support needs)
+    - If the participant has attendance restrictions (e.g. leaving early)
+    - Parents/guardians must receive event schedule, arrival/departure times, venue address, and contact information for the Safeguarding Officer and lead organizer.
+    - If a participant leaves the venue before the end of the event without permission, the parent/guardian of the individual must be informed and the Safeguarding Officer notified.
