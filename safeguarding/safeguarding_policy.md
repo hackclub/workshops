@@ -1,7 +1,6 @@
 # Hack Club Events Safeguarding Policy
 
-Adopted and Published January 15, 2026 | 8-10 minute read
-Inquiries must be directed to [safeguarding@hackclub.com](mailto:safeguarding@hackclub.com).
+This policy is being beta tested for Campfire, and will be rolled out to other Hack Club events by Summer, 2026. Please direct any inquires to [safeguarding@hackclub.com](mailto:safeguarding@hackclub.com).
 
 1. Purpose
     
