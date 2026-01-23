@@ -8,7 +8,8 @@ This policy is being beta tested for Campfire, and will be rolled out to other H
 
     * The purpose of this Safeguarding Policy (the "Policy") is to ensure that all participants, volunteers, mentors and staff at Hack Club are safe, respected, and supported. It reflects the spirit of the Hack Club Code of Conduct (respect, kindness and  inclusive behavior).
 
-2. Scope 
+2. Scope
+
     2.1 Application
 
     * This policy applies to everyone involved with Hack Club events globally:    
