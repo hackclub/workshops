@@ -8,6 +8,7 @@ import Authors from '../../components/authors'
 import Content from '../../components/content'
 import Footer from '../../components/footer'
 import Share from '../../components/share'
+import Announcement from '../../components/announcement'
 import { useRouter } from 'next/router'
 import { Edit3 } from 'react-feather'
 
@@ -79,6 +80,18 @@ const Page = ({ slug, data, html, locales }) => {
       </Container>
 
       <Container variant="copy" as="main">
+        <Announcement
+          copy="Join Hack Club Flavortown!"
+          caption="Ship your projects and earn free prizes  →"
+          href="https://flavortown.hackclub.com?ref=workshop-announcement"
+          iconLeft
+          iconColor="#ec3750"
+          sx={{
+            mb: 4,
+            fontSize: [2, 3]
+          }}
+        />
+  
         <Content html={html} />
         {data.locales && (
           <Content>
