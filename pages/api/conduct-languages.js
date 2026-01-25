@@ -1,4 +1,4 @@
-import { getAvailableConductLanguages } from '../../lib/data'
+import { getAvailableConductLanguages } from '../../lib/data-server'
 
 export default async function handler(req, res) {
   try {

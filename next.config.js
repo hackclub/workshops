@@ -1,5 +1,10 @@
 const isProd = process.env.NODE_ENV === 'production'
-const withMDX = require('@next/mdx')({ extension: /\.mdx?$/ })
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    providerImportSource: '@mdx-js/react'
+  }
+})
 module.exports = withMDX({
   trailingSlash: true,
   pageExtensions: ['js', 'jsx', 'mdx'],

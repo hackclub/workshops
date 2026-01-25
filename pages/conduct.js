@@ -110,7 +110,7 @@ const Page = ({ html, initialLanguage, availableLanguages }) => {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const { getConductHtml, getAvailableConductLanguages } = require('../lib/data')
+  const { getConductHtml, getAvailableConductLanguages } = require('../lib/data-server')
   
   // Get available languages
   const availableLanguages = await getAvailableConductLanguages()

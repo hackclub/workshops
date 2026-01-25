@@ -39,7 +39,7 @@ const Page = ({ issues, slug, data, html, authors }) => {
         />
       </Header>
       <Container variant="copy" as="main" pb={4}>
-        <Link href="/leader-newsletters" passHref>
+        <Link href="/leader-newsletters">
           <Box
             sx={{
               mb: 4,
@@ -79,7 +79,7 @@ const Page = ({ issues, slug, data, html, authors }) => {
         </Container>
       </Box>
     </>
-  )
+  );
 }
 
 export const getStaticPaths = async () => {

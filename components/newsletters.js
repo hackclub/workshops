@@ -26,9 +26,7 @@ export default ({ issues, showAbout, kind = '' }) => {
             as={`/${kind.length ? `${kind}-` : kind}newsletter${
               kind.length ? 's' : ''
             }/${issue}`}
-            passHref
-            key={issue}
-          >
+            key={issue}>
             <Card
               as="a"
               variant="nav"
@@ -48,5 +46,5 @@ export default ({ issues, showAbout, kind = '' }) => {
         ))}
       </Grid>
     </>
-  )
+  );
 }

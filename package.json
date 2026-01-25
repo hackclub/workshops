@@ -11,31 +11,39 @@
     "devserver": "next"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@hackclub/banner": "^1.0.1",
-    "@hackclub/icons": "^0.0.9",
+    "@hackclub/icons": "^0.0.15",
     "@hackclub/markdown": "^0.0.43",
     "@hackclub/meta": "^1.0.0",
     "@hackclub/theme": "^0.3.0",
-    "@mdx-js/loader": "^1.6.19",
-    "@next/mdx": "^10.0.0",
+    "@mdx-js/loader": "^3.0.0",
+    "@mdx-js/react": "^3.0.0",
+    "@next/mdx": "16.1.4",
     "download-git-repo": "^3.0.2",
     "framer-motion": "^4.1.16",
     "geopattern": "^1.2.3",
-    "graphql": "^15.5.1",
-    "graphql-request": "^3.5.0",
     "gray-matter": "^4.0.2",
     "hls.js": "^0.14.16",
     "lodash": "^4.17.23",
-    "next": "^12.3.4",
+    "next": "^16.1.4",
     "nprogress": "^0.2.0",
-    "react": "^17.0.1",
+    "react": "19.2.3",
     "react-copy-to-clipboard": "^5.1.0",
-    "react-dom": "^17.0.1",
+    "react-dom": "19.2.3",
     "react-feather": "^2.0.8",
     "react-fullstory": "^1.4.0",
     "react-p5": "^1.3.6",
     "swr": "^1.1.0",
-    "theme-ui": "^0.8.4",
+    "theme-ui": "^0.17.4",
     "toxiclibsjs": "^0.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.1.4"
+  },
+  "resolutions": {
+    "@opentelemetry/api": "^1.4.0"
   }
 }

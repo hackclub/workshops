@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styled from '@emotion/styled'
 import { motion } from 'framer-motion'
-import { useState, useRef, Fragment } from 'react'
+import { useState, useRef, Fragment, useEffect } from 'react'
 import { cloneDeep } from 'lodash'
 
 const Material = styled(Box)`
@@ -14,24 +14,15 @@ const Material = styled(Box)`
   top: 0;
   left: 0;
   right: 0;
-  ${props =>
-    props.colorMode === 'dark'
-      ? `
-         background-color: rgba(0, 0, 0, 0.875);
-         @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-           background-color: rgba(0, 0, 0, 0.75);
-           -webkit-backdrop-filter: saturate(180%) blur(12px);
-        }
-         `
-      : `
-           background-color: rgba(255, 255, 255, 0.98);
-           @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-             background-color: rgba(255, 255, 255, 0.75);
-             -webkit-backdrop-filter: saturate(180%) blur(12px);
-           }
-         `};
+  background-color: var(--theme-ui-colors-background);
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    background-color: color-mix(in srgb, var(--theme-ui-colors-background) 75%, transparent);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    backdrop-filter: saturate(180%) blur(12px);
+  }
   @media (prefers-reduced-transparency: reduce) {
     -webkit-backdrop-filter: auto !important;
+    backdrop-filter: auto !important;
   }
 `
 
@@ -99,19 +90,21 @@ const colorSwitcherVariant = cloneDeep(flagVariant)
 colorSwitcherVariant['visible'].display = 'inline-flex'
 
 const Flag = ({ visible }) => {
-  const retAnim = visible => {
+  const [animState, setAnimState] = useState('visible')
+
+  useEffect(() => {
     if (visible) {
-      return window.innerWidth <= 512 ? 'hidden' : 'visible'
+      setAnimState(window.innerWidth <= 512 ? 'hidden' : 'visible')
     } else {
-      return 'visible'
+      setAnimState('visible')
     }
-  }
+  }, [visible])
 
   return (
     <Fragment>
       <motion.a
         variants={flagVariant}
-        animate={retAnim(visible)}
+        animate={animState}
         href="https://hackclub.com/"
         target="_blank"
         rel="noopener noreferrer"
@@ -132,7 +125,7 @@ const Flag = ({ visible }) => {
   )
 }
 
-export const NavButton = ({ color = 'red', csx, ...props }) => (
+export const NavButton = ({ color = 'red', csx, visible, ...props }) => (
   <IconButton
     {...props}
     sx={{
@@ -178,6 +171,15 @@ const IconWrapper = ({ csx, children, ...props }) => {
 
 const SearchBar = ({ setVisible, visible, search, ...props }) => {
   const inp = useRef(null)
+  const [animState, setAnimState] = useState('hidden')
+
+  useEffect(() => {
+    if (visible) {
+      setAnimState(window.innerWidth <= 512 ? 'mobVisible' : 'visible')
+    } else {
+      setAnimState('hidden')
+    }
+  }, [visible])
 
   const handle_focus = () => {
     const display_val = inp.current.style.display
@@ -196,17 +198,10 @@ const SearchBar = ({ setVisible, visible, search, ...props }) => {
     search('')
   }
 
-  const retAnim = visible => {
-    if (visible) {
-      return window.innerWidth <= 512 ? 'mobVisible' : 'visible'
-    }
-    return 'hidden'
-  }
-
   return (
     <motion.div
       variants={parentVariant}
-      animate={retAnim(visible)}
+      animate={animState}
       sx={{
         display: 'flex',
         borderRadius: 'circle',
@@ -261,38 +256,38 @@ const SearchBar = ({ setVisible, visible, search, ...props }) => {
 }
 
 const BackButton = ({ to = '/', text = 'Back' }) => (
-  <Link href={to} passHref>
-    <NavButton
-      as="a"
-      title={to === '/' ? 'Back to homepage' : 'Back'}
-      csx={{
-        display: 'flex',
-        width: 'auto',
-        pr: 2,
-        mr: 'auto'
-      }}
-    >
-      <ArrowLeft />
-      {text}
-    </NavButton>
-  </Link>
+  <NavButton
+    as={Link}
+    href={to}
+    title={to === '/' ? 'Back to homepage' : 'Back'}
+    csx={{
+      display: 'flex',
+      width: 'auto',
+      pr: 2,
+      mr: 'auto'
+    }}
+  >
+    <ArrowLeft />
+    {text}
+  </NavButton>
 )
 
-const ColorSwitcher = props => {
+const ColorSwitcher = ({ visible, ...props }) => {
   const [mode, setMode] = useColorMode()
+  const [animState, setAnimState] = useState('visible')
 
-  const retAnim = visible => {
+  useEffect(() => {
     if (visible) {
-      return window.innerWidth <= 512 ? 'hidden' : 'visible'
+      setAnimState(window.innerWidth <= 512 ? 'hidden' : 'visible')
     } else {
-      return 'visible'
+      setAnimState('visible')
     }
-  }
+  }, [visible])
 
   return (
     <IconWrapper
       variants={colorSwitcherVariant}
-      animate={retAnim(props.visible)}
+      animate={animState}
       {...props}
       onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
       title="Reverse color scheme"
@@ -304,7 +299,6 @@ const ColorSwitcher = props => {
 
 const Nav = ({ material = false, homepage, search }) => {
   const [visible, setVisible] = useState(false)
-  const [mode] = useColorMode()
   const { pathname } = useRouter()
   const home = pathname === '/'
   const standalone = pathname !== '/[slug]' && pathname !== '/[slug]/[locale]'
@@ -313,7 +307,6 @@ const Nav = ({ material = false, homepage, search }) => {
   return (
     <Background
       as="nav"
-      colorMode={mode}
       sx={{
         bg: homepage ? 'sheet' : 'none',
         py: 3,

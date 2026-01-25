@@ -1,8 +1,13 @@
+'use client'
 import { memo } from 'react'
-import Sketch from 'react-p5'
+import dynamic from 'next/dynamic'
 import toxi from 'toxiclibsjs'
 
+const Sketch = dynamic(() => import('react-p5'), { ssr: false })
+
 const Blobs = () => {
+  if (typeof window === 'undefined') return null
+  
   const Polygon2D = toxi.geom.Polygon2D,
     Vec2D = toxi.geom.Vec2D,
     ColorRange = toxi.color.ColorRange,
@@ -10,7 +15,7 @@ const Blobs = () => {
   let polygons = []
   const numVertices = 30
 
-  const isSmallScreen = matchMedia('screen and (max-width: 480px)').matches
+  const isSmallScreen = typeof window !== 'undefined' && matchMedia('screen and (max-width: 480px)').matches
 
   const setup = (p5, canvasParentRef) => {
     p5.createCanvas(window.innerWidth, window.innerHeight).parent(

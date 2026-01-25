@@ -57,7 +57,7 @@ const Page = ({ issues, slug, data, html }) => {
             <Heading variant="headline" mt={0} mr={3} mb={2}>
               Recent issues
             </Heading>
-            <Link href="/vip-newsletters" passHref>
+            <Link href="/vip-newsletters">
               <NavButton
                 as="a"
                 color="muted"
@@ -78,7 +78,7 @@ const Page = ({ issues, slug, data, html }) => {
         </Container>
       </Box>
     </>
-  )
+  );
 }
 
 export const getStaticPaths = async () => {
