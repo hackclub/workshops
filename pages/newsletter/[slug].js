@@ -39,6 +39,7 @@ const Page = ({ issues, slug, data, html, authors }) => {
               sx={{
                 display: 'inline',
                 fontSize: 1,
+                textDecoration: 'none',
                 color: 'red',
                 ':hover': { cursor: 'pointer' }
               }}
@@ -55,6 +56,8 @@ const Page = ({ issues, slug, data, html, authors }) => {
               mb: 4,
               display: 'inline-flex',
               alignItems: 'center',
+              textDecoration: 'none',
+              color: 'muted',
               ':hover': { color: 'red', cursor: 'pointer' }
             }}
           >
