@@ -1,13 +1,12 @@
 import { useState } from 'react'
 import { Box, Container, Heading, Text, Grid, Card, Image } from 'theme-ui'
 import Link from 'next/link'
-import NextImage from 'next/image'
 import { snakeCase } from 'lodash'
 import Icon from '@hackclub/icons'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 const WorkshopCard = ({ slug, name, description, img, section }) => (
-  <Link href={`${slug.includes("https://") ? "" : "/"}${slug}`} passHref>
+  <Link href={`${slug.includes("https://") ? "" : "/"}${slug}`} legacyBehavior>
     <Card
       as="a"
       variant="interactive"
@@ -36,17 +35,7 @@ const WorkshopCard = ({ slug, name, description, img, section }) => (
             '@media print': { display: 'none' }
           }}
         >
-          {/* currently Next Images only support known domains, so we can’t use them for bounties/etc with the `img` in metadata */}
-          {img ? (
-            <Image alt={`${name} demo`} src={img} loading="lazy" />
-          ) : (
-            <NextImage
-              alt={`${name} demo`}
-              src={`/content/workshops/${slug}/img/demo.png`}
-              width={512}
-              height={256}
-            />
-          )}
+          <Image alt={`${name} demo`} src={img || `/content/workshops/${slug}/img/demo.png`} loading="lazy" />
         </Box>
       )}
     </Card>
@@ -63,7 +52,7 @@ function Listing({ id, title, description, workshops, ...props }) {
         backgroundImage: theme =>
           `linear-gradient(to bottom, ${theme.colors.sheet}, ${theme.colors.sunken})`,
         py: [4, 5],
-        flex: workshops.length == 0 ? 1 : null, //fix for floating footer on fallback data being rendered
+        flex: workshops.length == 0 ? 1 : null,
         color: 'text',
         '@media print': { background: 'none !important' }
       }}

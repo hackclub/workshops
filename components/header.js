@@ -1,3 +1,4 @@
+import { Fragment, useState, useEffect } from 'react'
 import { Box, Container, Text, Heading, Image, useColorMode } from 'theme-ui'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
@@ -18,8 +19,13 @@ const Header = ({
 }) => {
   const { pathname } = useRouter()
   const [mode] = useColorMode()
+  const [shades, setShades] = useState([0.125, 0.25])
+
+  useEffect(() => {
+    setShades(mode === 'dark' ? [0.5, 0.75] : [0.125, 0.25])
+  }, [mode])
+
   if (bgImg) {
-    const shades = mode === 'dark' ? [0.5, 0.75] : [0.125, 0.25]
     sx = {
       ...sx,
       backgroundImage: `linear-gradient(rgba(0,0,0,${shades[0]}), rgba(0,0,0,${shades[1]})),
@@ -29,10 +35,11 @@ const Header = ({
       'h1, h2': { color: 'white !important' }
     }
   }
-  return [
-    hideNav ? null : (
+  return (
+    <Fragment>
+    {hideNav ? null : (
       <Nav {...props} key="nav" homepage={navBg} material={!!bgImg} />
-    ),
+    )}
 
     <Box
       key="print"
@@ -65,7 +72,7 @@ const Header = ({
           Workshops
         </Heading>
       )}
-    </Box>,
+    </Box>
     <Box
       key="header"
       as="header"
@@ -108,7 +115,8 @@ const Header = ({
         {children}
       </Container>
     </Box>
-  ]
+    </Fragment>
+  )
 }
 
 export default Header

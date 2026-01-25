@@ -34,11 +34,12 @@ const Page = ({ issues, slug, data, html, authors }) => {
         <Authors text={authors.join()} color="secondary" />
         <Heading sx={{ fontSize: 1, color: 'secondary', mt: 3 }}>
           Want to be an author? Submit a pull request{' '}
-          <Link href="https://github.com/hackclub/newsletter" passHref>
+          <Link href="https://github.com/hackclub/newsletter">
             <Heading
               sx={{
                 display: 'inline',
                 fontSize: 1,
+                textDecoration: 'none',
                 color: 'red',
                 ':hover': { cursor: 'pointer' }
               }}
@@ -49,12 +50,14 @@ const Page = ({ issues, slug, data, html, authors }) => {
         </Heading>
       </Header>
       <Container variant="copy" as="main" pb={4}>
-        <Link href="/newsletter" passHref>
+        <Link href="/newsletter">
           <Box
             sx={{
               mb: 4,
               display: 'inline-flex',
               alignItems: 'center',
+              textDecoration: 'none',
+              color: 'muted',
               ':hover': { color: 'red', cursor: 'pointer' }
             }}
           >
@@ -87,7 +90,7 @@ const Page = ({ issues, slug, data, html, authors }) => {
             <Heading variant="headline" mt={0} mr={3} mb={2}>
               Recent issues
             </Heading>
-            <Link href="/newsletter" passHref>
+            <Link href="/newsletter">
               <Container
                 sx={{
                   display: 'flex',
@@ -106,7 +109,7 @@ const Page = ({ issues, slug, data, html, authors }) => {
         </Container>
       </Box>
     </>
-  )
+  );
 }
 
 export const getStaticPaths = async () => {

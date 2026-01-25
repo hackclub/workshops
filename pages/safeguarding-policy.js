@@ -21,7 +21,7 @@ const Page = ({ html }) => {
 }
 
 export const getServerSideProps = async () => {
-  const { getSafeguardingHtml } = require('../lib/data')
+  const { getSafeguardingHtml } = require('../lib/data-server')
   const html = await getSafeguardingHtml()
   
   return { 
