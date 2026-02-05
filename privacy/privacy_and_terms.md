@@ -138,7 +138,10 @@ Depending on where you live, local laws may provide you with additional rights o
 
 ## Hack Club Standard Terms And Conditions
 
-These terms and conditions ("Terms") apply to all challenges, contests, promotions, events or similar projects ("Challenges") conducted by Hack Foundation d/b/a Hack Club or any of its fiscally sponsored projects ("Hack Club") in furtherance of its charitable, educational, and scientific purposes ("Purposes"), including by encouraging participants ("Participants") to participate in certain activities ("Activities") that Hack Club has determined will advance its Purposes. In the event of any conflict between these Terms and any other communication or agreement by Hack Club, or its employees, agents, volunteers, or affiliates (collectively, "Hack Club Parties"), in connection with a Challenge, these Terms shall prevail.
+These terms and conditions ("Terms") apply to all challenges, contests, promotions, events or similar projects ("Challenges") conducted by Hack Foundation d/b/a Hack Club, to all Slack workspaces operated by Hack Club ("Slack"), or any of its fiscally sponsored projects ("Hack Club") in furtherance of its charitable, educational, and scientific purposes ("Purposes"), including by encouraging participants ("Participants") to participate in certain activities ("Activities") that Hack Club has determined will advance its Purposes. In the event of any conflict between these Terms and any other communication or agreement by Hack Club, or its employees, agents, volunteers, or affiliates (collectively, "Hack Club Parties"), in connection with a Challenge, these Terms shall prevail.
+
+**SLACK**
+Users of the Slack agree to follow Hack Club's Code of Conduct. Notwithstanding any disputes over the meaning of the Code of Conduct, they agree that if they are banned from the Slack by any Hack Club employee or by any designees thereof ("Moderators"), they will in fact refrain from using the Slack, including refraining from creating alternate accounts. Users banned from the Slack agree that if they wish to communicate with Hack Club or its Moderators, they will not use the Slack to do so. 
 
 ### All Awards Subject To Availability And Hack Club's Sole Discretion
 
