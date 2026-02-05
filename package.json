@@ -22,7 +22,7 @@
     "@mdx-js/react": "^3.0.0",
     "@next/mdx": "16.1.5",
     "download-git-repo": "^3.0.2",
-    "framer-motion": "^12.29.2",
+    "framer-motion": "^12.31.0",
     "geopattern": "^1.2.3",
     "gray-matter": "^4.0.3",
     "hls.js": "^1.6.15",
