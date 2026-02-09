@@ -43,7 +43,7 @@ This policy is being beta tested for Campfire, and will be rolled out to other H
     
     3.2 Safeguarding Officer(s)
     
-    - All approved Hack Club events will appoint one or more designated staff members with specialized training in safeguarding (e.g., safe-space, child protection).\
+    - All approved Hack Club events will appoint one or more designated staff members with specialized training in safeguarding (e.g., safe-space, child protection).
     - These officers will be trained via our online training modules.
     
     - Officer accreditations will be available for review by request.
