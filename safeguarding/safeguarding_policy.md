@@ -142,7 +142,7 @@ This policy is being beta tested for Campfire, and will be rolled out to other H
     
     5.1 First Aid
     
-    - Each event should have a first-aid kit fully stocked as per your country's health department guidelines. We higly recommed an organizer (per 55 participants) familiarizes themselves on how to use a first aid kit.
+    - Each event should have a first-aid kit fully stocked as per your country's health department guidelines. We highly recommend an organizer (one for every 55 participants) familiarizes themselves on how to use their first aid kit.
     
     - Participants must disclose relevant medical/health information to Hack Club in advance (allergies, conditions, medications).
     
