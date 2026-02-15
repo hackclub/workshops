@@ -4,12 +4,14 @@ import '@hackclub/theme/fonts/reg-ital-bold.css'
 import theme from '../lib/theme'
 import NProgress from '../components/nprogress'
 import { ThemeProvider } from 'theme-ui'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const App = ({ Component, pageProps }) => (
   <ThemeProvider theme={theme}>
     <NProgress color={theme.colors.primary} />
     <Component {...pageProps} />
     <Analytics />
+    <SpeedInsights />
   </ThemeProvider>
 )
 
