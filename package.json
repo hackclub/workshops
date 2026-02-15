@@ -35,7 +35,7 @@
     "react-feather": "^2.0.10",
     "react-fullstory": "^1.4.0",
     "react-p5": "^1.4.1",
-    "swr": "^2.3.8",
+    "swr": "^2.4.0",
     "theme-ui": "^0.17.4",
     "toxiclibsjs": "^0.3.3"
   },
