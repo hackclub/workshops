@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "eslint": "^9.39.2",
-    "eslint-config-next": "^16.1.5",
+    "eslint-config-next": "^16.1.6",
     "typescript": "^5.9.3"
   },
   "resolutions": {
