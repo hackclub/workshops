@@ -41,7 +41,7 @@
     "toxiclibsjs": "^0.3.3"
   },
   "devDependencies": {
-    "eslint": "^10.0.0",
+    "eslint": "^10.0.3",
     "eslint-config-next": "^16.1.6",
     "typescript": "^5.9.3"
   },
