@@ -1,6 +1,6 @@
 # Hack Club Events Safeguarding Policy
 
-This policy is being beta tested for Campfire, and will be rolled out to other Hack Club events by Summer, 2026. Please direct any inquires to [safeguarding@hackclub.com](mailto:safeguarding@hackclub.com).
+This policy applies to all in-person Hack Club events. Please direct any inquires to [safeguarding@hackclub.com](mailto:safeguarding@hackclub.com).
 
 1. Purpose
     
