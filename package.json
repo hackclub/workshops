@@ -17,7 +17,7 @@
     "@hackclub/icons": "^0.0.15",
     "@hackclub/markdown": "^0.0.43",
     "@hackclub/meta": "^1.2.0",
-    "@hackclub/theme": "^0.3.3",
+    "@hackclub/theme": "^1.0.0",
     "@mdx-js/loader": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
     "@next/mdx": "16.1.6",
