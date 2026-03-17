@@ -43,7 +43,7 @@ This policy is being beta-tested by all in-person Hack Club events, and will be 
     
     3.2 Safeguarding Officer(s)
     
-    - All approved Hack Club events will appoint one or more designated staff members with specialized training in safeguarding (e.g., safe-space, child protection).\
+    - All approved Hack Club events will appoint one or more designated staff members with specialized training in safeguarding (e.g., safe-space, child protection).
     - These officers will be trained via our online training modules.
     
     - Officer accreditations will be available for review by request.
