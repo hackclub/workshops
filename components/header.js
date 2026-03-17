@@ -1,5 +1,5 @@
 import { Fragment, useState, useEffect } from 'react'
-import { Box, Container, Text, Heading, Image, useColorMode } from 'theme-ui'
+import { Box, Container, Heading, Image, useColorMode } from 'theme-ui'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Meta from '@hackclub/meta'

@@ -1,12 +1,10 @@
 import { Container, Box, Select } from 'theme-ui'
 import { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
 import Header from '../components/header'
 import Content from '../components/content'
 
 const Page = ({ html, initialLanguage, availableLanguages }) => {
-  const router = useRouter()
-  const [language, setLanguage] = useState(initialLanguage)
+  const [language] = useState(initialLanguage)
   const [loading, setLoading] = useState(false)
 
   const handleLanguageChange = async (e) => {
@@ -16,8 +14,6 @@ const Page = ({ html, initialLanguage, availableLanguages }) => {
     // Refresh the page with the new language
     window.location.href = `/conduct?lang=${newLanguage}`
   }
-
-
 
   // Position the dropdown to the left of the theme toggle
   useEffect(() => {

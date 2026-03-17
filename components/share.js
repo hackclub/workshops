@@ -4,7 +4,6 @@ import {
   Heading,
   Text,
   Grid,
-  Label,
   Input,
   Button,
   Spinner,
@@ -39,12 +38,12 @@ export default ({ workshop }) => {
       }
     })
     if (submission.ok) {
-      submission = await submission.json()
+      await submission.json()
       setURL('')
       setSubmitting(false)
       setDone(true)
     } else {
-      submission = await submission.json()
+      await submission.json()
       setSubmitting(false)
       setError(submission.errors || 'Something went wrong')
     }

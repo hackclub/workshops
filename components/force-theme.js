@@ -1,7 +1,7 @@
 import { useColorMode } from 'theme-ui'
 
 export default ({ theme }) => {
-  const [colorMode, setColorMode] = useColorMode()
+  const [setColorMode] = useColorMode()
   setColorMode(theme)
   return (
     <style>{`
