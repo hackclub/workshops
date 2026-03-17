@@ -31,7 +31,7 @@
     "next": "^16.1.6",
     "nprogress": "^0.2.0",
     "react": "19.2.4",
-    "react-copy-to-clipboard": "^5.1.0",
+    "react-copy-to-clipboard": "^5.1.1",
     "react-dom": "19.2.4",
     "react-feather": "^2.0.10",
     "react-fullstory": "^1.4.0",
