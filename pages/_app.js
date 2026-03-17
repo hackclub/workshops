@@ -6,7 +6,7 @@ import NProgress from '../components/nprogress'
 import { ThemeProvider } from 'theme-ui'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
-const App = ({ Component, pageProps }) => (
+const MyApp = ({ Component, pageProps }) => (
   <ThemeProvider theme={theme}>
     <NProgress color={theme.colors.primary} />
     <Component {...pageProps} />
@@ -15,4 +15,4 @@ const App = ({ Component, pageProps }) => (
   </ThemeProvider>
 )
 
-export default App
+export default MyApp
