@@ -1,6 +1,6 @@
 # Hack Club Events Safeguarding Policy
 
-This policy is being beta-tested by all in-person Hack Club events, and will be rolled out fully by Summer, 2026. Please direct any inquires to [safeguarding@hackclub.com](mailto:safeguarding@hackclub.com).
+This policy is being beta-tested by all in-person Hack Club events, and will be rolled out fully by Summer, 2026. Please direct any inquiries to [safeguarding@hackclub.com](mailto:safeguarding@hackclub.com).
 
 1. Purpose
 
@@ -102,7 +102,7 @@ This policy is being beta-tested by all in-person Hack Club events, and will be 
 
     4. Acceptable lighting (ideally configurable by event staff)
 
-    5. Security of all venue entrances/exits (venue entrances / exits must be staffed, or lockable to prevent unauthorzied persons from entering)
+    5. Security of all venue entrances/exits (venue entrances / exits must be staffed, or lockable to prevent unauthorized persons from entering)
 
     * At all times during the event, there must be sufficient staff supervision (staff members having age of majority in your jurisdiction) relative to the number and age of participants. Our recommendation is 1 member of staff to 15 participants.
 
