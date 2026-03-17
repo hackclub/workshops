@@ -39,7 +39,7 @@ export default ({ workshop }) => {
       }
     })
     if (submission.ok) {
-      submission = await submission.json()
+      await submission.json()
       setURL('')
       setSubmitting(false)
       setDone(true)
