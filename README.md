@@ -17,7 +17,7 @@ The stack: [Next.js](https://nextjs.org) & [Theme UI](https://theme-ui.com), wit
 Stuff you need installed ahead of time:
 
 - Git
-- Yarn
+- Bun
 - An operating system (we hope)
 - A GitHub personal access token
 
@@ -31,7 +31,7 @@ Go into the directory!
 
 Install dependencies!
 
-    $ yarn
+    $ bun install
 
 Create a `.env` file!
 
@@ -43,7 +43,7 @@ Create a [GitHub personal access token](https://github.com/settings/tokens) and 
 
 Run it!
 
-    $ yarn run dev
+    $ bun run dev
 
 Open it!
 
