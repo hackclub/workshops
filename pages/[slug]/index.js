@@ -1,5 +1,5 @@
 import { map } from 'lodash'
-import { Button, Container, Flex, Spinner, Box, Text } from 'theme-ui'
+import { Button, Container, Flex, Spinner, Text } from 'theme-ui'
 import Error from 'next/error'
 import Link from 'next/link'
 import langs from '../../lib/langs'
