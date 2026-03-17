@@ -8,4 +8,5 @@ public/workshops.json
 .DS_Store
 .env
 package-lock.json
+yarn.lock
 .env*.local

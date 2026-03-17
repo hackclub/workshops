@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "yarn run dev",
+    "start": "next start",
     "devserver": "next"
   },
   "dependencies": {
@@ -45,7 +45,7 @@
     "eslint-config-next": "^16.1.6",
     "typescript": "^5.9.3"
   },
-  "resolutions": {
+  "overrides": {
     "@opentelemetry/api": "^1.4.0"
   }
 }
