@@ -13,7 +13,7 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@hackclub/banner": "^1.1.0",
+    "@hackclub/banner": "^1.1.1",
     "@hackclub/icons": "^0.2.1",
     "@hackclub/markdown": "^0.1.2",
     "@hackclub/meta": "^1.2.1",
