@@ -15,7 +15,7 @@
     "@emotion/styled": "^11.14.1",
     "@hackclub/banner": "^1.1.1",
     "@hackclub/icons": "^0.2.1",
-    "@hackclub/markdown": "^0.1.2",
+    "@hackclub/markdown": "^0.1.3",
     "@hackclub/meta": "^1.2.1",
     "@hackclub/theme": "^1.1.0",
     "@mdx-js/loader": "^3.0.0",
