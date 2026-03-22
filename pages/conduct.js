@@ -106,7 +106,7 @@ const Page = ({ html, initialLanguage, availableLanguages }) => {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const { getConductHtml, getAvailableConductLanguages } = require('../lib/data-server')
+  const { getConductHtml, getAvailableConductLanguages } = await import('../lib/data-server')
   
   // Get available languages
   const availableLanguages = await getAvailableConductLanguages()

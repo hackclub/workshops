@@ -21,7 +21,7 @@ const Page = ({ html }) => {
 }
 
 export const getServerSideProps = async () => {
-  const { getPrivacyHtml } = require('../lib/data-server')
+  const { getPrivacyHtml } = await import('../lib/data-server')
   const html = await getPrivacyHtml()
   
   return { 
