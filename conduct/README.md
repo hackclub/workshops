@@ -23,6 +23,7 @@ To add a new language translation:
 - `japanese.md` - Japanese (日本語)
 - `korean.md` - Korean (한국어)
 - `dutch.md` - Dutch (Nederlands)
+- - `turkish.md` - Turkish (Türkçe)
 
 ## File Format
 
