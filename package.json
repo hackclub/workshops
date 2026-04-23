@@ -27,7 +27,7 @@
     "framer-motion": "^12.38.0",
     "geopattern": "^1.2.3",
     "gray-matter": "^4.0.3",
-    "hls.js": "^1.6.15",
+    "hls.js": "^1.6.16",
     "lodash": "^4.17.23",
     "next": "^16.2.3",
     "nprogress": "^0.2.0",
