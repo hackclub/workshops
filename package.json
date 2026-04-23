@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "eslint": "^10.2.1",
-    "eslint-config-next": "^16.2.3",
+    "eslint-config-next": "^16.2.4",
     "typescript": "^6.0.3"
   },
   "overrides": {
