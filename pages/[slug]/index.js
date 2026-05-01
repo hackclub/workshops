@@ -82,7 +82,7 @@ const Page = ({ slug, data, html, locales }) => {
       <Container variant="copy" as="main">
         <Announcement
           copy="Join Hack Club Horizons!"
-          caption="Ship your projects and fly to your first hackathon  →"
+          caption="Ship your projects and fly to your first hackathon →"
           href="https://horizons.hackclub.com/?utm_source=workshops"
           iconLeft
           iconColor="#FFA936"
