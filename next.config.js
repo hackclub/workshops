@@ -8,6 +8,7 @@ module.exports = withMDX({
   trailingSlash: true,
   pageExtensions: ['js', 'jsx', 'mdx'],
   assetPrefix: '/workshops',
+  transpilePackages: ['@hackclub/markdown'],
   images: {
     imageSizes: [512]
   },
