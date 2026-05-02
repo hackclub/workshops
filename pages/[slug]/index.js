@@ -131,12 +131,13 @@ export const getStaticPaths = async () => {
   return { paths, fallback: true }
 }
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params: { slug } }) => {
   const { getWorkshopFile, getWorkshopData } = require('../../lib/data')
-  const { slug } = params
-  const md = await getWorkshopFile(slug)
-  const { data, html } = await getWorkshopData(slug, md)
-  return { props: { slug, data, html }, revalidate: 30 }
+  const { notFoundIf404 } = require('../../lib/github')
+  try {
+    const { data, html } = await getWorkshopData(slug, await getWorkshopFile(slug))
+    return { props: { slug, data, html }, revalidate: 30 }
+  } catch (e) { return notFoundIf404(e) }
 }
 
 export default Page

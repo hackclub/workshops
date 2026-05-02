@@ -118,22 +118,16 @@ export const getStaticPaths = async () => {
   return { paths, fallback: true }
 }
 
-export const getStaticProps = async ({ params }) => {
-  const {
-    getNewsletterSlugs,
-    getNewsletterFile,
-    getNewsletterData,
-    getNewsletterAuthors
-  } = require('../../lib/data')
-  const { slug } = params
-  const issues = await getNewsletterSlugs()
-  const md = await getNewsletterFile(slug)
-  const { data, html } = await getNewsletterData(slug, md)
-  data.title =
-    data.title.split(' ')[0] + ' ' + formatTitle(data.title.split(' ')[1])
-  const authors = await getNewsletterAuthors(slug)
-
-  return { props: { issues, slug, data, html, authors }, revalidate: 30 }
+export const getStaticProps = async ({ params: { slug } }) => {
+  const { getNewsletterSlugs, getNewsletterFile, getNewsletterData, getNewsletterAuthors } = require('../../lib/data')
+  const { notFoundIf404 } = require('../../lib/github')
+  try {
+    const [issues, md, authors] = await Promise.all([getNewsletterSlugs(), getNewsletterFile(slug), getNewsletterAuthors(slug)])
+    const { data, html } = await getNewsletterData(slug, md)
+    const [a, b] = data.title.split(' ')
+    data.title = `${a} ${formatTitle(b)}`
+    return { props: { issues, slug, data, html, authors }, revalidate: 30 }
+  } catch (e) { return notFoundIf404(e) }
 }
 
 export default Page
