@@ -1,3 +1,4 @@
+# Code of Conduct
 ## The Whole Point
 
 Most online spaces are somewhere between a gas station and a nuclear waste dump. At best, people come, take what they need, and leave. At worst, people poison each other, themselves, and everything around them.
