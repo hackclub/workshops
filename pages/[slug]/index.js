@@ -91,7 +91,7 @@ const Page = ({ slug, data, html, locales }) => {
             fontSize: [2, 3]
           }}
         />
-  
+
         <Content html={html} />
         {data.locales && (
           <Content>
@@ -135,9 +135,14 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const { getWorkshopFile, getWorkshopData } = require('../../lib/data')
   const { notFoundIf404 } = require('../../lib/github')
   try {
-    const { data, html } = await getWorkshopData(slug, await getWorkshopFile(slug))
+    const { data, html } = await getWorkshopData(
+      slug,
+      await getWorkshopFile(slug)
+    )
     return { props: { slug, data, html }, revalidate: 30 }
-  } catch (e) { return notFoundIf404(e) }
+  } catch (e) {
+    return notFoundIf404(e)
+  }
 }
 
 export default Page

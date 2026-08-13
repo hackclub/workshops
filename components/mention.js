@@ -9,8 +9,8 @@ export const StaticMention = memo(({ avatar, username, link }) => (
       display: 'inline-flex',
       alignItems: 'baseline',
       textDecoration: 'none'
-    }}>
-
+    }}
+  >
     {avatar && (
       <img
         src={avatar}
@@ -23,7 +23,7 @@ export const StaticMention = memo(({ avatar, username, link }) => (
           alignSelf: 'flex-end'
         }}
       />
-    )}@{username}
-
+    )}
+    @{username}
   </Link>
 ))

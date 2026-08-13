@@ -108,7 +108,7 @@ const Page = ({ issues, slug, data, html, authors }) => {
         </Container>
       </Box>
     </>
-  );
+  )
 }
 
 export const getStaticPaths = async () => {
@@ -119,15 +119,26 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params: { slug } }) => {
-  const { getNewsletterSlugs, getNewsletterFile, getNewsletterData, getNewsletterAuthors } = require('../../lib/data')
+  const {
+    getNewsletterSlugs,
+    getNewsletterFile,
+    getNewsletterData,
+    getNewsletterAuthors
+  } = require('../../lib/data')
   const { notFoundIf404 } = require('../../lib/github')
   try {
-    const [issues, md, authors] = await Promise.all([getNewsletterSlugs(), getNewsletterFile(slug), getNewsletterAuthors(slug)])
+    const [issues, md, authors] = await Promise.all([
+      getNewsletterSlugs(),
+      getNewsletterFile(slug),
+      getNewsletterAuthors(slug)
+    ])
     const { data, html } = await getNewsletterData(slug, md)
     const [a, b] = data.title.split(' ')
     data.title = `${a} ${formatTitle(b)}`
     return { props: { issues, slug, data, html, authors }, revalidate: 30 }
-  } catch (e) { return notFoundIf404(e) }
+  } catch (e) {
+    return notFoundIf404(e)
+  }
 }
 
 export default Page

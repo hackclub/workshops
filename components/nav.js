@@ -16,7 +16,11 @@ const Material = styled(Box)`
   right: 0;
   background-color: var(--theme-ui-colors-background);
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    background-color: color-mix(in srgb, var(--theme-ui-colors-background) 75%, transparent);
+    background-color: color-mix(
+      in srgb,
+      var(--theme-ui-colors-background) 75%,
+      transparent
+    );
     -webkit-backdrop-filter: saturate(180%) blur(12px);
     backdrop-filter: saturate(180%) blur(12px);
   }
