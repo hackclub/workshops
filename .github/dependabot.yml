@@ -1,13 +1,13 @@
 version: 2
 updates:
-  - package-ecosystem: "bun"
-    directory: "/"
+  - package-ecosystem: 'bun'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     open-pull-requests-limit: 10
 
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     open-pull-requests-limit: 10

@@ -6,7 +6,7 @@ import Icon from '@hackclub/icons'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 const WorkshopCard = ({ slug, name, description, img, section }) => (
-  <Link href={`${slug.includes("https://") ? "" : "/"}${slug}`} legacyBehavior>
+  <Link href={`${slug.includes('https://') ? '' : '/'}${slug}`} legacyBehavior>
     <Card
       as="a"
       variant="interactive"
@@ -35,7 +35,11 @@ const WorkshopCard = ({ slug, name, description, img, section }) => (
             '@media print': { display: 'none' }
           }}
         >
-          <Image alt={`${name} demo`} src={img || `/content/workshops/${slug}/img/demo.png`} loading="lazy" />
+          <Image
+            alt={`${name} demo`}
+            src={img || `/content/workshops/${slug}/img/demo.png`}
+            loading="lazy"
+          />
         </Box>
       )}
     </Card>

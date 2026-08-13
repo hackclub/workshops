@@ -12,7 +12,14 @@ export default function Home({ sections }) {
   const [data, setData] = useState(sections)
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+    <div
+      style={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+      }}
+    >
       <Box
         sx={{
           zIndex: -1,

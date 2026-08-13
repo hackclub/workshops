@@ -12,7 +12,7 @@ const Page = ({ html }) => {
         includeMeta
         sx={{ mb: 0 }}
       />
-      
+
       <Container variant="copy" sx={{ py: [3, 4] }}>
         <Content html={html} />
       </Container>
@@ -23,8 +23,8 @@ const Page = ({ html }) => {
 export const getServerSideProps = async () => {
   const { getPrivacyHtml } = await import('../lib/data-server')
   const html = await getPrivacyHtml()
-  
-  return { 
+
+  return {
     props: { html }
   }
 }

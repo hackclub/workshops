@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "singleQuote": true,
+  "trailingComma": "none",
+  "arrowParens": "avoid",
+  "printWidth": 80,
+  "semi": false,
+  "sortPackageJson": false,
+  "ignorePatterns": [
+    "/.git",
+    "/.next",
+    "/node_modules",
+    "package.json",
+    "package-lock.json",
+    "yarn.lock",
+    "bun.lock",
+    "conduct/**",
+    "privacy/**",
+    "safeguarding/**",
+    "**/*.md",
+    "**/*.html"
+  ]
+}

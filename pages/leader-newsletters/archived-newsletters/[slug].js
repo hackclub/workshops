@@ -79,7 +79,7 @@ const Page = ({ issues, slug, data, html, authors }) => {
         </Container>
       </Box>
     </>
-  );
+  )
 }
 
 export const getStaticPaths = async () => {
@@ -92,15 +92,35 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params: { slug } }) => {
-  const { getLeaderNewsletterSlugs, getLeaderNewsletterFile, getLeaderNewsletterData, getLeaderNewsletterAuthors } = require('../../../lib/data')
+  const {
+    getLeaderNewsletterSlugs,
+    getLeaderNewsletterFile,
+    getLeaderNewsletterData,
+    getLeaderNewsletterAuthors
+  } = require('../../../lib/data')
   const { notFoundIf404 } = require('../../../lib/github')
   const path = `archive/${slug}`
   try {
-    const [all, md, raw] = await Promise.all([getLeaderNewsletterSlugs(), getLeaderNewsletterFile(path), getLeaderNewsletterAuthors(path)])
+    const [all, md, raw] = await Promise.all([
+      getLeaderNewsletterSlugs(),
+      getLeaderNewsletterFile(path),
+      getLeaderNewsletterAuthors(path)
+    ])
     const { data, html } = await getLeaderNewsletterData(slug, md)
     const authors = [...new Set([...raw, '@MatthewStanciu'])]
-    return { props: { issues: all.find(x => x.kind === 'updates').slugs, slug, data, html, authors }, revalidate: 30 }
-  } catch (e) { return notFoundIf404(e) }
+    return {
+      props: {
+        issues: all.find(x => x.kind === 'updates').slugs,
+        slug,
+        data,
+        html,
+        authors
+      },
+      revalidate: 30
+    }
+  } catch (e) {
+    return notFoundIf404(e)
+  }
 }
 
 export default Page

@@ -11,7 +11,7 @@ export default ({ issues, showAbout, kind = '' }) => {
   const { pathname, query, isReady } = useRouter()
   const [active, setActive] = useState(null)
   const [mounted, setMounted] = useState(false)
-  
+
   useEffect(() => {
     setMounted(true)
     if (isReady) {
@@ -22,7 +22,7 @@ export default ({ issues, showAbout, kind = '' }) => {
       setActive(isActive ? query.slug : null)
     }
   }, [isReady, pathname, query.slug])
-  
+
   return (
     <>
       <Grid columns={[1, 2, 3]} gap={3} sx={{ alignItems: 'stretch' }}>
@@ -35,16 +35,19 @@ export default ({ issues, showAbout, kind = '' }) => {
               kind.length ? 's' : ''
             }/${issue}`}
             key={issue}
-            style={{ textDecoration: 'none' }}>
+            style={{ textDecoration: 'none' }}
+          >
             <Card
               variant="nav"
               sx={{
                 bg: getColor(i + 1),
                 color: 'white',
                 height: '100%',
-                boxShadow: mounted && active === issue
-                  ? theme => `0 0 0 3px ${theme.colors.sheet}, 0 0 0 6px ${theme.colors[getColor(i + 1)]}`
-                  : 'card'
+                boxShadow:
+                  mounted && active === issue
+                    ? theme =>
+                        `0 0 0 3px ${theme.colors.sheet}, 0 0 0 6px ${theme.colors[getColor(i + 1)]}`
+                    : 'card'
               }}
             >
               {kind.length ? issue : formatTitle(issue)}
@@ -53,5 +56,5 @@ export default ({ issues, showAbout, kind = '' }) => {
         ))}
       </Grid>
     </>
-  );
+  )
 }

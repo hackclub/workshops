@@ -7,10 +7,10 @@ const Page = ({ html, initialLanguage, availableLanguages }) => {
   const [language] = useState(initialLanguage)
   const [loading, setLoading] = useState(false)
 
-  const handleLanguageChange = async (e) => {
+  const handleLanguageChange = async e => {
     const newLanguage = e.target.value
     setLoading(true)
-    
+
     // Refresh the page with the new language
     window.location.href = `/conduct?lang=${newLanguage}`
   }
@@ -18,8 +18,10 @@ const Page = ({ html, initialLanguage, availableLanguages }) => {
   // Position the dropdown to the left of the theme toggle
   useEffect(() => {
     const themeSwitcher = document.querySelector('.nav-color-switcher')
-    const languageSelect = document.querySelector('#language-dropdown-container')
-    
+    const languageSelect = document.querySelector(
+      '#language-dropdown-container'
+    )
+
     if (themeSwitcher && languageSelect) {
       // Insert the language dropdown before the theme switcher
       themeSwitcher.parentNode.insertBefore(languageSelect, themeSwitcher)
@@ -83,13 +85,14 @@ const Page = ({ html, initialLanguage, availableLanguages }) => {
             }
             return (
               <option key={lang} value={lang}>
-                {languageNames[lang] || lang.charAt(0).toUpperCase() + lang.slice(1)}
+                {languageNames[lang] ||
+                  lang.charAt(0).toUpperCase() + lang.slice(1)}
               </option>
             )
           })}
         </Select>
       </Box>
-      
+
       <Header
         title="Code of Conduct"
         desc="The required standards of conduct for the Hack Club community & events."
@@ -97,7 +100,7 @@ const Page = ({ html, initialLanguage, availableLanguages }) => {
         includeMeta
         sx={{ mb: 0 }}
       />
-      
+
       <Container variant="copy" sx={{ py: [3, 4] }}>
         <Content html={html} />
       </Container>
@@ -106,23 +109,26 @@ const Page = ({ html, initialLanguage, availableLanguages }) => {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const { getConductHtml, getAvailableConductLanguages } = await import('../lib/data-server')
-  
+  const { getConductHtml, getAvailableConductLanguages } =
+    await import('../lib/data-server')
+
   // Get available languages
   const availableLanguages = await getAvailableConductLanguages()
-  
+
   // Get requested language or default to english
   const requestedLanguage = query.lang || 'english'
-  const language = availableLanguages.includes(requestedLanguage) ? requestedLanguage : 'english'
-  
+  const language = availableLanguages.includes(requestedLanguage)
+    ? requestedLanguage
+    : 'english'
+
   // Get the HTML content for the selected language
   const html = await getConductHtml(language)
-  
-  return { 
-    props: { 
-      html, 
+
+  return {
+    props: {
+      html,
       initialLanguage: language,
-      availableLanguages 
+      availableLanguages
     }
   }
 }
