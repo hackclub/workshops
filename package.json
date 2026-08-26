@@ -30,7 +30,7 @@
     "framer-motion": "^13.1.0",
     "geopattern": "^1.2.3",
     "gray-matter": "^4.0.3",
-    "hls.js": "^1.7.0",
+    "hls.js": "^1.7.1",
     "lodash": "^4.18.1",
     "next": "^16.3.0",
     "nprogress": "^0.2.0",
