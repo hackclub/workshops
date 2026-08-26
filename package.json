@@ -27,7 +27,7 @@
     "@next/mdx": "16.3.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
-    "framer-motion": "^13.1.0",
+    "framer-motion": "^13.1.1",
     "geopattern": "^1.2.3",
     "gray-matter": "^4.0.3",
     "hls.js": "^1.7.0",
