@@ -10,3 +10,4 @@ public/workshops.json
 package-lock.json
 yarn.lock
 .env*.local
+.env*
