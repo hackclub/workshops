@@ -45,7 +45,7 @@
     "toxiclibsjs": "^0.3.3"
   },
   "devDependencies": {
-    "oxfmt": "^0.70.0",
+    "oxfmt": "^0.71.0",
     "oxlint": "^1.85.0"
   },
   "overrides": {
